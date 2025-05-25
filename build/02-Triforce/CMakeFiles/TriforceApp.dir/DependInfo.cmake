@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/02-Triforce/src/EBO.cpp" "02-Triforce/CMakeFiles/TriforceApp.dir/src/EBO.cpp.obj" "gcc" "02-Triforce/CMakeFiles/TriforceApp.dir/src/EBO.cpp.obj.d"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/02-Triforce/src/VAO.cpp" "02-Triforce/CMakeFiles/TriforceApp.dir/src/VAO.cpp.obj" "gcc" "02-Triforce/CMakeFiles/TriforceApp.dir/src/VAO.cpp.obj.d"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/02-Triforce/src/VBO.cpp" "02-Triforce/CMakeFiles/TriforceApp.dir/src/VBO.cpp.obj" "gcc" "02-Triforce/CMakeFiles/TriforceApp.dir/src/VBO.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/02-Triforce/src/main.cpp" "02-Triforce/CMakeFiles/TriforceApp.dir/src/main.cpp.obj" "gcc" "02-Triforce/CMakeFiles/TriforceApp.dir/src/main.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/02-Triforce/src/shaderClass.cpp" "02-Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj" "gcc" "02-Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj.d"
   )

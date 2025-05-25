@@ -1,32 +1,22 @@
 #include <iostream>
 #include <cmath>
+
+// Shader class
 #include "shaderClass.h"
+
+// Custom buffer classes
+#include "EBO.h"
+#include "VBO.h"
+#include "VAO.h"
+
+// Include GLAD and GLFW
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 
 int main() {
-	glfwInit();
-
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-	GLFWwindow* window = glfwCreateWindow(800, 800, "OpenGL", NULL, NULL);
-	if (window == NULL) {
-		std::cout << "Failed to create GLFW window" << std::endl;
-
-		glfwTerminate();
-		return -1;
-	}
-	glfwMakeContextCurrent(window);
-
-	gladLoadGL();
-	glViewport(0, 0, 800, 800);
-
-
 	// Define our triangle vertices
-	float vertices[] = {
+	GLfloat vertices[] = {
 		// Lower Left : 0
 		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
 		// Lower Middle : 1
@@ -41,35 +31,75 @@ int main() {
 		0.0f, 0.5f * float(sqrt(3)) / 3, 0.0f
 	};
 
-	int indices[] = {
+
+
+	
+	// Define our triangle indices 
+	// See the diagram below for the indices and what corresponding vertices they refer to.
+	/*  
+	    5
+	   / \
+	  3 - 4
+	 / \ / \
+	0 - 1 - 2 
+	*/
+	GLuint indices[] = {
 		0, 1, 3,
-		2, 1, 4,
+		1, 2, 4,
 		3, 4, 5
 
 	};
 
+	// Initialize GLFW
+	glfwInit();
 
-	// 2. Create the vertex array object and vertex buffer object
-	unsigned int VAO, VBO, EBO;
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-	glGenBuffers(1, &EBO);
+	// Tell GLFW to use OpenGL version 3.3
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 
-	// Bind VAO
-	glBindVertexArray(VAO);
+	// Tell GLFW to use the core CORE profile
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	//  Bind BVO
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	// Create a GLFW window
+	GLFWwindow* window = glfwCreateWindow(800, 800, "OpenGL", NULL, NULL);
+	// Error handling for window creation
+	if (window == NULL) {
+		std::cerr << "Failed to create GLFW window" << std::endl;
+		glfwTerminate();
+		return -1;
+	}
 
-	// Bind EBO
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+	// Introduce the window into the current context
+	glfwMakeContextCurrent(window);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
+	// Load GLAD to configure OpenGL
+	gladLoadGL();
 
+	// Set our viewport X / y and width / height
+	glViewport(0, 0, 800, 800);
+
+	// Create and compile our shaders
 	Shader shader("default.vert", "default.frag");
+
+	// Create VAO object and bind it
+	VAO vao;
+	vao.Bind();
+
+	// Create VBO object and bind it 
+	VBO vbo(vertices, sizeof(vertices));
+	vbo.Bind();
+
+	// Create EBO object and bind it
+	EBO ebo(indices, sizeof(indices));
+	ebo.Bind();
+
+	// Link VBO to VAO
+	vao.LinkVBO(vbo, 0);
+
+	// Unbind VAO, VBO, and EBO
+	vao.Unbind();
+	vbo.Unbind();
+	ebo.Unbind();
 
 	while (!glfwWindowShouldClose(window)) {
 		glfwPollEvents();
@@ -78,21 +108,25 @@ int main() {
 
 		/*glUseProgram(shaderProgram);*/
 		shader.Activate();
-		glBindVertexArray(VAO);
+		glBindVertexArray(vao.vaoID);
 		glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
 
 		glfwSwapBuffers(window);
 
 	}
 
-	// Clean up
-	glDeleteVertexArrays(1, &VAO);
-	glDeleteBuffers(1, &VBO);
-	glDeleteBuffers(1, &EBO);
+	// Delete our objects
+	vao.Delete();
+	vbo.Delete();
+	ebo.Delete();
+
+	// Delete our shader program
 	shader.Delete();
 
+	// Destroy the window
 	glfwDestroyWindow(window);
+
+	// Terminate GLFW
 	glfwTerminate();
-	
 	return 0;
 }

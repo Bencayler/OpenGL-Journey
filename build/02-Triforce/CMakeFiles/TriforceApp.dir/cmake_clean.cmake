@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/TriforceApp.dir/src/EBO.cpp.obj"
+  "CMakeFiles/TriforceApp.dir/src/EBO.cpp.obj.d"
+  "CMakeFiles/TriforceApp.dir/src/VAO.cpp.obj"
+  "CMakeFiles/TriforceApp.dir/src/VAO.cpp.obj.d"
+  "CMakeFiles/TriforceApp.dir/src/VBO.cpp.obj"
+  "CMakeFiles/TriforceApp.dir/src/VBO.cpp.obj.d"
   "CMakeFiles/TriforceApp.dir/src/main.cpp.obj"
   "CMakeFiles/TriforceApp.dir/src/main.cpp.obj.d"
   "CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj"

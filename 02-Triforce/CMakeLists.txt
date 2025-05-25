@@ -1,5 +1,10 @@
 # Add the executable
-file(GLOB TRIFORCE_SOURCES "src/*.cpp")
+file(GLOB TRIFORCE_SOURCES 
+    "src/*.cpp"
+    "include/*.h"
+)
+
+
 add_executable(TriforceApp ${TRIFORCE_SOURCES})
 
 file(GLOB SHADERS "shaders/*.vert" "shaders/*.frag")
