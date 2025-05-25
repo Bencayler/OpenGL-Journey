@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\TriforceApp.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\TriforceApp.dir/objects.a @CMakeFiles\TriforceApp.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\TriforceApp.dir/objects.a -Wl,--no-whole-archive -o TriforceApp.exe -Wl,--out-implib,libTriforceApp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\TriforceApp.dir\linkLibs.rsp

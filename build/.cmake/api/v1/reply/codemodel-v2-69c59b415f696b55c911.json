@@ -1,0 +1,113 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "Triangle",
+					"jsonFile" : "directory-Triangle-Debug-78b0822e04d8ce532274.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Triangle",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "Triforce",
+					"jsonFile" : "directory-Triforce-Debug-c36aa6357ed49e3a3fbb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Triforce",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "OpenGL_Journals_Test",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "TriangleApp::@c62ee8c2c70b847b24d7",
+					"jsonFile" : "target-TriangleApp-Debug-0d70ea93e3f9a2daec9a.json",
+					"name" : "TriangleApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TriforceApp::@3cbf8b66da666d0eac47",
+					"jsonFile" : "target-TriforceApp-Debug-823130324359d140a347.json",
+					"name" : "TriforceApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hello_window::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hello_window-Debug-f21166f7f74b2d46c4bc.json",
+					"name" : "hello_window",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build",
+		"source" : "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
