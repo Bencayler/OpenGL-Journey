@@ -129,30 +129,6 @@ TriforceApp/fast:
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/build
 .PHONY : TriforceApp/fast
 
-__/src/glad.obj: __/src/glad.c.obj
-.PHONY : __/src/glad.obj
-
-# target to build an object file
-__/src/glad.c.obj:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.obj
-.PHONY : __/src/glad.c.obj
-
-__/src/glad.i: __/src/glad.c.i
-.PHONY : __/src/glad.i
-
-# target to preprocess a source file
-__/src/glad.c.i:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.i
-.PHONY : __/src/glad.c.i
-
-__/src/glad.s: __/src/glad.c.s
-.PHONY : __/src/glad.s
-
-# target to generate assembly for a file
-__/src/glad.c.s:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.s
-.PHONY : __/src/glad.c.s
-
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -177,6 +153,30 @@ src/main.cpp.s:
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/shaderClass.obj: src/shaderClass.cpp.obj
+.PHONY : src/shaderClass.obj
+
+# target to build an object file
+src/shaderClass.cpp.obj:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj
+.PHONY : src/shaderClass.cpp.obj
+
+src/shaderClass.i: src/shaderClass.cpp.i
+.PHONY : src/shaderClass.i
+
+# target to preprocess a source file
+src/shaderClass.cpp.i:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.i
+.PHONY : src/shaderClass.cpp.i
+
+src/shaderClass.s: src/shaderClass.cpp.s
+.PHONY : src/shaderClass.s
+
+# target to generate assembly for a file
+src/shaderClass.cpp.s:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.s
+.PHONY : src/shaderClass.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -186,12 +186,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... TriforceApp
-	@echo ... __/src/glad.obj
-	@echo ... __/src/glad.i
-	@echo ... __/src/glad.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/shaderClass.obj
+	@echo ... src/shaderClass.i
+	@echo ... src/shaderClass.s
 .PHONY : help
 
 

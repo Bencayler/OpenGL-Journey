@@ -86,32 +86,33 @@ Triforce/CMakeFiles/TriforceApp.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TriforceApp.dir/src/main.cpp.s"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\Triforce && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\Triforce\src\main.cpp -o CMakeFiles\TriforceApp.dir\src\main.cpp.s
 
-Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.obj: Triforce/CMakeFiles/TriforceApp.dir/flags.make
-Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.obj: Triforce/CMakeFiles/TriforceApp.dir/includes_C.rsp
-Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/src/glad.c
-Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.obj: Triforce/CMakeFiles/TriforceApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.obj"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\Triforce && C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.obj -MF CMakeFiles\TriforceApp.dir\__\src\glad.c.obj.d -o CMakeFiles\TriforceApp.dir\__\src\glad.c.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\src\glad.c
+Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj: Triforce/CMakeFiles/TriforceApp.dir/flags.make
+Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj: Triforce/CMakeFiles/TriforceApp.dir/includes_CXX.rsp
+Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Triforce/src/shaderClass.cpp
+Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj: Triforce/CMakeFiles/TriforceApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\Triforce && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj -MF CMakeFiles\TriforceApp.dir\src\shaderClass.cpp.obj.d -o CMakeFiles\TriforceApp.dir\src\shaderClass.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\Triforce\src\shaderClass.cpp
 
-Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/TriforceApp.dir/__/src/glad.c.i"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\Triforce && C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\src\glad.c > CMakeFiles\TriforceApp.dir\__\src\glad.c.i
+Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.i"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\Triforce && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\Triforce\src\shaderClass.cpp > CMakeFiles\TriforceApp.dir\src\shaderClass.cpp.i
 
-Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/TriforceApp.dir/__/src/glad.c.s"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\Triforce && C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\src\glad.c -o CMakeFiles\TriforceApp.dir\__\src\glad.c.s
+Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.s"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\Triforce && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\Triforce\src\shaderClass.cpp -o CMakeFiles\TriforceApp.dir\src\shaderClass.cpp.s
 
 # Object files for target TriforceApp
 TriforceApp_OBJECTS = \
 "CMakeFiles/TriforceApp.dir/src/main.cpp.obj" \
-"CMakeFiles/TriforceApp.dir/__/src/glad.c.obj"
+"CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj"
 
 # External object files for target TriforceApp
 TriforceApp_EXTERNAL_OBJECTS =
 
 Triforce/TriforceApp.exe: Triforce/CMakeFiles/TriforceApp.dir/src/main.cpp.obj
-Triforce/TriforceApp.exe: Triforce/CMakeFiles/TriforceApp.dir/__/src/glad.c.obj
+Triforce/TriforceApp.exe: Triforce/CMakeFiles/TriforceApp.dir/src/shaderClass.cpp.obj
 Triforce/TriforceApp.exe: Triforce/CMakeFiles/TriforceApp.dir/build.make
+Triforce/TriforceApp.exe: libglad.a
 Triforce/TriforceApp.exe: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Libraries/lib/libglfw3.a
 Triforce/TriforceApp.exe: Triforce/CMakeFiles/TriforceApp.dir/linkLibs.rsp
 Triforce/TriforceApp.exe: Triforce/CMakeFiles/TriforceApp.dir/objects1.rsp

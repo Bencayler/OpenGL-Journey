@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/hello_window")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/OpenGL_Journals_Test")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triangle/cmake_install.cmake")
-  include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triforce/cmake_install.cmake")
+  include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/01-Triangle/cmake_install.cmake")
+  include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/02-Triforce/cmake_install.cmake")
 
 endif()
 

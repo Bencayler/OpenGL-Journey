@@ -116,17 +116,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hello_window
+# Target rules for targets named glad
 
 # Build rule for target.
-hello_window: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 hello_window
-.PHONY : hello_window
+glad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 glad
+.PHONY : glad
 
 # fast build rule for target.
-hello_window/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/build
-.PHONY : hello_window/fast
+glad/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/build
+.PHONY : glad/fast
 
 #=============================================================================
 # Target rules for targets named TriangleApp
@@ -138,7 +138,7 @@ TriangleApp: cmake_check_build_system
 
 # fast build rule for target.
 TriangleApp/fast:
-	$(MAKE) $(MAKESILENT) -f Triangle\CMakeFiles\TriangleApp.dir\build.make Triangle/CMakeFiles/TriangleApp.dir/build
+	$(MAKE) $(MAKESILENT) -f 01-Triangle\CMakeFiles\TriangleApp.dir\build.make 01-Triangle/CMakeFiles/TriangleApp.dir/build
 .PHONY : TriangleApp/fast
 
 #=============================================================================
@@ -151,56 +151,32 @@ TriforceApp: cmake_check_build_system
 
 # fast build rule for target.
 TriforceApp/fast:
-	$(MAKE) $(MAKESILENT) -f Triforce\CMakeFiles\TriforceApp.dir\build.make Triforce/CMakeFiles/TriforceApp.dir/build
+	$(MAKE) $(MAKESILENT) -f 02-Triforce\CMakeFiles\TriforceApp.dir\build.make 02-Triforce/CMakeFiles/TriforceApp.dir/build
 .PHONY : TriforceApp/fast
 
-src/glad.obj: src/glad.c.obj
-.PHONY : src/glad.obj
+Libraries/src/glad.obj: Libraries/src/glad.c.obj
+.PHONY : Libraries/src/glad.obj
 
 # target to build an object file
-src/glad.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/glad.c.obj
-.PHONY : src/glad.c.obj
+Libraries/src/glad.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/Libraries/src/glad.c.obj
+.PHONY : Libraries/src/glad.c.obj
 
-src/glad.i: src/glad.c.i
-.PHONY : src/glad.i
-
-# target to preprocess a source file
-src/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/glad.c.i
-.PHONY : src/glad.c.i
-
-src/glad.s: src/glad.c.s
-.PHONY : src/glad.s
-
-# target to generate assembly for a file
-src/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/glad.c.s
-.PHONY : src/glad.c.s
-
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
-
-# target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+Libraries/src/glad.i: Libraries/src/glad.c.i
+.PHONY : Libraries/src/glad.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+Libraries/src/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/Libraries/src/glad.c.i
+.PHONY : Libraries/src/glad.c.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+Libraries/src/glad.s: Libraries/src/glad.c.s
+.PHONY : Libraries/src/glad.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+Libraries/src/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/Libraries/src/glad.c.s
+.PHONY : Libraries/src/glad.c.s
 
 # Help Target
 help:
@@ -212,13 +188,10 @@ help:
 	@echo ... rebuild_cache
 	@echo ... TriangleApp
 	@echo ... TriforceApp
-	@echo ... hello_window
-	@echo ... src/glad.obj
-	@echo ... src/glad.i
-	@echo ... src/glad.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
+	@echo ... glad
+	@echo ... Libraries/src/glad.obj
+	@echo ... Libraries/src/glad.i
+	@echo ... Libraries/src/glad.s
 .PHONY : help
 
 

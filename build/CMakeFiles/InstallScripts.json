@@ -2,8 +2,8 @@
 	"InstallScripts" : 
 	[
 		"C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/cmake_install.cmake",
-		"C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triangle/cmake_install.cmake",
-		"C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triforce/cmake_install.cmake"
+		"C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/01-Triangle/cmake_install.cmake",
+		"C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/02-Triforce/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

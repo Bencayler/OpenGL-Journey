@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/src/glad.c" "Triangle/CMakeFiles/TriangleApp.dir/__/src/glad.c.obj" "gcc" "Triangle/CMakeFiles/TriangleApp.dir/__/src/glad.c.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Triangle/src/main.cpp" "Triangle/CMakeFiles/TriangleApp.dir/src/main.cpp.obj" "gcc" "Triangle/CMakeFiles/TriangleApp.dir/src/main.cpp.obj.d"
   )
 

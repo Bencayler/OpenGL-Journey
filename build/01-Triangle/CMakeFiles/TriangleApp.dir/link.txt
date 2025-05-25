@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\TriangleApp.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\TriangleApp.dir/objects.a @CMakeFiles\TriangleApp.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\TriangleApp.dir/objects.a -Wl,--no-whole-archive -o TriangleApp.exe -Wl,--out-implib,libTriangleApp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\TriangleApp.dir\linkLibs.rsp

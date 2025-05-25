@@ -129,30 +129,6 @@ TriangleApp/fast:
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triangle\CMakeFiles\TriangleApp.dir\build.make Triangle/CMakeFiles/TriangleApp.dir/build
 .PHONY : TriangleApp/fast
 
-__/src/glad.obj: __/src/glad.c.obj
-.PHONY : __/src/glad.obj
-
-# target to build an object file
-__/src/glad.c.obj:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triangle\CMakeFiles\TriangleApp.dir\build.make Triangle/CMakeFiles/TriangleApp.dir/__/src/glad.c.obj
-.PHONY : __/src/glad.c.obj
-
-__/src/glad.i: __/src/glad.c.i
-.PHONY : __/src/glad.i
-
-# target to preprocess a source file
-__/src/glad.c.i:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triangle\CMakeFiles\TriangleApp.dir\build.make Triangle/CMakeFiles/TriangleApp.dir/__/src/glad.c.i
-.PHONY : __/src/glad.c.i
-
-__/src/glad.s: __/src/glad.c.s
-.PHONY : __/src/glad.s
-
-# target to generate assembly for a file
-__/src/glad.c.s:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f Triangle\CMakeFiles\TriangleApp.dir\build.make Triangle/CMakeFiles/TriangleApp.dir/__/src/glad.c.s
-.PHONY : __/src/glad.c.s
-
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -186,9 +162,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... TriangleApp
-	@echo ... __/src/glad.obj
-	@echo ... __/src/glad.i
-	@echo ... __/src/glad.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

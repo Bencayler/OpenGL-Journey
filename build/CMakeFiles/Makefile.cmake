@@ -39,9 +39,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.0/Modules/Platform/Windows-windres.cmake"
   "C:/Program Files/CMake/share/cmake-4.0/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/01-Triangle/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/02-Triforce/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/02-Triforce/shaders/default.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/02-Triforce/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
-  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Triangle/CMakeLists.txt"
-  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Triforce/CMakeLists.txt"
   "CMakeFiles/4.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeRCCompiler.cmake"
@@ -57,13 +59,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Triangle/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Triforce/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "01-Triangle/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "02-Triforce/default.frag"
+  "02-Triforce/default.vert"
+  "02-Triforce/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/hello_window.dir/DependInfo.cmake"
-  "Triangle/CMakeFiles/TriangleApp.dir/DependInfo.cmake"
-  "Triforce/CMakeFiles/TriforceApp.dir/DependInfo.cmake"
+  "CMakeFiles/glad.dir/DependInfo.cmake"
+  "01-Triangle/CMakeFiles/TriangleApp.dir/DependInfo.cmake"
+  "02-Triforce/CMakeFiles/TriforceApp.dir/DependInfo.cmake"
   )

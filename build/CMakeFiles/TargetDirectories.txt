@@ -1,9 +1,9 @@
-C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/CMakeFiles/hello_window.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/CMakeFiles/glad.dir
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/CMakeFiles/edit_cache.dir
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/CMakeFiles/rebuild_cache.dir
-C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triangle/CMakeFiles/TriangleApp.dir
-C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triangle/CMakeFiles/edit_cache.dir
-C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triangle/CMakeFiles/rebuild_cache.dir
-C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triforce/CMakeFiles/TriforceApp.dir
-C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triforce/CMakeFiles/edit_cache.dir
-C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/Triforce/CMakeFiles/rebuild_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/01-Triangle/CMakeFiles/TriangleApp.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/01-Triangle/CMakeFiles/edit_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/01-Triangle/CMakeFiles/rebuild_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/02-Triforce/CMakeFiles/TriforceApp.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/02-Triforce/CMakeFiles/edit_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/02-Triforce/CMakeFiles/rebuild_cache.dir

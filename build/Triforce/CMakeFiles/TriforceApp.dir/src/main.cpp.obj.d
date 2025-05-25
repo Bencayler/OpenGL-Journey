@@ -100,6 +100,15 @@ Triforce/CMakeFiles/TriforceApp.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
- C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Libraries/include/GLFW/glfw3.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cmath c:\mingw\include\math.h \
+ C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Triforce/include/shaderClass.h \
  C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Libraries/include/glad/glad.h \
- C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Libraries/include/KHR/khrplatform.h
+ C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Libraries/include/KHR/khrplatform.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\fstream \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\codecvt.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\basic_file.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++io.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\fstream.tcc \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\sstream \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc \
+ C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Libraries/include/GLFW/glfw3.h
