@@ -154,6 +154,19 @@ TriforceApp/fast:
 	$(MAKE) $(MAKESILENT) -f 02-Triforce\CMakeFiles\TriforceApp.dir\build.make 02-Triforce/CMakeFiles/TriforceApp.dir/build
 .PHONY : TriforceApp/fast
 
+#=============================================================================
+# Target rules for targets named InterpolatedTriangleApp
+
+# Build rule for target.
+InterpolatedTriangleApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 InterpolatedTriangleApp
+.PHONY : InterpolatedTriangleApp
+
+# fast build rule for target.
+InterpolatedTriangleApp/fast:
+	$(MAKE) $(MAKESILENT) -f 03-InterpolatedTriangle\CMakeFiles\InterpolatedTriangleApp.dir\build.make 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/build
+.PHONY : InterpolatedTriangleApp/fast
+
 Libraries/src/glad.obj: Libraries/src/glad.c.obj
 .PHONY : Libraries/src/glad.obj
 
@@ -186,6 +199,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... InterpolatedTriangleApp
 	@echo ... TriangleApp
 	@echo ... TriforceApp
 	@echo ... glad

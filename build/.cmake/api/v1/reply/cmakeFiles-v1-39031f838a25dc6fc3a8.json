@@ -226,6 +226,15 @@
 		},
 		{
 			"path" : "02-Triforce/shaders/default.vert"
+		},
+		{
+			"path" : "03-InterpolatedTriangle/CMakeLists.txt"
+		},
+		{
+			"path" : "03-InterpolatedTriangle/shaders/default.frag"
+		},
+		{
+			"path" : "03-InterpolatedTriangle/shaders/default.vert"
 		}
 	],
 	"kind" : "cmakeFiles",

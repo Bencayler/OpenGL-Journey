@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -20,7 +21,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -35,7 +36,7 @@
 					"source" : "01-Triangle",
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -50,7 +51,22 @@
 					"source" : "02-Triforce",
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"build" : "03-InterpolatedTriangle",
+					"jsonFile" : "directory-03-InterpolatedTriangle-Debug-41364e8f830a0f57255b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "03-InterpolatedTriangle",
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
@@ -62,19 +78,28 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					],
 					"name" : "OpenGL_Journals_Test",
 					"targetIndexes" : 
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 3,
+					"id" : "InterpolatedTriangleApp::@f92da03f4e6ffc8c911c",
+					"jsonFile" : "target-InterpolatedTriangleApp-Debug-19d5ef0184c3b7449534.json",
+					"name" : "InterpolatedTriangleApp",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 1,
 					"id" : "TriangleApp::@29abaa162e0e0c731ec1",

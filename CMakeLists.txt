@@ -22,3 +22,4 @@ target_include_directories(glad PUBLIC "${CMAKE_SOURCE_DIR}/Libraries/include")
 # Add subdirectories for each milestone
 add_subdirectory(01-Triangle)
 add_subdirectory(02-Triforce)
+add_subdirectory(03-InterpolatedTriangle)
