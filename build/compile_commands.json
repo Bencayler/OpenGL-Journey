@@ -70,5 +70,35 @@
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/InterpolatedTriangleApp.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\InterpolatedTriangleApp.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\03-InterpolatedTriangle\\src\\shaderClass.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/03-InterpolatedTriangle/src/shaderClass.cpp",
   "output": "03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/src/shaderClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/04-3DCube",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCube.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCube.dir\\src\\EBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\04-3DCube\\src\\EBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/src/EBO.cpp",
+  "output": "04-3DCube/CMakeFiles/3DCube.dir/src/EBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/04-3DCube",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCube.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCube.dir\\src\\VAO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\04-3DCube\\src\\VAO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/src/VAO.cpp",
+  "output": "04-3DCube/CMakeFiles/3DCube.dir/src/VAO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/04-3DCube",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCube.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCube.dir\\src\\VBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\04-3DCube\\src\\VBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/src/VBO.cpp",
+  "output": "04-3DCube/CMakeFiles/3DCube.dir/src/VBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/04-3DCube",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCube.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCube.dir\\src\\main.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\04-3DCube\\src\\main.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/src/main.cpp",
+  "output": "04-3DCube/CMakeFiles/3DCube.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/04-3DCube",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCube.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCube.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\04-3DCube\\src\\shaderClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/src/shaderClass.cpp",
+  "output": "04-3DCube/CMakeFiles/3DCube.dir/src/shaderClass.cpp.obj"
 }
 ]

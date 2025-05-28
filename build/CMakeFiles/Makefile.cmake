@@ -46,6 +46,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/03-InterpolatedTriangle/CMakeLists.txt"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/03-InterpolatedTriangle/shaders/default.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/03-InterpolatedTriangle/shaders/default.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/shaders/default.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
   "CMakeFiles/4.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
@@ -69,6 +72,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "03-InterpolatedTriangle/default.frag"
   "03-InterpolatedTriangle/default.vert"
   "03-InterpolatedTriangle/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "04-3DCube/default.frag"
+  "04-3DCube/default.vert"
+  "04-3DCube/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -77,4 +83,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "01-Triangle/CMakeFiles/TriangleApp.dir/DependInfo.cmake"
   "02-Triforce/CMakeFiles/TriforceApp.dir/DependInfo.cmake"
   "03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/DependInfo.cmake"
+  "04-3DCube/CMakeFiles/3DCube.dir/DependInfo.cmake"
   )

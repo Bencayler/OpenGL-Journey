@@ -1,0 +1,163 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "01-Triangle",
+					"jsonFile" : "directory-01-Triangle-Debug-d8bece3a556097e375f0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "01-Triangle",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "02-Triforce",
+					"jsonFile" : "directory-02-Triforce-Debug-ed76b704585140b7c504.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "02-Triforce",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "03-InterpolatedTriangle",
+					"jsonFile" : "directory-03-InterpolatedTriangle-Debug-41364e8f830a0f57255b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "03-InterpolatedTriangle",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "04-3DCube",
+					"jsonFile" : "directory-04-3DCube-Debug-40c112e06541d5f1f6e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "04-3DCube",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "OpenGL_Journals_Test",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "3DCube::@2bc2d7b93fd2bce69a66",
+					"jsonFile" : "target-3DCube-Debug-0bf374a152631d559692.json",
+					"name" : "3DCube",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "InterpolatedTriangleApp::@f92da03f4e6ffc8c911c",
+					"jsonFile" : "target-InterpolatedTriangleApp-Debug-552200f5916db5081d22.json",
+					"name" : "InterpolatedTriangleApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TriangleApp::@29abaa162e0e0c731ec1",
+					"jsonFile" : "target-TriangleApp-Debug-1eb200c507a3ed0164f5.json",
+					"name" : "TriangleApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "TriforceApp::@d37b0878c46bdf7efc7c",
+					"jsonFile" : "target-TriforceApp-Debug-f6f86f78da03c268936d.json",
+					"name" : "TriforceApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "glad::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-glad-Debug-17febb7e229f0d28810b.json",
+					"name" : "glad",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build",
+		"source" : "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

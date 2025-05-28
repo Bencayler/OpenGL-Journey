@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\3DCube.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\3DCube.dir/objects.a @CMakeFiles\3DCube.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\3DCube.dir/objects.a -Wl,--no-whole-archive -o 3DCube.exe -Wl,--out-implib,lib3DCube.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\3DCube.dir\linkLibs.rsp

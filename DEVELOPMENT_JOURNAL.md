@@ -1,4 +1,4 @@
-May 26th 2026 @ 14:16 EST 
+May 26th 2025 @ 14:16 EST 
 
 After struggling for days over build systems and IDE I finally have what I feel is a strong build system. It stook a lot of work and headache but I finally have a CMake system to carry we through the rest of the course.
 
@@ -16,3 +16,7 @@ Ultimately I would be extremely happy with some kind of solar system simulator a
 
 The dream of a 3D Water Polo video game side project is still very much alive. We will see. 
 
+
+May 27th 2025
+
+Just managed to import the STB and GLM libraries. The plan of attack for today and tomorrow is to basically catch up to where I was before in the graphics programming class. Lets get a rainbow 3D outputted and rotating and then a 3D cube with a texture mapped to the surface of the cube. That is two separate projects and hopefully it goes smoothly.

@@ -42,6 +42,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/01-Triangle/cmake_install.cmake")
   include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/02-Triforce/cmake_install.cmake")
   include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/03-InterpolatedTriangle/cmake_install.cmake")
+  include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/04-3DCube/cmake_install.cmake")
 
 endif()
 

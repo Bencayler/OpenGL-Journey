@@ -167,6 +167,19 @@ InterpolatedTriangleApp/fast:
 	$(MAKE) $(MAKESILENT) -f 03-InterpolatedTriangle\CMakeFiles\InterpolatedTriangleApp.dir\build.make 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/build
 .PHONY : InterpolatedTriangleApp/fast
 
+#=============================================================================
+# Target rules for targets named 3DCube
+
+# Build rule for target.
+3DCube: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 3DCube
+.PHONY : 3DCube
+
+# fast build rule for target.
+3DCube/fast:
+	$(MAKE) $(MAKESILENT) -f 04-3DCube\CMakeFiles\3DCube.dir\build.make 04-3DCube/CMakeFiles/3DCube.dir/build
+.PHONY : 3DCube/fast
+
 Libraries/src/glad.obj: Libraries/src/glad.c.obj
 .PHONY : Libraries/src/glad.obj
 
@@ -199,6 +212,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... 3DCube
 	@echo ... InterpolatedTriangleApp
 	@echo ... TriangleApp
 	@echo ... TriforceApp

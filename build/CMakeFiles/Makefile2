@@ -66,6 +66,7 @@ all: CMakeFiles/glad.dir/all
 all: 01-Triangle/all
 all: 02-Triforce/all
 all: 03-InterpolatedTriangle/all
+all: 04-3DCube/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -73,12 +74,14 @@ codegen: CMakeFiles/glad.dir/codegen
 codegen: 01-Triangle/codegen
 codegen: 02-Triforce/codegen
 codegen: 03-InterpolatedTriangle/codegen
+codegen: 04-3DCube/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: 01-Triangle/preinstall
 preinstall: 02-Triforce/preinstall
 preinstall: 03-InterpolatedTriangle/preinstall
+preinstall: 04-3DCube/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -86,6 +89,7 @@ clean: CMakeFiles/glad.dir/clean
 clean: 01-Triangle/clean
 clean: 02-Triforce/clean
 clean: 03-InterpolatedTriangle/clean
+clean: 04-3DCube/clean
 .PHONY : clean
 
 #=============================================================================
@@ -146,13 +150,32 @@ clean: 03-InterpolatedTriangle/clean
 .PHONY : 03-InterpolatedTriangle/clean
 
 #=============================================================================
+# Directory level rules for directory 04-3DCube
+
+# Recursive "all" directory target.
+04-3DCube/all: 04-3DCube/CMakeFiles/3DCube.dir/all
+.PHONY : 04-3DCube/all
+
+# Recursive "codegen" directory target.
+04-3DCube/codegen: 04-3DCube/CMakeFiles/3DCube.dir/codegen
+.PHONY : 04-3DCube/codegen
+
+# Recursive "preinstall" directory target.
+04-3DCube/preinstall:
+.PHONY : 04-3DCube/preinstall
+
+# Recursive "clean" directory target.
+04-3DCube/clean: 04-3DCube/CMakeFiles/3DCube.dir/clean
+.PHONY : 04-3DCube/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/glad.dir
 
 # All Build rule for target.
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=15,16 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=21,22 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -169,7 +192,7 @@ glad: CMakeFiles/glad.dir/rule
 # codegen rule for target.
 CMakeFiles/glad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=15,16 "Finished codegen for target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=21,22 "Finished codegen for target glad"
 .PHONY : CMakeFiles/glad.dir/codegen
 
 # clean rule for target.
@@ -184,7 +207,7 @@ CMakeFiles/glad.dir/clean:
 01-Triangle/CMakeFiles/TriangleApp.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f 01-Triangle\CMakeFiles\TriangleApp.dir\build.make 01-Triangle/CMakeFiles/TriangleApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f 01-Triangle\CMakeFiles\TriangleApp.dir\build.make 01-Triangle/CMakeFiles/TriangleApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=7,8 "Built target TriangleApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=13,14 "Built target TriangleApp"
 .PHONY : 01-Triangle/CMakeFiles/TriangleApp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -201,7 +224,7 @@ TriangleApp: 01-Triangle/CMakeFiles/TriangleApp.dir/rule
 # codegen rule for target.
 01-Triangle/CMakeFiles/TriangleApp.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f 01-Triangle\CMakeFiles\TriangleApp.dir\build.make 01-Triangle/CMakeFiles/TriangleApp.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=7,8 "Finished codegen for target TriangleApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=13,14 "Finished codegen for target TriangleApp"
 .PHONY : 01-Triangle/CMakeFiles/TriangleApp.dir/codegen
 
 # clean rule for target.
@@ -216,7 +239,7 @@ TriangleApp: 01-Triangle/CMakeFiles/TriangleApp.dir/rule
 02-Triforce/CMakeFiles/TriforceApp.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f 02-Triforce\CMakeFiles\TriforceApp.dir\build.make 02-Triforce/CMakeFiles/TriforceApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f 02-Triforce\CMakeFiles\TriforceApp.dir\build.make 02-Triforce/CMakeFiles/TriforceApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=9,10,11,12,13,14 "Built target TriforceApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=15,16,17,18,19,20 "Built target TriforceApp"
 .PHONY : 02-Triforce/CMakeFiles/TriforceApp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -233,7 +256,7 @@ TriforceApp: 02-Triforce/CMakeFiles/TriforceApp.dir/rule
 # codegen rule for target.
 02-Triforce/CMakeFiles/TriforceApp.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f 02-Triforce\CMakeFiles\TriforceApp.dir\build.make 02-Triforce/CMakeFiles/TriforceApp.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=9,10,11,12,13,14 "Finished codegen for target TriforceApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=15,16,17,18,19,20 "Finished codegen for target TriforceApp"
 .PHONY : 02-Triforce/CMakeFiles/TriforceApp.dir/codegen
 
 # clean rule for target.
@@ -248,7 +271,7 @@ TriforceApp: 02-Triforce/CMakeFiles/TriforceApp.dir/rule
 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f 03-InterpolatedTriangle\CMakeFiles\InterpolatedTriangleApp.dir\build.make 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f 03-InterpolatedTriangle\CMakeFiles\InterpolatedTriangleApp.dir\build.make 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target InterpolatedTriangleApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=7,8,9,10,11,12 "Built target InterpolatedTriangleApp"
 .PHONY : 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -265,13 +288,45 @@ InterpolatedTriangleApp: 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangle
 # codegen rule for target.
 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f 03-InterpolatedTriangle\CMakeFiles\InterpolatedTriangleApp.dir\build.make 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target InterpolatedTriangleApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=7,8,9,10,11,12 "Finished codegen for target InterpolatedTriangleApp"
 .PHONY : 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/codegen
 
 # clean rule for target.
 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/clean:
 	$(MAKE) $(MAKESILENT) -f 03-InterpolatedTriangle\CMakeFiles\InterpolatedTriangleApp.dir\build.make 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/clean
 .PHONY : 03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/clean
+
+#=============================================================================
+# Target rules for target 04-3DCube/CMakeFiles/3DCube.dir
+
+# All Build rule for target.
+04-3DCube/CMakeFiles/3DCube.dir/all: CMakeFiles/glad.dir/all
+	$(MAKE) $(MAKESILENT) -f 04-3DCube\CMakeFiles\3DCube.dir\build.make 04-3DCube/CMakeFiles/3DCube.dir/depend
+	$(MAKE) $(MAKESILENT) -f 04-3DCube\CMakeFiles\3DCube.dir\build.make 04-3DCube/CMakeFiles/3DCube.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target 3DCube"
+.PHONY : 04-3DCube/CMakeFiles/3DCube.dir/all
+
+# Build rule for subdir invocation for target.
+04-3DCube/CMakeFiles/3DCube.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 04-3DCube/CMakeFiles/3DCube.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles 0
+.PHONY : 04-3DCube/CMakeFiles/3DCube.dir/rule
+
+# Convenience name for target.
+3DCube: 04-3DCube/CMakeFiles/3DCube.dir/rule
+.PHONY : 3DCube
+
+# codegen rule for target.
+04-3DCube/CMakeFiles/3DCube.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f 04-3DCube\CMakeFiles\3DCube.dir\build.make 04-3DCube/CMakeFiles/3DCube.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target 3DCube"
+.PHONY : 04-3DCube/CMakeFiles/3DCube.dir/codegen
+
+# clean rule for target.
+04-3DCube/CMakeFiles/3DCube.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 04-3DCube\CMakeFiles\3DCube.dir\build.make 04-3DCube/CMakeFiles/3DCube.dir/clean
+.PHONY : 04-3DCube/CMakeFiles/3DCube.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

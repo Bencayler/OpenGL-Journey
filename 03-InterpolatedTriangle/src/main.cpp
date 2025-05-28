@@ -87,8 +87,8 @@ int main() {
 	ebo.Bind();
 	
 	// Link VBO to VAO
-	vao.LinkVBO(vbo, 0, 3, 6 * sizeof(GLfloat), 0);               // Position attribute
-	vao.LinkVBO(vbo, 1, 3, 6 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Color attribute
+	vao.LinkAttrib(vbo, 0, 3, 6 * sizeof(GLfloat), 0);               // Position attribute
+	vao.LinkAttrib(vbo, 1, 3, 6 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Color attribute
 
 	
 	// Unbind VAO, VBO, and EBO
