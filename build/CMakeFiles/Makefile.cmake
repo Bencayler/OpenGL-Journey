@@ -50,6 +50,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/shaders/default.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/assets/wood_floor.png"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/default.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
@@ -80,6 +81,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "04-3DCube/CMakeFiles/CMakeDirectoryInformation.cmake"
   "05-3DCubeTextured/default.frag"
   "05-3DCubeTextured/default.vert"
+  "05-3DCubeTextured/wood_floor.png"
   "05-3DCubeTextured/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

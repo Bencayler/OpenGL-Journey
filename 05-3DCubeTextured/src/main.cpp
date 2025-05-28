@@ -1,14 +1,14 @@
+// Standard library includes
 #include <iostream>
 #include <cmath>
 
-#define STB_IMAGE_IMPLEMENTATION
-#include <stb/stb_image.h>
-
+// GLM includes
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-// Shader class
+// Custom shader classes
 #include "shaderClass.h"
+#include "textureClass.h"
 
 // Custom buffer classes
 #include "EBO.h"
@@ -19,14 +19,40 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+// THE ONE AND ONLY PREPROCESSOR MACRO TO INCLUDE THE STB IMPLEMENTATION
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb/stb_image.h>
+
+// Constants for the height and width of the scene
 const unsigned int HEIGHT = 800;
 const unsigned int WIDTH  = 800;
-
-
 
 int main() {
 	// Define our triangle vertices
 	GLfloat vertices[] = {
+
+	/*
+	Like we see below with the indices, the vetices don't get more complicated
+	in the sense of dimension, but the nature of texture mapping makes
+	this considerably more difficuly. Essentially every face is unique
+	and not ACTUALLY connected, but the coordinates match and they will 
+	all rotate together. All this is to say, the number of vertices goes
+	up considerably. We have 3 * 4 * 6 = 72 vertices now, just because 
+	every face has to have a unique coordinate and we can no longer share
+	and connect them via the indices. The U, V are normalized coordinates
+	to stretch the texture over the face. This too needs to match its 
+	corresponding vertex or the whole texture will be smeared and warped
+	at best. This adds considerable complexity, not in terms of execution
+	but in terms of debugging. The values must be perfect, and finding the 
+	imperfect value took 2 hours. 
+	(0, 1) ------- (1, 1)
+	|				 |
+	|				 |
+	|				 |
+	| 				 |
+	(0, 0) ------- (1, 0)
+	*/
+
 	// X,     Y,      Z       U,    V
     // Top face
     -1.0f,  1.0f, -1.0f,  0.0f, 0.0f, // Top-left
@@ -67,10 +93,19 @@ int main() {
 
 
 		
-	// Define our square indices 
-	// For the sake of an example. We will create a square with 6 vertices and 12 indices
-	// But it helps to visualize the square as a triangle mesh.
-	/*  
+	/*	
+	Define our square indices:
+
+	This is a bit outdated for the texture program just because we deal with
+	indices differently. We can no longer share incides like we can with the
+	rainbow cube. Because we are placing a texture onto the local coordinates
+ 	of the cube face, the indices need to be unique. In the number of indices
+	nothing changes. We still need to tell the GPU how to connect the inidces,
+	but inpractice it is much more difficult because the unique values has 
+	increased. We need 24 values (4 for each side) as opposed to the 6 
+	(one for each point that could be shared) we werere able to share for 
+	all 36 indices before.
+	
      3 ______ 2	
 	 /     /|
 	/     / |
@@ -139,7 +174,6 @@ int main() {
 	// Set our viewport X / y and width / height
 	glViewport(0, 0, WIDTH, HEIGHT);
 
-
 	// Enable GL features we need for 3D rendering
 	glEnable(GL_DEPTH_TEST); // Enable depth testing
 	// glEnable(GL_CULL_FACE);  // Enable face culling
@@ -162,7 +196,6 @@ int main() {
 	// Link VBO to VAO
 	vao.LinkAttrib(vbo, 0, 3, 5 * sizeof(GLfloat), 0);                   // Position attribute
 	vao.LinkAttrib(vbo, 1, 2, 5 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Texture attribute
-
 	
 	// Unbind VAO, VBO, and EBO
 	vao.Unbind();
@@ -173,35 +206,18 @@ int main() {
 	GLfloat rotation      = 0.0f;
 	GLdouble previousTime = glfwGetTime();
 
-	// Import texture
-	int widthImg, heightImg, nrChannelsImg;
-	unsigned char *imageData = stbi_load("C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\05-3DCubeTextured\\shaders\\assets\\wood_floor.png", &widthImg, &heightImg, &nrChannelsImg, 0);
-	// unsigned char *imageData = stbi_load("wood_flooring.png", &widthImg, &heightImg, &nrChannelsImg, 0);
+	// Create a texture object
+	textureClass texture(
+		"wood_floor.png",
+		GL_TEXTURE_2D, 
+		GL_TEXTURE0,
+		GL_RGBA,
+		GL_UNSIGNED_BYTE
+	);
 
-	// Check if the image was loaded successfully
-	if (imageData == nullptr) {
-		std::cerr << "Failed to load texture" << std::endl;
-	}
-	// std::cout << imageData << std::endl;
-	// std::cout << "Image loaded with dimensions: " << widthImg << "x" << heightImg << " and channels: " << nrChannelsImg << std::endl;
-
-	// Generate a texture ID, activate a texture unit, and bind the texture
-	GLuint texture;
-	glGenTextures(1, &texture);
-	glActiveTexture(GL_TEXTURE0); // Activate texture unit 0
-	glBindTexture(GL_TEXTURE_2D, texture); // Bind the texture
-
-	// Set texture wrapping to repeglUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);at
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER); 
-	
-	// Upload the texture data to the GPU
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, widthImg, heightImg, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
-
-	// Generate mipmaps for the texture
-	glGenerateMipmap(GL_TEXTURE_2D);
-
-	// Free the image data after uploading to the GPU
-	stbi_image_free(imageData);
+	// Attach the uniform shader variable to the shader program and the texture
+	// unit
+	texture.textureUnit(shader, "textureSampler", 0);
 
 	// Main rendering loop
 	while (!glfwWindowShouldClose(window)) {
@@ -214,11 +230,16 @@ int main() {
 		}
 
 
+		// Set the background color
 		glClearColor(0.00f, 0.13f, 0.17f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the color and depth buffers
+		// Clear the color and depth buffers
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 		
 		// Activate our shader program
 		shader.Activate();
+
+		// Bind the texture
+		texture.Bind();
 
 		// Set the texture sampler uniform to use texture unit 0
 		glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
@@ -229,7 +250,9 @@ int main() {
 		glm::mat4 projection = glm::mat4(1.0f);
 
 
-		model = glm::rotate(glm::mat4(1.0f), rotation, glm::vec3(0.5f, 1.0f, 0.0f)); // Apply rotation
+		model = glm::rotate(glm::mat4(1.0f), 
+				rotation, 
+				glm::vec3(0.5f, 1.0f, 0.25f)); // X, Y, and Z axis
 
 		view = glm::translate(
 			view,                        // Apply the back onto the view matrix
@@ -243,20 +266,18 @@ int main() {
 			1000.0f              // Far visible plane
 		);
 
-	
-		
-		// Get the uniform locations for our matrices
+		// Get the uniform locations for our matrices from the vertex shader
 		GLuint modelLocation = glGetUniformLocation(shader.getProgramID(), "mModel");
 		GLuint viewLocation  = glGetUniformLocation(shader.getProgramID(), "mView");
 		GLuint projLocation  = glGetUniformLocation(shader.getProgramID(), "mProjection");
 
+		// Get the uniform location for the texture in fragment shader
 		glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
 
 		// Pass the matrices to our shaders
 		glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(model));
 		glUniformMatrix4fv(viewLocation, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(projLocation, 1, GL_FALSE, glm::value_ptr(projection));
-
 
 
 		// Bind the VAO and draw the cube
@@ -275,7 +296,8 @@ int main() {
 	ebo.Delete();
 
 	// Delete the texture
-	glDeleteTextures(1, &texture);
+	//glDeleteTextures(1, &texture);
+	texture.Delete();
 
 	// Delete our shader program
 	shader.Delete();
@@ -285,5 +307,7 @@ int main() {
 
 	// Terminate GLFW
 	glfwTerminate();
+
+	// Exit the program
 	return 0;
 }

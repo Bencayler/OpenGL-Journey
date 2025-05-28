@@ -146,13 +146,29 @@ include 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/flags.make
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.s"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\05-3DCubeTextured && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\05-3DCubeTextured\src\shaderClass.cpp -o CMakeFiles\3DCubeTextured.dir\src\shaderClass.cpp.s
 
+05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/flags.make
+05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/includes_CXX.rsp
+05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/textureClass.cpp
+05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\05-3DCubeTextured && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj -MF CMakeFiles\3DCubeTextured.dir\src\textureClass.cpp.obj.d -o CMakeFiles\3DCubeTextured.dir\src\textureClass.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\05-3DCubeTextured\src\textureClass.cpp
+
+05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.i"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\05-3DCubeTextured && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\05-3DCubeTextured\src\textureClass.cpp > CMakeFiles\3DCubeTextured.dir\src\textureClass.cpp.i
+
+05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.s"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\05-3DCubeTextured && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\05-3DCubeTextured\src\textureClass.cpp -o CMakeFiles\3DCubeTextured.dir\src\textureClass.cpp.s
+
 # Object files for target 3DCubeTextured
 3DCubeTextured_OBJECTS = \
 "CMakeFiles/3DCubeTextured.dir/src/EBO.cpp.obj" \
 "CMakeFiles/3DCubeTextured.dir/src/VAO.cpp.obj" \
 "CMakeFiles/3DCubeTextured.dir/src/VBO.cpp.obj" \
 "CMakeFiles/3DCubeTextured.dir/src/main.cpp.obj" \
-"CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.obj"
+"CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.obj" \
+"CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj"
 
 # External object files for target 3DCubeTextured
 3DCubeTextured_EXTERNAL_OBJECTS =
@@ -162,13 +178,14 @@ include 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/flags.make
 05-3DCubeTextured/3DCubeTextured.exe: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/VBO.cpp.obj
 05-3DCubeTextured/3DCubeTextured.exe: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/main.cpp.obj
 05-3DCubeTextured/3DCubeTextured.exe: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.obj
+05-3DCubeTextured/3DCubeTextured.exe: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj
 05-3DCubeTextured/3DCubeTextured.exe: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/build.make
 05-3DCubeTextured/3DCubeTextured.exe: libglad.a
 05-3DCubeTextured/3DCubeTextured.exe: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Libraries/lib/libglfw3.a
 05-3DCubeTextured/3DCubeTextured.exe: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/linkLibs.rsp
 05-3DCubeTextured/3DCubeTextured.exe: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/objects1.rsp
 05-3DCubeTextured/3DCubeTextured.exe: 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable 3DCubeTextured.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable 3DCubeTextured.exe"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\05-3DCubeTextured && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\3DCubeTextured.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

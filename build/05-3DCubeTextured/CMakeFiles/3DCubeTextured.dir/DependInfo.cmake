@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/VBO.cpp" "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/VBO.cpp.obj" "gcc" "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/VBO.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/main.cpp" "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/main.cpp.obj" "gcc" "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/main.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/shaderClass.cpp" "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.obj" "gcc" "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.obj.d"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/textureClass.cpp" "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj" "gcc" "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

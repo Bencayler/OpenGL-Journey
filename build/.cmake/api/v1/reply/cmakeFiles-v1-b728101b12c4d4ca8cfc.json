@@ -253,6 +253,9 @@
 		},
 		{
 			"path" : "05-3DCubeTextured/shaders/default.vert"
+		},
+		{
+			"path" : "05-3DCubeTextured/shaders/assets/wood_floor.png"
 		}
 	],
 	"kind" : "cmakeFiles",

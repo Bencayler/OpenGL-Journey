@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/3DCubeTextured.dir/src/main.cpp.obj.d"
   "CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.obj"
   "CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.obj.d"
+  "CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj"
+  "CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj.d"
   "lib3DCubeTextured.dll.a"
 )
 

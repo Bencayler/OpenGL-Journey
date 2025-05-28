@@ -249,6 +249,30 @@ src/shaderClass.cpp.s:
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 05-3DCubeTextured\CMakeFiles\3DCubeTextured.dir\build.make 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.s
 .PHONY : src/shaderClass.cpp.s
 
+src/textureClass.obj: src/textureClass.cpp.obj
+.PHONY : src/textureClass.obj
+
+# target to build an object file
+src/textureClass.cpp.obj:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 05-3DCubeTextured\CMakeFiles\3DCubeTextured.dir\build.make 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj
+.PHONY : src/textureClass.cpp.obj
+
+src/textureClass.i: src/textureClass.cpp.i
+.PHONY : src/textureClass.i
+
+# target to preprocess a source file
+src/textureClass.cpp.i:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 05-3DCubeTextured\CMakeFiles\3DCubeTextured.dir\build.make 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.i
+.PHONY : src/textureClass.cpp.i
+
+src/textureClass.s: src/textureClass.cpp.s
+.PHONY : src/textureClass.s
+
+# target to generate assembly for a file
+src/textureClass.cpp.s:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 05-3DCubeTextured\CMakeFiles\3DCubeTextured.dir\build.make 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.s
+.PHONY : src/textureClass.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -273,6 +297,9 @@ help:
 	@echo ... src/shaderClass.obj
 	@echo ... src/shaderClass.i
 	@echo ... src/shaderClass.s
+	@echo ... src/textureClass.obj
+	@echo ... src/textureClass.i
+	@echo ... src/textureClass.s
 .PHONY : help
 
 

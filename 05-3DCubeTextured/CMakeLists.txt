@@ -13,6 +13,15 @@ foreach(SHADER ${SHADERS})
     configure_file(${SHADER} ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
 endforeach()
 
+# Copy assets to the build directory
+# In the future there may be a more elegant way to do this with specific
+# commands, but as of now there is very little in the way of assets in here
+# so the single wildcard does fine.
+file(GLOB ASSETS "shaders/assets/*")
+foreach(ASSET ${ASSETS})
+    configure_file(${ASSET} ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+endforeach()
+
 # Copy the assets folder to the build directory
 file(COPY "${CMAKE_SOURCE_DIR}/05-3DCubeTextured/shaders/assets" DESTINATION "${CMAKE_BINARY_DIR}")
 
