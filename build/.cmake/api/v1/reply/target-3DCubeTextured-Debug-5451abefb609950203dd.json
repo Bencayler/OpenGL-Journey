@@ -36,19 +36,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 24,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 27,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 16,
+				"line" : 20,
 				"parent" : 0
 			}
 		]
@@ -78,6 +78,10 @@
 				{
 					"backtrace" : 4,
 					"path" : "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shader/assets"
 				},
 				{
 					"backtrace" : 2,

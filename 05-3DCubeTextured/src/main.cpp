@@ -27,15 +27,42 @@ const unsigned int WIDTH  = 800;
 int main() {
 	// Define our triangle vertices
 	GLfloat vertices[] = {
-	// X,      Y,      Z        R,   G,    B	
-    -1.0f,   1.0f,  -1.0f,    1.0f, 0.0f, 0.0f,  // Vertex 0: (Red)
-    -1.0f,   1.0f,   1.0f,    1.0f, 1.0f, 0.0f,  // Vertex 1: (Yellow)
-     1.0f,   1.0f,   1.0f,    0.0f, 1.0f, 0.0f,  // Vertex 2: (Green)
-     1.0f,   1.0f,  -1.0f,    1.0f, 0.0f, 1.0f,  // Vertex 3: (Magenta)
-    -1.0f,  -1.0f,  -1.0f,    0.0f, 0.0f, 1.0f,  // Vertex 4: (Blue)
-    -1.0f,  -1.0f,   1.0f,    0.0f, 1.0f, 1.0f,  // Vertex 5: (Cyan)
-     1.0f,  -1.0f,   1.0f,    1.0f, 1.0f, 1.0f,  // Vertex 6: (White)
-     1.0f,  -1.0f,  -1.0f,    1.0f, 0.0f, 0.5f   // Vertex 7: (Pink)
+	// X,     Y,      Z       U,    V
+    // Top face
+    -1.0f,  1.0f, -1.0f,  0.0f, 0.0f, // Top-left
+    -1.0f,  1.0f,  1.0f,  0.0f, 1.0f, // Bottom-left
+     1.0f,  1.0f,  1.0f,  1.0f, 1.0f, // Bottom-right
+     1.0f,  1.0f, -1.0f,  1.0f, 0.0f, // Top-right
+
+    // Left face
+    -1.0f,  1.0f,  1.0f,  0.0f, 0.0f, // Top-left
+    -1.0f, -1.0f,  1.0f,  0.0f, 1.0f, // Bottom-left
+    -1.0f, -1.0f, -1.0f,  1.0f, 1.0f, // Bottom-right
+    -1.0f,  1.0f, -1.0f,  1.0f, 0.0f, // Top-right
+
+    // Right face
+     1.0f,  1.0f,  1.0f,  1.0f, 1.0f, // Top-left
+     1.0f, -1.0f,  1.0f,  1.0f, 0.0f, // Bottom-left
+     1.0f, -1.0f, -1.0f,  0.0f, 0.0f, // Bottom-right
+     1.0f,  1.0f, -1.0f,  0.0f, 1.0f, // Top-right
+
+    // Front face
+    -1.0f,  1.0f,  1.0f,  0.0f, 1.0f, // Top-left
+    -1.0f, -1.0f,  1.0f,  0.0f, 0.0f, // Bottom-left
+     1.0f, -1.0f,  1.0f,  1.0f, 0.0f, // Bottom-right
+     1.0f,  1.0f,  1.0f,  1.0f, 1.0f, // Top-right
+
+    // Back face
+    -1.0f,  1.0f, -1.0f,  1.0f, 1.0f, // Top-left
+    -1.0f, -1.0f, -1.0f,  1.0f, 0.0f, // Bottom-left
+     1.0f, -1.0f, -1.0f,  0.0f, 0.0f, // Bottom-right
+     1.0f,  1.0f, -1.0f,  0.0f, 1.0f, // Top-right
+
+    // Bottom face
+    -1.0f, -1.0f, -1.0f,  0.0f, 0.0f, // Top-left
+    -1.0f, -1.0f,  1.0f,  0.0f, 1.0f, // Bottom-left
+     1.0f, -1.0f,  1.0f,  1.0f, 1.0f, // Bottom-right
+     1.0f, -1.0f, -1.0f,  1.0f, 0.0f  // Top-right
 };
 
 
@@ -53,29 +80,29 @@ int main() {
 	4 -- 6
 	*/
 	GLuint indices[] = {
-		// Top face
-		0, 1, 2, // Triangle 1
-		0, 2, 3, // Triangle 2
-
-		// Bottom face
-		4, 6, 5, // Triangle 1
-		4, 7, 6, // Triangle 2
-	
-		// Left face
-		0, 5, 1, // Triangle 1
-		0, 4, 5, // Triangle 2
-		
-		// Right face
-		3, 2, 6, // Triangle 1
-		3, 6, 7, // Triangle 2
-
-		// Front face
-		1, 5, 6,  // Triangle 1
-		1, 6, 2,  // Triangle 2
-		
-		// Back face
-		0, 3, 7, // Triangle 1
-		0, 7, 4  // Triangle 2
+    // Top face
+    0, 1, 2, 
+	0, 2, 3,
+    
+	// Left face
+    4, 5, 6,
+	4, 6, 7,
+    
+	// Right face
+    8, 9, 10,
+	8, 10, 11,
+    
+	// Front face
+    12, 13, 14, 
+	12, 14, 15,
+    
+	// Back face
+    16, 17, 18,
+	16, 18, 19,
+    
+	// Bottom face
+    20, 21, 22, 
+	20, 22, 23
 	};
 
 	// Initialize GLFW
@@ -115,9 +142,9 @@ int main() {
 
 	// Enable GL features we need for 3D rendering
 	glEnable(GL_DEPTH_TEST); // Enable depth testing
-	glEnable(GL_CULL_FACE);  // Enable face culling
+	// glEnable(GL_CULL_FACE);  // Enable face culling
 	glFrontFace(GL_CCW);     // Set front face to counter-clockwise
-	glCullFace(GL_BACK);     // Cull back faces
+	// glCullFace(GL_BACK);     // Cull back faces
 
 	// Create and compile our shaders
 	Shader shader("default.vert", "default.frag");
@@ -133,8 +160,8 @@ int main() {
 	ebo.Bind();
 	
 	// Link VBO to VAO
-	vao.LinkAttrib(vbo, 0, 3, 6 * sizeof(GLfloat), 0);                   // Position attribute
-	vao.LinkAttrib(vbo, 1, 3, 6 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Color attribute
+	vao.LinkAttrib(vbo, 0, 3, 5 * sizeof(GLfloat), 0);                   // Position attribute
+	vao.LinkAttrib(vbo, 1, 2, 5 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Texture attribute
 
 	
 	// Unbind VAO, VBO, and EBO
@@ -146,16 +173,39 @@ int main() {
 	GLfloat rotation      = 0.0f;
 	GLdouble previousTime = glfwGetTime();
 
+	// Import texture
+	int widthImg, heightImg, nrChannelsImg;
+	unsigned char *imageData = stbi_load("C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\05-3DCubeTextured\\shaders\\assets\\wood_floor.png", &widthImg, &heightImg, &nrChannelsImg, 0);
+	// unsigned char *imageData = stbi_load("wood_flooring.png", &widthImg, &heightImg, &nrChannelsImg, 0);
+
+	// Check if the image was loaded successfully
+	if (imageData == nullptr) {
+		std::cerr << "Failed to load texture" << std::endl;
+	}
+	// std::cout << imageData << std::endl;
+	// std::cout << "Image loaded with dimensions: " << widthImg << "x" << heightImg << " and channels: " << nrChannelsImg << std::endl;
+
+	// Generate a texture ID, activate a texture unit, and bind the texture
+	GLuint texture;
+	glGenTextures(1, &texture);
+	glActiveTexture(GL_TEXTURE0); // Activate texture unit 0
+	glBindTexture(GL_TEXTURE_2D, texture); // Bind the texture
+
+	// Set texture wrapping to repeglUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);at
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER); 
+	
+	// Upload the texture data to the GPU
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, widthImg, heightImg, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
+
+	// Generate mipmaps for the texture
+	glGenerateMipmap(GL_TEXTURE_2D);
+
+	// Free the image data after uploading to the GPU
+	stbi_image_free(imageData);
 
 	// Main rendering loop
 	while (!glfwWindowShouldClose(window)) {
-	
-		glClearColor(0.00f, 0.13f, 0.17f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the color and depth buffers
 		
-		// Activate our shader program
-		shader.Activate();
-
 		// Simple timer to rotate the cube
 		double currentTime = glfwGetTime();
 		if (currentTime - previousTime >= 1 / 160.0) { // 60 FPS
@@ -164,6 +214,14 @@ int main() {
 		}
 
 
+		glClearColor(0.00f, 0.13f, 0.17f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the color and depth buffers
+		
+		// Activate our shader program
+		shader.Activate();
+
+		// Set the texture sampler uniform to use texture unit 0
+		glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
 
 		// Initialize our mode, view, and projection matrices
 		glm::mat4 model      = glm::mat4(1.0f);
@@ -182,7 +240,7 @@ int main() {
 			glm::radians(45.0f), // Field of view in degrees
 		    static_cast<float>(WIDTH) / static_cast<float>(HEIGHT),     // Aspect ratio (the same as the window size)
 			0.1f,                // Near visible plane
-			100.0f               // Far visible plane
+			1000.0f              // Far visible plane
 		);
 
 	
@@ -192,11 +250,13 @@ int main() {
 		GLuint viewLocation  = glGetUniformLocation(shader.getProgramID(), "mView");
 		GLuint projLocation  = glGetUniformLocation(shader.getProgramID(), "mProjection");
 
+		glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
 
 		// Pass the matrices to our shaders
 		glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(model));
 		glUniformMatrix4fv(viewLocation, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(projLocation, 1, GL_FALSE, glm::value_ptr(projection));
+
 
 
 		// Bind the VAO and draw the cube
@@ -213,6 +273,9 @@ int main() {
 	vao.Delete();
 	vbo.Delete();
 	ebo.Delete();
+
+	// Delete the texture
+	glDeleteTextures(1, &texture);
 
 	// Delete our shader program
 	shader.Delete();

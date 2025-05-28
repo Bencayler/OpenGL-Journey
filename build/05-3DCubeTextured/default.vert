@@ -1,8 +1,11 @@
 #version 330 core
 layout(location = 0) in vec3 aPos;
-layout(location = 1) in vec3 aColor;
+layout(location = 1) in vec2 aTexCoord;
 
-out vec3 vertexColor;
+// Outputs the texture coordinates to the fragment shader
+out vec2 textureCoords;
+
+
 
 // Uniform matrices
 uniform mat4 mModel;
@@ -15,5 +18,5 @@ void main() {
 	gl_Position = mProjection * mView * mModel * vec4(aPos, 1.0);
 	// gl_Position = vec4(aPos, 1.0);
 	
-	vertexColor = aColor;
+	textureCoords = aTexCoord;
 }
