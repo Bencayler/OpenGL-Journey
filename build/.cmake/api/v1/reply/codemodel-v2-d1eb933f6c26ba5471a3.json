@@ -11,7 +11,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -22,7 +23,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						4
+						5
 					]
 				},
 				{
@@ -37,7 +38,7 @@
 					"source" : "01-Triangle",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -52,7 +53,7 @@
 					"source" : "02-Triforce",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -67,7 +68,7 @@
 					"source" : "03-InterpolatedTriangle",
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				},
 				{
@@ -84,6 +85,21 @@
 					[
 						0
 					]
+				},
+				{
+					"build" : "05-3DCubeTextured",
+					"jsonFile" : "directory-05-3DCubeTextured-Debug-890323954d493f74036a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "05-3DCubeTextured",
+					"targetIndexes" : 
+					[
+						1
+					]
 				}
 			],
 			"name" : "Debug",
@@ -96,7 +112,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					],
 					"name" : "OpenGL_Journals_Test",
 					"targetIndexes" : 
@@ -105,7 +122,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					]
 				}
 			],
@@ -116,6 +134,13 @@
 					"id" : "3DCube::@2bc2d7b93fd2bce69a66",
 					"jsonFile" : "target-3DCube-Debug-0bf374a152631d559692.json",
 					"name" : "3DCube",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "3DCubeTextured::@2b8dba93ef36beba243f",
+					"jsonFile" : "target-3DCubeTextured-Debug-401e7deffc823206ad4c.json",
+					"name" : "3DCubeTextured",
 					"projectIndex" : 0
 				},
 				{

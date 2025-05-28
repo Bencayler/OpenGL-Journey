@@ -244,6 +244,15 @@
 		},
 		{
 			"path" : "04-3DCube/shaders/default.vert"
+		},
+		{
+			"path" : "05-3DCubeTextured/CMakeLists.txt"
+		},
+		{
+			"path" : "05-3DCubeTextured/shaders/default.frag"
+		},
+		{
+			"path" : "05-3DCubeTextured/shaders/default.vert"
 		}
 	],
 	"kind" : "cmakeFiles",

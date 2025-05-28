@@ -100,5 +100,35 @@
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCube.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCube.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\04-3DCube\\src\\shaderClass.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/src/shaderClass.cpp",
   "output": "04-3DCube/CMakeFiles/3DCube.dir/src/shaderClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/05-3DCubeTextured",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCubeTextured.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCubeTextured.dir\\src\\EBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\05-3DCubeTextured\\src\\EBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/EBO.cpp",
+  "output": "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/EBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/05-3DCubeTextured",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCubeTextured.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCubeTextured.dir\\src\\VAO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\05-3DCubeTextured\\src\\VAO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/VAO.cpp",
+  "output": "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/VAO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/05-3DCubeTextured",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCubeTextured.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCubeTextured.dir\\src\\VBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\05-3DCubeTextured\\src\\VBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/VBO.cpp",
+  "output": "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/VBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/05-3DCubeTextured",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCubeTextured.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCubeTextured.dir\\src\\main.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\05-3DCubeTextured\\src\\main.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/main.cpp",
+  "output": "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/05-3DCubeTextured",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCubeTextured.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCubeTextured.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\05-3DCubeTextured\\src\\shaderClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/shaderClass.cpp",
+  "output": "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/shaderClass.cpp.obj"
 }
 ]
