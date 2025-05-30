@@ -53,6 +53,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/assets/wood_floor.png"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/default.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/default.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/shaders/assets/wood_floor.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/shaders/default.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
   "CMakeFiles/4.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
@@ -83,6 +87,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "05-3DCubeTextured/default.vert"
   "05-3DCubeTextured/wood_floor.png"
   "05-3DCubeTextured/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "06-Camera/default.frag"
+  "06-Camera/default.vert"
+  "06-Camera/wood_floor.png"
+  "06-Camera/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -93,4 +101,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "03-InterpolatedTriangle/CMakeFiles/InterpolatedTriangleApp.dir/DependInfo.cmake"
   "04-3DCube/CMakeFiles/3DCube.dir/DependInfo.cmake"
   "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/DependInfo.cmake"
+  "06-Camera/CMakeFiles/Camera.dir/DependInfo.cmake"
   )

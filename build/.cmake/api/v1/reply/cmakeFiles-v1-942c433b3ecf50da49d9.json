@@ -256,6 +256,18 @@
 		},
 		{
 			"path" : "05-3DCubeTextured/shaders/assets/wood_floor.png"
+		},
+		{
+			"path" : "06-Camera/CMakeLists.txt"
+		},
+		{
+			"path" : "06-Camera/shaders/default.frag"
+		},
+		{
+			"path" : "06-Camera/shaders/default.vert"
+		},
+		{
+			"path" : "06-Camera/shaders/assets/wood_floor.png"
 		}
 	],
 	"kind" : "cmakeFiles",

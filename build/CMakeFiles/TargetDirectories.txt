@@ -16,3 +16,6 @@ C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/04-3DCube/CM
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/05-3DCubeTextured/CMakeFiles/edit_cache.dir
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/05-3DCubeTextured/CMakeFiles/rebuild_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera/CMakeFiles/Camera.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera/CMakeFiles/edit_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera/CMakeFiles/rebuild_cache.dir

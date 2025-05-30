@@ -12,7 +12,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -23,7 +24,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						5
+						6
 					]
 				},
 				{
@@ -38,7 +39,7 @@
 					"source" : "01-Triangle",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -53,7 +54,7 @@
 					"source" : "02-Triforce",
 					"targetIndexes" : 
 					[
-						4
+						5
 					]
 				},
 				{
@@ -68,7 +69,7 @@
 					"source" : "03-InterpolatedTriangle",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -100,6 +101,21 @@
 					[
 						1
 					]
+				},
+				{
+					"build" : "06-Camera",
+					"jsonFile" : "directory-06-Camera-Debug-68ba4e78564effc2cb83.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "06-Camera",
+					"targetIndexes" : 
+					[
+						2
+					]
 				}
 			],
 			"name" : "Debug",
@@ -113,7 +129,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					],
 					"name" : "OpenGL_Journals_Test",
 					"targetIndexes" : 
@@ -123,7 +140,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -141,6 +159,13 @@
 					"id" : "3DCubeTextured::@2b8dba93ef36beba243f",
 					"jsonFile" : "target-3DCubeTextured-Debug-afe837517601bcfe751b.json",
 					"name" : "3DCubeTextured",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "Camera::@739134ae7101c00688a8",
+					"jsonFile" : "target-Camera-Debug-89ee7e05ea7fa87362e9.json",
+					"name" : "Camera",
 					"projectIndex" : 0
 				},
 				{

@@ -136,5 +136,41 @@
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/3DCubeTextured.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\3DCubeTextured.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\05-3DCubeTextured\\src\\textureClass.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/src/textureClass.cpp",
   "output": "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/src/textureClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\EBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\EBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/EBO.cpp",
+  "output": "06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\VAO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\VAO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/VAO.cpp",
+  "output": "06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\VBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\VBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/VBO.cpp",
+  "output": "06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\main.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\main.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/main.cpp",
+  "output": "06-Camera/CMakeFiles/Camera.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\shaderClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/shaderClass.cpp",
+  "output": "06-Camera/CMakeFiles/Camera.dir/src/shaderClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\textureClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/textureClass.cpp",
+  "output": "06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.obj"
 }
 ]

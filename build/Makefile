@@ -193,6 +193,19 @@ InterpolatedTriangleApp/fast:
 	$(MAKE) $(MAKESILENT) -f 05-3DCubeTextured\CMakeFiles\3DCubeTextured.dir\build.make 05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/build
 .PHONY : 3DCubeTextured/fast
 
+#=============================================================================
+# Target rules for targets named Camera
+
+# Build rule for target.
+Camera: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Camera
+.PHONY : Camera
+
+# fast build rule for target.
+Camera/fast:
+	$(MAKE) $(MAKESILENT) -f 06-Camera\CMakeFiles\Camera.dir\build.make 06-Camera/CMakeFiles/Camera.dir/build
+.PHONY : Camera/fast
+
 Libraries/src/glad.obj: Libraries/src/glad.c.obj
 .PHONY : Libraries/src/glad.obj
 
@@ -227,6 +240,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... 3DCube
 	@echo ... 3DCubeTextured
+	@echo ... Camera
 	@echo ... InterpolatedTriangleApp
 	@echo ... TriangleApp
 	@echo ... TriforceApp
