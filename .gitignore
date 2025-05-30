@@ -20,8 +20,8 @@ x64/
 *.cache
 *.log
 
-# HTML for some reason
-*.html
+# Ignore the GLM API documentation
+Libraries/include/glm/doc/api/
 
 # Others
 *.VC.db
