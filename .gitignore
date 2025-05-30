@@ -20,6 +20,9 @@ x64/
 *.cache
 *.log
 
+# HTML for some reason
+*.HTML
+
 # Others
 *.VC.db
 *.VC.opendb
