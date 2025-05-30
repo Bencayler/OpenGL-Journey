@@ -21,7 +21,7 @@ x64/
 *.log
 
 # HTML for some reason
-*.HTML
+*.html
 
 # Others
 *.VC.db
