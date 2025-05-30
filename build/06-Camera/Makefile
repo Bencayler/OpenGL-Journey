@@ -129,6 +129,30 @@ Camera/fast:
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 06-Camera\CMakeFiles\Camera.dir\build.make 06-Camera/CMakeFiles/Camera.dir/build
 .PHONY : Camera/fast
 
+src/Camera.obj: src/Camera.cpp.obj
+.PHONY : src/Camera.obj
+
+# target to build an object file
+src/Camera.cpp.obj:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 06-Camera\CMakeFiles\Camera.dir\build.make 06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj
+.PHONY : src/Camera.cpp.obj
+
+src/Camera.i: src/Camera.cpp.i
+.PHONY : src/Camera.i
+
+# target to preprocess a source file
+src/Camera.cpp.i:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 06-Camera\CMakeFiles\Camera.dir\build.make 06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.i
+.PHONY : src/Camera.cpp.i
+
+src/Camera.s: src/Camera.cpp.s
+.PHONY : src/Camera.s
+
+# target to generate assembly for a file
+src/Camera.cpp.s:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 06-Camera\CMakeFiles\Camera.dir\build.make 06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.s
+.PHONY : src/Camera.cpp.s
+
 src/EBO.obj: src/EBO.cpp.obj
 .PHONY : src/EBO.obj
 
@@ -282,6 +306,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Camera
+	@echo ... src/Camera.obj
+	@echo ... src/Camera.i
+	@echo ... src/Camera.s
 	@echo ... src/EBO.obj
 	@echo ... src/EBO.i
 	@echo ... src/EBO.s

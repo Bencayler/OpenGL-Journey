@@ -10,6 +10,9 @@
 #include "shaderClass.h"
 #include "textureClass.h"
 
+// Custom camera classe(s)
+#include "Camera.h"
+
 // Custom buffer classes
 #include "EBO.h"
 #include "VBO.h"
@@ -219,6 +222,10 @@ int main() {
 	// unit
 	texture.textureUnit(shader, "textureSampler", 0);
 
+	// Create the camera object
+	Camera Camera(WIDTH, HEIGHT, glm::vec3(0.0f, 0.0f, 8.0f));
+
+
 	// Main rendering loop
 	while (!glfwWindowShouldClose(window)) {
 		
@@ -229,6 +236,20 @@ int main() {
 			previousTime = currentTime;
 		}
 
+		// Add rotation for the sake of exercise
+		// I'll revert this later, but it is neat to work with the shader 
+		// and get the locations and pass it back to the vertex shader. 
+		// This is the kind of exercise I should do more often.
+		glm::mat4 model = glm::rotate(glm::mat4(1.0f),
+						  rotation,
+						  glm::vec3(0.5f, 1.0f, 0.25f)
+
+	);
+
+		// Get the mModel location
+		GLuint modelLocation = glGetUniformLocation(shader.getProgramID(), "mModel");
+		// Pass that location back to the vertex shader
+		glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(model));
 
 		// Set the background color
 		glClearColor(0.00f, 0.13f, 0.17f, 1.0f);
@@ -244,40 +265,11 @@ int main() {
 		// Set the texture sampler uniform to use texture unit 0
 		glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
 
-		// Initialize our mode, view, and projection matrices
-		glm::mat4 model      = glm::mat4(1.0f);
-		glm::mat4 view       = glm::mat4(1.0f);
-		glm::mat4 projection = glm::mat4(1.0f);
-
-
-		model = glm::rotate(glm::mat4(1.0f), 
-				rotation, 
-				glm::vec3(0.5f, 1.0f, 0.25f)); // X, Y, and Z axis
-
-		view = glm::translate(
-			view,                        // Apply the back onto the view matrix
-			glm::vec3(0.0f, 0.0f, -8.0f) // Move the camera back
-		);
-
-		projection = glm::perspective(
-			glm::radians(45.0f), // Field of view in degrees
-		    static_cast<float>(WIDTH) / static_cast<float>(HEIGHT),     // Aspect ratio (the same as the window size)
-			0.1f,                // Near visible plane
-			1000.0f              // Far visible plane
-		);
-
-		// Get the uniform locations for our matrices from the vertex shader
-		GLuint modelLocation = glGetUniformLocation(shader.getProgramID(), "mModel");
-		GLuint viewLocation  = glGetUniformLocation(shader.getProgramID(), "mView");
-		GLuint projLocation  = glGetUniformLocation(shader.getProgramID(), "mProjection");
+		Camera.Matrix(45.0f, 0.0f, 100.0, shader, "camMatrix");
+		Camera.Inputs(window);
 
 		// Get the uniform location for the texture in fragment shader
 		glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
-
-		// Pass the matrices to our shaders
-		glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(model));
-		glUniformMatrix4fv(viewLocation, 1, GL_FALSE, glm::value_ptr(view));
-		glUniformMatrix4fv(projLocation, 1, GL_FALSE, glm::value_ptr(projection));
 
 
 		// Bind the VAO and draw the cube

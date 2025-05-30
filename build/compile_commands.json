@@ -139,6 +139,12 @@
 },
 {
   "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\Camera.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\Camera.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/Camera.cpp",
+  "output": "06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera",
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\EBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\EBO.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/EBO.cpp",
   "output": "06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj"

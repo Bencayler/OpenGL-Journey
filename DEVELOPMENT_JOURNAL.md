@@ -59,3 +59,64 @@ once in a project and then including stb as normal from then on.
 Overall, much more painful than anticipated, but that is typically the only way to learn. Notably, the size of the project is getting more and more unwieldy so when I reach out to the LLM it gives less concise feedback and I have to rely on my programming knowledge more.
 
 I'd still like to rotate it with a mouse and then have it slowly slow down as if it were some kind of character customization screen where the model can be manipulated. I think that might be a good exercise in basic physics simulation.
+
+----------- 
+
+May 30th 2025 @ 15:39
+
+I have the camera class mostly working as intended. I still need to program the mouse buttons for looking around the sceen and that looks a little bit more complicated, but its only a few more lines in the INPUT functions so it shouldn't be too difficult. Building the class wrapper for the camera was fairly simple. We have done this with the Shaders and with the VAO and with textures already. Move all the functions that are normally associated with the camera in main into a class to clean up the main function and reuse the camera later. 
+
+Some noteworthy things I learned so far:
+Since we are changing the model matrices to a camera it is only appropriate we stop the model from rotating. This makes practical sense. The model floats in space and we want to move the camera around it, it doesn't necessarily need to be rotating, in fact its more of a distraction than anything. So in the making of the camera I realize I wanted to RE-ADD the rotation to the model matrix for the sake of exercise. I thought it would be difficult but it turned out to be easier than I thought. Our new camera class took the Orientation and Position matrices and passed those to the shader in a uniform mat4 camMatrix. We multiplied them in the class so we only need one matrix in the vertex shader. In general I'd rather have the C++ code be more complicated and let the shaders be simpler so this works out. But it didn't leave an entry point to re-add the model matrix. We can simply define our own, pass it to the shader language with a uniform just like before, and multiply it with the camMatrix variable. Boom done. 
+uniform mat4 mModel;
+uniform mat4 camMatrix;
+
+IN THE VERTEX SHADER
+uniform mat4 mModel;
+uniform mat4 camMatrix;
+
+
+void main() {
+	
+	gl_Position = camMatrix * mModel * vec4(aPos, 1.0);
+	// gl_Position = vec4(aPos, 1.0);
+	
+	textureCoords = aTexCoord;
+}
+
+IN THE MAIN RENDERING LOOP
+glm::mat4 model = glm::rotate(glm::mat4(1.0f),
+                    rotation,
+                    glm::vec3(0.5f, 1.0f, 0.25f)
+
+);
+
+// Get the mModel location
+GLuint modelLocation = glGetUniformLocation(shader.getProgramID(), "mModel");
+// Pass that location back to the vertex shader
+glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(model));
+
+Boom. Done and dusted. I learned something new about shaders - which has been what I wanted.
+
+Another thing I learned is the transformation matrices. Always keeping the up matrix as a way of orientating the camera. If it knows a single cardinal direction all the movement can be derived. It might be worth making that a const type so it can't be accidentally changed in the future. The normalizatio nfunction makes every vector's length 1, meaning it always moves at a consant rate. 
+
+Also there is a distinction between GL_BUTTON_PRESS and GL_BUTTON_RELEASE - that proved slightly difficult debugging. 
+
+@ 17:17 - Implementing the camera movement
+
+
+Going back now and deleting the commented out camera stuff from main before we had the camera wrapper.
+
+Mouse buttons implemented and I am honestly quite confused about how it works. But I'll try to walk myself through it. First, standard stuff, if the mouse button is pressed the cursor should be hidden. Almost every program in the world does this.
+
+We declare doubles for the X and Y coordinates of the mouse - we give those memory addresses to the GetCursorPos function. We pass them as memory addresses since they are going to be updated every loop of the rendering loop.
+
+Next we normalize the cursor to the center of the screen. If we it would immediately move to in the inputted click and jump around, as opposed to us being able to smoothly pan around the window.
+
+We calcualte the new orientation and location and write it to a vec3. 
+
+We have a guarding IF STATEMENT to prevent the camera from pitching forward and preventing the camera from flipping upside down. 
+
+We move our Orientation left and right with the calculated inputs.
+
+Lastly, we unhide the curor and return it to the center of the screen when we release the mouse button so the cursor doesn't fly away. And reset our first click bool

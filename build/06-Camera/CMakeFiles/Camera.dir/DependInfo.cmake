@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/Camera.cpp" "06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj" "gcc" "06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/EBO.cpp" "06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj" "gcc" "06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/VAO.cpp" "06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj" "gcc" "06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/VBO.cpp" "06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj" "gcc" "06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj.d"

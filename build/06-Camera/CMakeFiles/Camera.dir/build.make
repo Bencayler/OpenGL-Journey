@@ -71,11 +71,26 @@ include 06-Camera/CMakeFiles/Camera.dir/flags.make
 06-Camera/CMakeFiles/Camera.dir/codegen:
 .PHONY : 06-Camera/CMakeFiles/Camera.dir/codegen
 
+06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/flags.make
+06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/includes_CXX.rsp
+06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/Camera.cpp
+06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj -MF CMakeFiles\Camera.dir\src\Camera.cpp.obj.d -o CMakeFiles\Camera.dir\src\Camera.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\Camera.cpp
+
+06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Camera.dir/src/Camera.cpp.i"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\Camera.cpp > CMakeFiles\Camera.dir\src\Camera.cpp.i
+
+06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Camera.dir/src/Camera.cpp.s"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\Camera.cpp -o CMakeFiles\Camera.dir\src\Camera.cpp.s
+
 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/flags.make
 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/includes_CXX.rsp
 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/EBO.cpp
 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj -MF CMakeFiles\Camera.dir\src\EBO.cpp.obj.d -o CMakeFiles\Camera.dir\src\EBO.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\EBO.cpp
 
 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.i: cmake_force
@@ -90,7 +105,7 @@ include 06-Camera/CMakeFiles/Camera.dir/flags.make
 06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/includes_CXX.rsp
 06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/VAO.cpp
 06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj -MF CMakeFiles\Camera.dir\src\VAO.cpp.obj.d -o CMakeFiles\Camera.dir\src\VAO.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\VAO.cpp
 
 06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.i: cmake_force
@@ -105,7 +120,7 @@ include 06-Camera/CMakeFiles/Camera.dir/flags.make
 06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/includes_CXX.rsp
 06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/VBO.cpp
 06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj -MF CMakeFiles\Camera.dir\src\VBO.cpp.obj.d -o CMakeFiles\Camera.dir\src\VBO.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\VBO.cpp
 
 06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.i: cmake_force
@@ -120,7 +135,7 @@ include 06-Camera/CMakeFiles/Camera.dir/flags.make
 06-Camera/CMakeFiles/Camera.dir/src/main.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/includes_CXX.rsp
 06-Camera/CMakeFiles/Camera.dir/src/main.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/main.cpp
 06-Camera/CMakeFiles/Camera.dir/src/main.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/main.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 06-Camera/CMakeFiles/Camera.dir/src/main.cpp.obj -MF CMakeFiles\Camera.dir\src\main.cpp.obj.d -o CMakeFiles\Camera.dir\src\main.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\main.cpp
 
 06-Camera/CMakeFiles/Camera.dir/src/main.cpp.i: cmake_force
@@ -135,7 +150,7 @@ include 06-Camera/CMakeFiles/Camera.dir/flags.make
 06-Camera/CMakeFiles/Camera.dir/src/shaderClass.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/includes_CXX.rsp
 06-Camera/CMakeFiles/Camera.dir/src/shaderClass.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/shaderClass.cpp
 06-Camera/CMakeFiles/Camera.dir/src/shaderClass.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/shaderClass.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/shaderClass.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 06-Camera/CMakeFiles/Camera.dir/src/shaderClass.cpp.obj -MF CMakeFiles\Camera.dir\src\shaderClass.cpp.obj.d -o CMakeFiles\Camera.dir\src\shaderClass.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\shaderClass.cpp
 
 06-Camera/CMakeFiles/Camera.dir/src/shaderClass.cpp.i: cmake_force
@@ -150,7 +165,7 @@ include 06-Camera/CMakeFiles/Camera.dir/flags.make
 06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/includes_CXX.rsp
 06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/textureClass.cpp
 06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.obj: 06-Camera/CMakeFiles/Camera.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object 06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.obj -MF CMakeFiles\Camera.dir\src\textureClass.cpp.obj.d -o CMakeFiles\Camera.dir\src\textureClass.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\06-Camera\src\textureClass.cpp
 
 06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.i: cmake_force
@@ -163,6 +178,7 @@ include 06-Camera/CMakeFiles/Camera.dir/flags.make
 
 # Object files for target Camera
 Camera_OBJECTS = \
+"CMakeFiles/Camera.dir/src/Camera.cpp.obj" \
 "CMakeFiles/Camera.dir/src/EBO.cpp.obj" \
 "CMakeFiles/Camera.dir/src/VAO.cpp.obj" \
 "CMakeFiles/Camera.dir/src/VBO.cpp.obj" \
@@ -173,6 +189,7 @@ Camera_OBJECTS = \
 # External object files for target Camera
 Camera_EXTERNAL_OBJECTS =
 
+06-Camera/Camera.exe: 06-Camera/CMakeFiles/Camera.dir/src/Camera.cpp.obj
 06-Camera/Camera.exe: 06-Camera/CMakeFiles/Camera.dir/src/EBO.cpp.obj
 06-Camera/Camera.exe: 06-Camera/CMakeFiles/Camera.dir/src/VAO.cpp.obj
 06-Camera/Camera.exe: 06-Camera/CMakeFiles/Camera.dir/src/VBO.cpp.obj
@@ -185,7 +202,7 @@ Camera_EXTERNAL_OBJECTS =
 06-Camera/Camera.exe: 06-Camera/CMakeFiles/Camera.dir/linkLibs.rsp
 06-Camera/Camera.exe: 06-Camera/CMakeFiles/Camera.dir/objects1.rsp
 06-Camera/Camera.exe: 06-Camera/CMakeFiles/Camera.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Camera.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Camera.exe"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\06-Camera && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Camera.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -99,12 +99,13 @@
 			},
 			"sourceIndexes" : 
 			[
-				5,
 				6,
 				7,
 				8,
 				9,
-				10
+				10,
+				11,
+				12
 			]
 		}
 	],
@@ -163,24 +164,31 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				5,
 				6,
 				7,
 				8,
 				9,
-				10
+				10,
+				11,
+				12
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"path" : "06-Camera/include/Camera.h",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 1,
 			"path" : "06-Camera/include/EBO.h",
@@ -205,6 +213,12 @@
 			"backtrace" : 1,
 			"path" : "06-Camera/include/textureClass.h",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "06-Camera/src/Camera.cpp",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,

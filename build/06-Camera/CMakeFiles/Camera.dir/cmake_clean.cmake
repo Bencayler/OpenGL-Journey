@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Camera.dir/src/Camera.cpp.obj"
+  "CMakeFiles/Camera.dir/src/Camera.cpp.obj.d"
   "CMakeFiles/Camera.dir/src/EBO.cpp.obj"
   "CMakeFiles/Camera.dir/src/EBO.cpp.obj.d"
   "CMakeFiles/Camera.dir/src/VAO.cpp.obj"
