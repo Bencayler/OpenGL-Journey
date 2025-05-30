@@ -21,7 +21,7 @@ x64/
 *.log
 
 # Ignore the GLM API documentation
-\Libraries\include\glm\doc\api\*.html
+/Libraries/include/glm/doc/
 
 # Others
 *.VC.db
