@@ -206,6 +206,19 @@ Camera/fast:
 	$(MAKE) $(MAKESILENT) -f 06-Camera\CMakeFiles\Camera.dir\build.make 06-Camera/CMakeFiles/Camera.dir/build
 .PHONY : Camera/fast
 
+#=============================================================================
+# Target rules for targets named Lighting
+
+# Build rule for target.
+Lighting: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Lighting
+.PHONY : Lighting
+
+# fast build rule for target.
+Lighting/fast:
+	$(MAKE) $(MAKESILENT) -f 07-Lighting\CMakeFiles\Lighting.dir\build.make 07-Lighting/CMakeFiles/Lighting.dir/build
+.PHONY : Lighting/fast
+
 Libraries/src/glad.obj: Libraries/src/glad.c.obj
 .PHONY : Libraries/src/glad.obj
 
@@ -242,6 +255,7 @@ help:
 	@echo ... 3DCubeTextured
 	@echo ... Camera
 	@echo ... InterpolatedTriangleApp
+	@echo ... Lighting
 	@echo ... TriangleApp
 	@echo ... TriforceApp
 	@echo ... glad

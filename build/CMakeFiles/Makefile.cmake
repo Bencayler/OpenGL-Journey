@@ -57,6 +57,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/shaders/assets/wood_floor.png"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/shaders/default.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/shaders/default.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/assets/wood_floor.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/default.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
   "CMakeFiles/4.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
@@ -91,6 +95,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "06-Camera/default.vert"
   "06-Camera/wood_floor.png"
   "06-Camera/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "07-Lighting/default.frag"
+  "07-Lighting/default.vert"
+  "07-Lighting/wood_floor.png"
+  "07-Lighting/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -102,4 +110,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "04-3DCube/CMakeFiles/3DCube.dir/DependInfo.cmake"
   "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/DependInfo.cmake"
   "06-Camera/CMakeFiles/Camera.dir/DependInfo.cmake"
+  "07-Lighting/CMakeFiles/Lighting.dir/DependInfo.cmake"
   )

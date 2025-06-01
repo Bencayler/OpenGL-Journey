@@ -178,5 +178,47 @@
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Camera.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Camera.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\06-Camera\\src\\textureClass.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/src/textureClass.cpp",
   "output": "06-Camera/CMakeFiles/Camera.dir/src/textureClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Lighting.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Lighting.dir\\src\\Camera.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\07-Lighting\\src\\Camera.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/src/Camera.cpp",
+  "output": "07-Lighting/CMakeFiles/Lighting.dir/src/Camera.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Lighting.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Lighting.dir\\src\\EBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\07-Lighting\\src\\EBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/src/EBO.cpp",
+  "output": "07-Lighting/CMakeFiles/Lighting.dir/src/EBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Lighting.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Lighting.dir\\src\\VAO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\07-Lighting\\src\\VAO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/src/VAO.cpp",
+  "output": "07-Lighting/CMakeFiles/Lighting.dir/src/VAO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Lighting.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Lighting.dir\\src\\VBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\07-Lighting\\src\\VBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/src/VBO.cpp",
+  "output": "07-Lighting/CMakeFiles/Lighting.dir/src/VBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Lighting.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Lighting.dir\\src\\main.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\07-Lighting\\src\\main.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/src/main.cpp",
+  "output": "07-Lighting/CMakeFiles/Lighting.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Lighting.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Lighting.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\07-Lighting\\src\\shaderClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/src/shaderClass.cpp",
+  "output": "07-Lighting/CMakeFiles/Lighting.dir/src/shaderClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Lighting.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Lighting.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\07-Lighting\\src\\textureClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/src/textureClass.cpp",
+  "output": "07-Lighting/CMakeFiles/Lighting.dir/src/textureClass.cpp.obj"
 }
 ]

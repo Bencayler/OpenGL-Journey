@@ -13,7 +13,8 @@
 						3,
 						4,
 						5,
-						6
+						6,
+						7
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -24,7 +25,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						6
+						7
 					]
 				},
 				{
@@ -39,7 +40,7 @@
 					"source" : "01-Triangle",
 					"targetIndexes" : 
 					[
-						4
+						5
 					]
 				},
 				{
@@ -54,7 +55,7 @@
 					"source" : "02-Triforce",
 					"targetIndexes" : 
 					[
-						5
+						6
 					]
 				},
 				{
@@ -116,6 +117,21 @@
 					[
 						2
 					]
+				},
+				{
+					"build" : "07-Lighting",
+					"jsonFile" : "directory-07-Lighting-Debug-cb97c21a648979944229.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "07-Lighting",
+					"targetIndexes" : 
+					[
+						4
+					]
 				}
 			],
 			"name" : "Debug",
@@ -130,7 +146,8 @@
 						3,
 						4,
 						5,
-						6
+						6,
+						7
 					],
 					"name" : "OpenGL_Journals_Test",
 					"targetIndexes" : 
@@ -141,7 +158,8 @@
 						3,
 						4,
 						5,
-						6
+						6,
+						7
 					]
 				}
 			],
@@ -173,6 +191,13 @@
 					"id" : "InterpolatedTriangleApp::@f92da03f4e6ffc8c911c",
 					"jsonFile" : "target-InterpolatedTriangleApp-Debug-552200f5916db5081d22.json",
 					"name" : "InterpolatedTriangleApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "Lighting::@490e186c3476d3b0d170",
+					"jsonFile" : "target-Lighting-Debug-b6a880f75966a1861675.json",
+					"name" : "Lighting",
 					"projectIndex" : 0
 				},
 				{

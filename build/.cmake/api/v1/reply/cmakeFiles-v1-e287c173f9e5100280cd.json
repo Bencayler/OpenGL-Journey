@@ -268,6 +268,18 @@
 		},
 		{
 			"path" : "06-Camera/shaders/assets/wood_floor.png"
+		},
+		{
+			"path" : "07-Lighting/CMakeLists.txt"
+		},
+		{
+			"path" : "07-Lighting/shaders/default.frag"
+		},
+		{
+			"path" : "07-Lighting/shaders/default.vert"
+		},
+		{
+			"path" : "07-Lighting/shaders/assets/wood_floor.png"
 		}
 	],
 	"kind" : "cmakeFiles",
