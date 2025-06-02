@@ -9,25 +9,30 @@ Camera::Camera(int width, int height, glm::vec3 position) {
 
 }
 
-void Camera::Matrix(float FOVdeg, float nearPlane, float farPlane, Shader &shader, const char* uniform) {
+// todo: write this function to compile
+void Camera::updateMatrix(float FOVdeg, float nearPlane, float farPlane) {
     glm::mat4 view       = glm::mat4(1.0f);
     glm::mat4 projection = glm::mat4(1.0f);
 
     view = glm::lookAt(Position, Position + Orientation, Up);
-    
-    
-    projection = glm::perspective(
-			glm::radians(45.0f), // Field of view in degrees
-		    static_cast<float>(width) / static_cast<float>(height),     // Aspect ratio (the same as the window size)
-			0.1f,                // Near visible plane
-			1000.0f              // Far visible plane
-		);
 
+     projection = glm::perspective(
+			glm::radians(FOVdeg), // Field of view in degrees
+		    static_cast<float>(width) / static_cast<float>(height),     // Aspect ratio (the same as the window size)
+			nearPlane,                // Near visible plane
+			farPlane              // Far visible plane
+		);
+    
+    this->cameraMatrix = projection * view;
+}
+
+// todo: update this to compile
+void Camera::Matrix(Shader &shader, const char* uniform) {
     glUniformMatrix4fv(
         glGetUniformLocation(shader.getProgramID(), uniform), 
                              1, 
                              GL_FALSE, 
-                             glm::value_ptr(projection * view)
+                             glm::value_ptr(cameraMatrix)
     );
 }
 

@@ -31,7 +31,9 @@ const unsigned int HEIGHT = 800;
 const unsigned int WIDTH  = 800;
 
 int main() {
-	// Define our triangle vertices
+///////////////////////////////////////////////////////////////////////////////
+//                  TEXUTRED CUBE VERTICES AND INDICES                       // 
+///////////////////////////////////////////////////////////////////////////////
 	GLfloat vertices[] = {
 
 	/*
@@ -143,6 +145,50 @@ int main() {
 	20, 22, 23
 	};
 
+///////////////////////////////////////////////////////////////////////////////
+//                    LIGHT CUBE VERTICES AND INDICES                        // 
+///////////////////////////////////////////////////////////////////////////////
+// We can just copy these from the interpolated cube and skip the color data
+	GLfloat lightVertices[] = {
+	// X,      Y,      Z
+    -1.0f,   1.0f,  -1.0f,
+    -1.0f,   1.0f,   1.0f,
+     1.0f,   1.0f,   1.0f,
+     1.0f,   1.0f,  -1.0f,
+    -1.0f,  -1.0f,  -1.0f,
+    -1.0f,  -1.0f,   1.0f,
+     1.0f,  -1.0f,   1.0f,
+     1.0f,  -1.0f,  -1.0f
+
+	};
+
+	GLuint lightIndices[] = {
+		// Top face
+		0, 1, 2, // Triangle 1
+		0, 2, 3, // Triangle 2
+
+		// Bottom face
+		4, 6, 5, // Triangle 1
+		4, 7, 6, // Triangle 2
+	
+		// Left face
+		0, 5, 1, // Triangle 1
+		0, 4, 5, // Triangle 2
+		
+		// Right face
+		3, 2, 6, // Triangle 1
+		3, 6, 7, // Triangle 2
+
+		// Front face
+		1, 5, 6,  // Triangle 1
+		1, 6, 2,  // Triangle 2
+		
+		// Back face
+		0, 3, 7, // Triangle 1
+		0, 7, 4  // Triangle 2
+	};
+
+
 	// Initialize GLFW
 	if (!glfwInit()) {
     	std::cerr << "Failed to initialize GLFW" << std::endl;
@@ -183,6 +229,42 @@ int main() {
 	glFrontFace(GL_CCW);     // Set front face to counter-clockwise
 	// glCullFace(GL_BACK);     // Cull back faces
 
+
+	///////////////////////////////////
+	// Lighting cube initialization  //
+	///////////////////////////////////
+	Shader lightingShader("light.vert", "light.frag");
+
+	VAO lightVao;
+	VBO lightVbo(lightVertices, sizeof(lightVertices));
+	EBO lightEbo(lightIndices, sizeof(lightIndices));
+
+	lightVao.Bind();
+	lightVbo.Bind();
+	lightEbo.Bind();
+
+	lightVao.LinkAttrib(lightVbo, 0, 3, 3 * sizeof(GLfloat), 0);
+
+	glm::vec4 lightColor    = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+	glm::vec3 lightPosition = glm::vec3(5.0f, 4.0f, 0.0f);
+	glm::mat4 lightModel    = glm::mat4(1.0f);
+	lightModel = glm::translate(lightModel, lightPosition);
+	lightModel = glm::scale(lightModel, glm::vec3(0.2f));
+
+
+	// Now we need to connect our matrices to the lighting shader program
+	glUniformMatrix4fv(glGetUniformLocation(lightingShader.getProgramID(), "modelMatrix"), 1, GL_FALSE, glm::value_ptr(lightModel));
+	glUniform4f(glGetUniformLocation(lightingShader.getProgramID(), "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+
+
+	lightVao.Unbind();
+	lightVbo.Unbind();
+	lightEbo.Unbind();
+
+	///////////////////////////////////
+	// Textured cube initialization  //
+	///////////////////////////////////
+
 	// Create and compile our shaders
 	Shader shader("default.vert", "default.frag");
 
@@ -205,10 +287,6 @@ int main() {
 	vbo.Unbind();
 	ebo.Unbind();
 
-	// Initialize a timer for rotation
-	GLfloat rotation      = 0.0f;
-	GLdouble previousTime = glfwGetTime();
-
 	// Create a texture object
 	textureClass texture(
 		"wood_floor.png",
@@ -225,56 +303,64 @@ int main() {
 	// Create the camera object
 	Camera Camera(WIDTH, HEIGHT, glm::vec3(0.0f, 0.0f, 8.0f));
 
-
 	// Main rendering loop
 	while (!glfwWindowShouldClose(window)) {
-		
-		// Simple timer to rotate the cube
-		double currentTime = glfwGetTime();
-		if (currentTime - previousTime >= 1 / 160.0) { // 60 FPS
-			rotation    += 0.01f; // Rotate by 0.01 radians
-			previousTime = currentTime;
-		}
-
-		// Add rotation for the sake of exercise
-		// I'll revert this later, but it is neat to work with the shader 
-		// and get the locations and pass it back to the vertex shader. 
-		// This is the kind of exercise I should do more often.
-		glm::mat4 model = glm::rotate(glm::mat4(1.0f),
-						  rotation,
-						  glm::vec3(0.5f, 1.0f, 0.25f)
-
-	);
-
-		// Get the mModel location
-		GLuint modelLocation = glGetUniformLocation(shader.getProgramID(), "mModel");
-		// Pass that location back to the vertex shader
-		glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(model));
-
 		// Set the background color
 		glClearColor(0.00f, 0.13f, 0.17f, 1.0f);
 		// Clear the color and depth buffers
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 		
-		// Activate our shader program
-		shader.Activate();
-
-		// Bind the texture
-		texture.Bind();
-
-		// Set the texture sampler uniform to use texture unit 0
-		glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
-
-		Camera.Matrix(45.0f, 0.0f, 100.0, shader, "camMatrix");
+		// Update camera
 		Camera.Inputs(window);
+		Camera.updateMatrix(45.0f, 0.1f, 100.0f);
 
-		// Get the uniform location for the texture in fragment shader
-		glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
-
-
-		// Bind the VAO and draw the cube
-		glBindVertexArray(vao.vaoID);
+		///////////////////////////////////////////////////
+		//        TEXTURED CUBE RENDERING LOOP           //
+		///////////////////////////////////////////////////
+		shader.Activate();
+		texture.Bind();
+		Camera.Matrix(shader, "camMatrix");
+		vao.Bind();
 		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(GLuint), GL_UNSIGNED_INT, 0);
+
+
+		///////////////////////////////////////////////////
+		//        LIGHTING CUBE RENDERING LOOP           //
+		///////////////////////////////////////////////////
+		lightingShader.Activate();
+		Camera.Matrix(lightingShader, "camMatrix");
+
+		// Update model matrix uniform
+		glUniformMatrix4fv(
+			glGetUniformLocation(lightingShader.getProgramID(), "modelMatrix"), 
+			1, GL_FALSE, 
+			glm::value_ptr(lightModel)
+		);
+
+		// Set light color
+		glUniform4f(
+			glGetUniformLocation(lightingShader.getProgramID(), "lightColor"),
+			lightColor.x, lightColor.y, lightColor.z, lightColor.w
+		);
+
+		// Bind light VAO and draw
+		lightVao.Bind();
+		glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(GLuint), GL_UNSIGNED_INT, 0);
+
+
+		// glUniformMatrix4fv(glGetUniformLocation(lightingShader.getProgramID(), "modelMatrix"), 
+        //            1, GL_FALSE, glm::value_ptr(lightModel));
+
+
+
+		// // Set the texture sampler uniform to use texture unit 0
+		// glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
+
+
+
+		// // Bind the VAO and draw the cube
+		// glBindVertexArray(vao.vaoID);
+		// glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(GLuint), GL_UNSIGNED_INT, 0);
 
 		// Swap buffer and poll events
 		glfwSwapBuffers(window);

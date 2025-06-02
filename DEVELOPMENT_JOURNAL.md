@@ -60,7 +60,7 @@ Overall, much more painful than anticipated, but that is typically the only way 
 
 I'd still like to rotate it with a mouse and then have it slowly slow down as if it were some kind of character customization screen where the model can be manipulated. I think that might be a good exercise in basic physics simulation.
 
------------ 
+------------------------
 
 May 30th 2025 @ 15:39
 
@@ -120,3 +120,23 @@ We have a guarding IF STATEMENT to prevent the camera from pitching forward and 
 We move our Orientation left and right with the calculated inputs.
 
 Lastly, we unhide the curor and return it to the center of the screen when we release the mouse button so the cursor doesn't fly away. And reset our first click bool
+
+------------------------
+
+June 1st 2025 @ 12:39
+
+I am trying to understand why we are chaning the cameraMatrix in the camera class. I still don't entirely understand entirely. It seems like all we are doing is incorporating the mat4 cameraMatrix variable into the Camera class definition so the matrix now is a member instead of having to modify it in the main function. Unknown. If I get more insight I will talk about it more here. For now I'm just doing my best to understand what is changing even if it is minor change. 
+
+Leaving for a responsibility - need to write the shader program, write the new vertices and indices to VAO, VBO, and EBO objects, and place it into the rendering loop. Probably a scale function as well so we can shrink the light cube - then we can go back to following the tutorial after that for how lighting works. 
+
+------------------------
+
+June 2nd 2025
+
+Back to the problem. From previous entry I need to insantiate and render the object on screen. Here we go. Writing to the vertex and fragment shader is slightly different. Since we are including a model this time and will be shifting it around we will include a model matrix now. The exercise of having removed the model and then re-adding it without it being pre calculated in the C++ program came in handy. My understanding is that we want this light source to be moveable so we can move the light around. If now the model's location is basically stuck in the middle of the scene. 
+
+The cube is now rendering and is white as intended, but I want to be able to scale it and be move it to a different location so it is smaller and above the textured cube.
+
+Okay, so this is lesson seems to be divived into two parts. Getting the cube setup outside the textured cube and then using the shader language to modify the lighting. 
+
+Just spent the last hour refactoring the main rendering loop. My understanding now is more complete. Basically every object in the world has its own shader program and they need to be executed in order. IE Rendering loop for the Cube and then rendering loop for the Lighting Cube. Which is why they now have two different sets of fragment and vertex shaders. They need to draw their own objects. There is definetely a possibility of abstraction here where we have a different shading language for differnt objects.

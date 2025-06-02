@@ -6,19 +6,12 @@ layout(location = 1) in vec2 aTexCoord;
 out vec2 textureCoords;
 
 
-
-// Uniform matrices
-// uniform mat4 mModel;
-// uniform mat4 mView; 
-// uniform mat4 mProjection;
-
-uniform mat4 mModel;
 uniform mat4 camMatrix;
 
 
 void main() {
 	
-	gl_Position = camMatrix * mModel * vec4(aPos, 1.0);
+	gl_Position = camMatrix *  vec4(aPos, 1.0);
 	// gl_Position = vec4(aPos, 1.0);
 	
 	textureCoords = aTexCoord;

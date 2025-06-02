@@ -61,6 +61,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/assets/wood_floor.png"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/default.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/default.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/light.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/light.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
   "CMakeFiles/4.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
@@ -97,6 +99,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "06-Camera/CMakeFiles/CMakeDirectoryInformation.cmake"
   "07-Lighting/default.frag"
   "07-Lighting/default.vert"
+  "07-Lighting/light.frag"
+  "07-Lighting/light.vert"
   "07-Lighting/wood_floor.png"
   "07-Lighting/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
