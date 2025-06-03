@@ -119,7 +119,7 @@ We have a guarding IF STATEMENT to prevent the camera from pitching forward and 
 
 We move our Orientation left and right with the calculated inputs.
 
-Lastly, we unhide the curor and return it to the center of the screen when we release the mouse button so the cursor doesn't fly away. And reset our first click bool
+Lastly, we unhide the cursor and return it to the center of the screen when we release the mouse button so the cursor doesn't fly away. And reset our first click bool
 
 ------------------------
 
@@ -140,3 +140,47 @@ The cube is now rendering and is white as intended, but I want to be able to sca
 Okay, so this is lesson seems to be divived into two parts. Getting the cube setup outside the textured cube and then using the shader language to modify the lighting. 
 
 Just spent the last hour refactoring the main rendering loop. My understanding now is more complete. Basically every object in the world has its own shader program and they need to be executed in order. IE Rendering loop for the Cube and then rendering loop for the Lighting Cube. Which is why they now have two different sets of fragment and vertex shaders. They need to draw their own objects. There is definetely a possibility of abstraction here where we have a different shading language for differnt objects.
+
+A big revelation from the tutorial - lighting for now - is just multiplying the colors of the light together. IE if the light is 
+(1.0f, 0.0, 0.0) and the object is (1.0f, 0.5f, 0.0f) or orange. If you multiply them together you get red. The object will now receive a red color. This is reminding me of using red light to read map in the Marine Corps during night land nav. Red markings on the map for roads were invisible and you had to be careful how you red the map since red * red == invisible (in comparison to the other map stuff)
+
+Okay I need to stop for the evening but I think I am ready to move on to normals. I should watch another youtube video on how they exactly work. The tutorial I'm following gives it a 30 second explanation and moves on and I am really confused. My VAO object should be setup to input them tomorrow. My indices on the textured cube have to change for some reason too. I anticipate tomorrow being quite difficult. We will see.
+
+------------------------
+
+June 3rd 2025
+
+Picking up where I left off, today will be watching YouTube videos and making sure I understand normals before I move on and start to input them into the cube vertices and debug it. I want to make sure I completely understand this concept and can implement it, at least in overall concept, before I ask an LLM to debug my code. 
+
+What I do understand. The normal vectors for diffuse lightings are just vectors of size one that shoot out perpendicularly from the face of the primitive. This is called a face normal. If each face has a single normal, that normal represents the orientation of the entire flat face, and thusm its effect is unform across the face. IE - there is no interpolation - the smooth spread of the light across the surface won't happen. See the picture at the top of the learnopengl page for the example of the diffuse lighting. The new frag color is calculated and then spread across the entire face of the cube. 
+
+https://learnopengl.com/Lighting/Basic-Lighting
+
+However, in your current code we are setup to provide the veritces with 3 sets of data - 3 floats for the vertex coordinates, 2 floats for the texture coordinates spread across the face of the cube, and 3 more floats for the normal data - the normals allow us to interpolate a new color across the face of the cube. 
+
+How we find the location of these normals is pretty complicated and a class in trig and linear algebra specifically for graphics programming would be incredibly helpful. We calculate the face normal by taking the CROSS PRODUCT (not the dot product) of two NON-PARALLEL edge vectors that form the face. For example, if you hve a triangle wth vertices A, B, and C you can find the normal by: normalize(cross(B - A), C - A)
+	 B
+    / \
+   /    \
+  /       \  
+ /          \
+A-------------C
+
+Vertex normals, what we are using so we can interpolate the fragment shader, are typically pre calculated by the 3D grapics modeling software and are incorporated in the mesh data. It works by averaguing the face ormals of all the polygons connected to that vertex. This average then points outwards in a way that allows for smooth lighting interpolation. 
+
+The dot product is used AFTER you have the normal. It's used in the lighting equation to determine the ANGLE between two vectors. The prime example being the angle between the surface normal and the light direction.
+
+Light source      Normal Vector
+	        \   |
+	         \  |
+     Angle    \	|
+______________________________________
+               Surface of the mesh
+
+Normally, this kind of normals data will be calculated in 3D modeling software. A piece of software like Blender's most basic application is allowing an artist to design meshes and animate things. Those meshes and transformation are simply vertices / lighting values - like our cube - but far too complex to input by hand. So the work is extrapolated to the 3D art software. For this reason I will have to manually input the normal data. This will likely be difficult and I'll have to find a decent method of calculating it by hand. Lastly the steps I will have to do to finish this lesson are: 
+1.| Modify vertices data to take in normal data
+2.| Modify the VAO linking function to account for 3 more floats
+3.| Change the default vertex shader layout
+4.| In the default.vert add a vec3 output for the normal, add a vec3 output fragPos so the 'light' can be interpolated and then take care of the calculations in the fragment shader.
+
+I shouldn't have to modify indices - but we will see. I am slightly different than the tutorial I am following. It seems like I've already taken care of that because I am using a textured cube as opposed to a pyramid.

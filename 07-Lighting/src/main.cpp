@@ -58,42 +58,42 @@ int main() {
 	(0, 0) ------- (1, 0)
 	*/
 
-	// X,     Y,      Z       U,    V
+	// Cube Coordinates  / TexCoords   /      Normals
     // Top face
-    -1.0f,  1.0f, -1.0f,  0.0f, 0.0f, // Top-left
-    -1.0f,  1.0f,  1.0f,  0.0f, 1.0f, // Bottom-left
-     1.0f,  1.0f,  1.0f,  1.0f, 1.0f, // Bottom-right
-     1.0f,  1.0f, -1.0f,  1.0f, 0.0f, // Top-right
+    -1.0f,  1.0f, -1.0f,   0.0f, 0.0f,                          // Top-left
+    -1.0f,  1.0f,  1.0f,   0.0f, 1.0f,                          // Bottom-left
+     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,                          // Bottom-right
+     1.0f,  1.0f, -1.0f,   1.0f, 0.0f,                          // Top-right
 
     // Left face
-    -1.0f,  1.0f,  1.0f,  0.0f, 0.0f, // Top-left
-    -1.0f, -1.0f,  1.0f,  0.0f, 1.0f, // Bottom-left
-    -1.0f, -1.0f, -1.0f,  1.0f, 1.0f, // Bottom-right
-    -1.0f,  1.0f, -1.0f,  1.0f, 0.0f, // Top-right
+    -1.0f,  1.0f,  1.0f,   0.0f, 0.0f,                          // Top-left
+    -1.0f, -1.0f,  1.0f,   0.0f, 1.0f,                          // Bottom-left
+    -1.0f, -1.0f, -1.0f,   1.0f, 1.0f,                          // Bottom-right
+    -1.0f,  1.0f, -1.0f,   1.0f, 0.0f,                          // Top-right
 
     // Right face
-     1.0f,  1.0f,  1.0f,  1.0f, 1.0f, // Top-left
-     1.0f, -1.0f,  1.0f,  1.0f, 0.0f, // Bottom-left
-     1.0f, -1.0f, -1.0f,  0.0f, 0.0f, // Bottom-right
-     1.0f,  1.0f, -1.0f,  0.0f, 1.0f, // Top-right
+     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,                          // Top-left
+     1.0f, -1.0f,  1.0f,   1.0f, 0.0f,                          // Bottom-left
+     1.0f, -1.0f, -1.0f,   0.0f, 0.0f,                          // Bottom-right
+     1.0f,  1.0f, -1.0f,   0.0f, 1.0f,                          // Top-right
 
     // Front face
-    -1.0f,  1.0f,  1.0f,  0.0f, 1.0f, // Top-left
-    -1.0f, -1.0f,  1.0f,  0.0f, 0.0f, // Bottom-left
-     1.0f, -1.0f,  1.0f,  1.0f, 0.0f, // Bottom-right
-     1.0f,  1.0f,  1.0f,  1.0f, 1.0f, // Top-right
+    -1.0f,  1.0f,  1.0f,   0.0f, 1.0f,                          // Top-left
+    -1.0f, -1.0f,  1.0f,   0.0f, 0.0f,                          // Bottom-left
+     1.0f, -1.0f,  1.0f,   1.0f, 0.0f,                          // Bottom-right
+     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,                          // Top-right
 
     // Back face
-    -1.0f,  1.0f, -1.0f,  1.0f, 1.0f, // Top-left
-    -1.0f, -1.0f, -1.0f,  1.0f, 0.0f, // Bottom-left
-     1.0f, -1.0f, -1.0f,  0.0f, 0.0f, // Bottom-right
-     1.0f,  1.0f, -1.0f,  0.0f, 1.0f, // Top-right
+    -1.0f,  1.0f, -1.0f,   1.0f, 1.0f,                          // Top-left
+    -1.0f, -1.0f, -1.0f,   1.0f, 0.0f,                          // Bottom-left
+     1.0f, -1.0f, -1.0f,   0.0f, 0.0f,                          // Bottom-right
+     1.0f,  1.0f, -1.0f,   0.0f, 1.0f,                          // Top-right
 
     // Bottom face
-    -1.0f, -1.0f, -1.0f,  0.0f, 0.0f, // Top-left
-    -1.0f, -1.0f,  1.0f,  0.0f, 1.0f, // Bottom-left
-     1.0f, -1.0f,  1.0f,  1.0f, 1.0f, // Bottom-right
-     1.0f, -1.0f, -1.0f,  1.0f, 0.0f  // Top-right
+    -1.0f, -1.0f, -1.0f,   0.0f, 0.0f,                          // Top-left
+    -1.0f, -1.0f,  1.0f,   0.0f, 1.0f,                          // Bottom-left
+     1.0f, -1.0f,  1.0f,   1.0f, 1.0f,                          // Bottom-right
+     1.0f, -1.0f, -1.0f,   1.0f, 0.0f                           // Top-right
 };
 
 
@@ -192,8 +192,8 @@ int main() {
 	// Initialize GLFW
 	if (!glfwInit()) {
     	std::cerr << "Failed to initialize GLFW" << std::endl;
-    return -1;
-}
+   		return -1;
+	}
 
 	// Tell GLFW to use OpenGL version 3.3
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -228,43 +228,10 @@ int main() {
 	// glEnable(GL_CULL_FACE);  // Enable face culling
 	glFrontFace(GL_CCW);     // Set front face to counter-clockwise
 	// glCullFace(GL_BACK);     // Cull back faces
-
-
-	///////////////////////////////////
-	// Lighting cube initialization  //
-	///////////////////////////////////
-	Shader lightingShader("light.vert", "light.frag");
-
-	VAO lightVao;
-	VBO lightVbo(lightVertices, sizeof(lightVertices));
-	EBO lightEbo(lightIndices, sizeof(lightIndices));
-
-	lightVao.Bind();
-	lightVbo.Bind();
-	lightEbo.Bind();
-
-	lightVao.LinkAttrib(lightVbo, 0, 3, 3 * sizeof(GLfloat), 0);
-
-	glm::vec4 lightColor    = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-	glm::vec3 lightPosition = glm::vec3(5.0f, 4.0f, 0.0f);
-	glm::mat4 lightModel    = glm::mat4(1.0f);
-	lightModel = glm::translate(lightModel, lightPosition);
-	lightModel = glm::scale(lightModel, glm::vec3(0.2f));
-
-
-	// Now we need to connect our matrices to the lighting shader program
-	glUniformMatrix4fv(glGetUniformLocation(lightingShader.getProgramID(), "modelMatrix"), 1, GL_FALSE, glm::value_ptr(lightModel));
-	glUniform4f(glGetUniformLocation(lightingShader.getProgramID(), "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
-
-
-	lightVao.Unbind();
-	lightVbo.Unbind();
-	lightEbo.Unbind();
-
+	
 	///////////////////////////////////
 	// Textured cube initialization  //
 	///////////////////////////////////
-
 	// Create and compile our shaders
 	Shader shader("default.vert", "default.frag");
 
@@ -279,8 +246,9 @@ int main() {
 	ebo.Bind();
 	
 	// Link VBO to VAO
-	vao.LinkAttrib(vbo, 0, 3, 5 * sizeof(GLfloat), 0);                   // Position attribute
-	vao.LinkAttrib(vbo, 1, 2, 5 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Texture attribute
+	vao.LinkAttrib(vbo, 0, 3, 8 * sizeof(GLfloat), 0);                   // Position attribute
+	vao.LinkAttrib(vbo, 1, 2, 8 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Texture attribute
+	vao.LinkAttrib(vbo, 1, 2, 8 * sizeof(GLfloat), 2 * sizeof(GLfloat)); // Normal Attributes
 	
 	// Unbind VAO, VBO, and EBO
 	vao.Unbind();
@@ -300,8 +268,58 @@ int main() {
 	// unit
 	texture.textureUnit(shader, "textureSampler", 0);
 
+	///////////////////////////////////
+	// Lighting cube initialization  //
+	///////////////////////////////////
+	Shader lightingShader("light.vert", "light.frag");
+
+	VAO lightVao;
+	VBO lightVbo(lightVertices, sizeof(lightVertices));
+	EBO lightEbo(lightIndices, sizeof(lightIndices));
+
+	lightVao.Bind();
+	lightVbo.Bind();
+	lightEbo.Bind();
+
+	// Attach the vertices to the VAO 
+	lightVao.LinkAttrib(lightVbo, 0, 3, 3 * sizeof(GLfloat), 0);
+
+	// Unbind the VAO, VBO, EBO objects 
+	lightVao.Unbind();
+	lightVbo.Unbind();
+	lightEbo.Unbind();
+
+	glm::vec4 lightColor    = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+	glm::vec3 lightPosition = glm::vec3(4.0f, 2.0f, 0.0f);
+	glm::mat4 lightModel    = glm::mat4(1.0f);
+	lightModel = glm::translate(lightModel, lightPosition);
+	lightModel = glm::scale(lightModel, glm::vec3(0.2f));
+
+	glm::vec3 cubePosition = glm::vec3(0.0f, 0.0f, 0.0f);
+	glm::mat4 cubeModel = glm::mat4(1.0f);
+
+	// Now we need to connect our matrices to the lighting shader program
+	lightingShader.Activate();
+	glUniform4f(
+		glGetUniformLocation(lightingShader.getProgramID(), "lightColor"),
+		lightColor.x, lightColor.y, lightColor.z, lightColor.w
+	);
+	glUniformMatrix4fv(glGetUniformLocation(lightingShader.getProgramID(), "modelMatrix"), 1, GL_FALSE, glm::value_ptr(lightModel));
+
+	
+	shader.Activate();
+	glUniformMatrix4fv(glGetUniformLocation(shader.getProgramID(), "modelMatrix"), 1, GL_FALSE, glm::value_ptr(cubeModel));
+	glUniform4f(
+    	glGetUniformLocation(shader.getProgramID(), "lightColor"),
+    	lightColor.x, lightColor.y, lightColor.z, lightColor.w
+	);
+
+
+
+
 	// Create the camera object
 	Camera Camera(WIDTH, HEIGHT, glm::vec3(0.0f, 0.0f, 8.0f));
+
 
 	// Main rendering loop
 	while (!glfwWindowShouldClose(window)) {
@@ -320,6 +338,14 @@ int main() {
 		shader.Activate();
 		texture.Bind();
 		Camera.Matrix(shader, "camMatrix");
+
+		// Set light color for textured cube
+		glUniform4f(
+			glGetUniformLocation(shader.getProgramID(), "lightColor"),
+			lightColor.x, lightColor.y, lightColor.z, lightColor.w
+		);
+
+		// Draw textured cube
 		vao.Bind();
 		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(GLuint), GL_UNSIGNED_INT, 0);
 
