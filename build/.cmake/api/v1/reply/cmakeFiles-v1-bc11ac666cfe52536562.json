@@ -286,6 +286,24 @@
 		},
 		{
 			"path" : "07-Lighting/shaders/assets/wood_floor.png"
+		},
+		{
+			"path" : "08-SpecularMaps/CMakeLists.txt"
+		},
+		{
+			"path" : "08-SpecularMaps/shaders/default.frag"
+		},
+		{
+			"path" : "08-SpecularMaps/shaders/default.vert"
+		},
+		{
+			"path" : "08-SpecularMaps/shaders/light.frag"
+		},
+		{
+			"path" : "08-SpecularMaps/shaders/light.vert"
+		},
+		{
+			"path" : "08-SpecularMaps/shaders/assets/wood_floor.png"
 		}
 	],
 	"kind" : "cmakeFiles",

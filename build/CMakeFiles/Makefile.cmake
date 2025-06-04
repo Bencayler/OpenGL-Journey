@@ -63,6 +63,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/light.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/light.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/assets/wood_floor.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/default.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/default.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/light.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/light.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
   "CMakeFiles/4.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
@@ -103,6 +109,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "07-Lighting/light.vert"
   "07-Lighting/wood_floor.png"
   "07-Lighting/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "08-SpecularMaps/default.frag"
+  "08-SpecularMaps/default.vert"
+  "08-SpecularMaps/light.frag"
+  "08-SpecularMaps/light.vert"
+  "08-SpecularMaps/wood_floor.png"
+  "08-SpecularMaps/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -115,4 +127,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "05-3DCubeTextured/CMakeFiles/3DCubeTextured.dir/DependInfo.cmake"
   "06-Camera/CMakeFiles/Camera.dir/DependInfo.cmake"
   "07-Lighting/CMakeFiles/Lighting.dir/DependInfo.cmake"
+  "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/DependInfo.cmake"
   )

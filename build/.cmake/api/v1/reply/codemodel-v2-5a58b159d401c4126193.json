@@ -14,7 +14,8 @@
 						4,
 						5,
 						6,
-						7
+						7,
+						8
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -25,7 +26,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						7
+						8
 					]
 				},
 				{
@@ -40,7 +41,7 @@
 					"source" : "01-Triangle",
 					"targetIndexes" : 
 					[
-						5
+						6
 					]
 				},
 				{
@@ -55,7 +56,7 @@
 					"source" : "02-Triforce",
 					"targetIndexes" : 
 					[
-						6
+						7
 					]
 				},
 				{
@@ -132,6 +133,21 @@
 					[
 						4
 					]
+				},
+				{
+					"build" : "08-SpecularMaps",
+					"jsonFile" : "directory-08-SpecularMaps-Debug-07ccb0035485ddc3f013.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "08-SpecularMaps",
+					"targetIndexes" : 
+					[
+						5
+					]
 				}
 			],
 			"name" : "Debug",
@@ -147,7 +163,8 @@
 						4,
 						5,
 						6,
-						7
+						7,
+						8
 					],
 					"name" : "OpenGL_Journals_Test",
 					"targetIndexes" : 
@@ -159,7 +176,8 @@
 						4,
 						5,
 						6,
-						7
+						7,
+						8
 					]
 				}
 			],
@@ -198,6 +216,13 @@
 					"id" : "Lighting::@490e186c3476d3b0d170",
 					"jsonFile" : "target-Lighting-Debug-b6a880f75966a1861675.json",
 					"name" : "Lighting",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "SpecularMaps::@a114c19a43cb38ba2b9b",
+					"jsonFile" : "target-SpecularMaps-Debug-177dd6a5271ec2a487b2.json",
+					"name" : "SpecularMaps",
 					"projectIndex" : 0
 				},
 				{

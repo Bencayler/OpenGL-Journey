@@ -220,5 +220,47 @@
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/Lighting.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\Lighting.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\07-Lighting\\src\\textureClass.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/src/textureClass.cpp",
   "output": "07-Lighting/CMakeFiles/Lighting.dir/src/textureClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/SpecularMaps.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\SpecularMaps.dir\\src\\Camera.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\08-SpecularMaps\\src\\Camera.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/src/Camera.cpp",
+  "output": "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/src/Camera.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/SpecularMaps.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\SpecularMaps.dir\\src\\EBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\08-SpecularMaps\\src\\EBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/src/EBO.cpp",
+  "output": "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/src/EBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/SpecularMaps.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\SpecularMaps.dir\\src\\VAO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\08-SpecularMaps\\src\\VAO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/src/VAO.cpp",
+  "output": "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/src/VAO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/SpecularMaps.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\SpecularMaps.dir\\src\\VBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\08-SpecularMaps\\src\\VBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/src/VBO.cpp",
+  "output": "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/src/VBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/SpecularMaps.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\SpecularMaps.dir\\src\\main.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\08-SpecularMaps\\src\\main.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/src/main.cpp",
+  "output": "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/SpecularMaps.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\SpecularMaps.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\08-SpecularMaps\\src\\shaderClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/src/shaderClass.cpp",
+  "output": "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/src/shaderClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/SpecularMaps.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\SpecularMaps.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\08-SpecularMaps\\src\\textureClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/src/textureClass.cpp",
+  "output": "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/src/textureClass.cpp.obj"
 }
 ]

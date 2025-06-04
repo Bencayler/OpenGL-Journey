@@ -219,6 +219,19 @@ Lighting/fast:
 	$(MAKE) $(MAKESILENT) -f 07-Lighting\CMakeFiles\Lighting.dir\build.make 07-Lighting/CMakeFiles/Lighting.dir/build
 .PHONY : Lighting/fast
 
+#=============================================================================
+# Target rules for targets named SpecularMaps
+
+# Build rule for target.
+SpecularMaps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SpecularMaps
+.PHONY : SpecularMaps
+
+# fast build rule for target.
+SpecularMaps/fast:
+	$(MAKE) $(MAKESILENT) -f 08-SpecularMaps\CMakeFiles\SpecularMaps.dir\build.make 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/build
+.PHONY : SpecularMaps/fast
+
 Libraries/src/glad.obj: Libraries/src/glad.c.obj
 .PHONY : Libraries/src/glad.obj
 
@@ -256,6 +269,7 @@ help:
 	@echo ... Camera
 	@echo ... InterpolatedTriangleApp
 	@echo ... Lighting
+	@echo ... SpecularMaps
 	@echo ... TriangleApp
 	@echo ... TriforceApp
 	@echo ... glad
