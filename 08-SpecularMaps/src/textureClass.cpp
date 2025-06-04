@@ -4,7 +4,7 @@
 
 
 // Constructor to load texture from file
-textureClass::textureClass(const char* filePath, GLenum textureType, GLenum slot, GLenum format, GLenum pixelType) {
+textureClass::textureClass(const char* filePath, GLenum textureType, GLuint slot, GLenum format, GLenum pixelType) {
     
     // set the type of texture
     this->type = textureType;
@@ -25,16 +25,25 @@ textureClass::textureClass(const char* filePath, GLenum textureType, GLenum slot
 
     
     glGenTextures(1, &textureID); // Generate a texture ID with our member variable
-    glActiveTexture(slot); // Activate the texture unit
+    glActiveTexture(GL_TEXTURE0 + slot); // Activate the texture unit
+    unit = slot;
     glBindTexture(type, textureID); // Bind the texture
 
-    // Configures the texture parameters / algorithms to make the image fit the texture mapping
-    glTexParameteri(textureType, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
-    glTexParameteri(textureType, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    // // Configures the texture parameters / algorithms to make the image fit the texture mapping
+    // glTexParameteri(textureType, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
+    // glTexParameteri(textureType, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
-    // Configure texture repeat, border, or edge behavior
-    glTexParameteri(textureType, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
-    glTexParameteri(textureType, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+    // // Configure texture repeat, border, or edge behavior
+    // glTexParameteri(textureType, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+    // glTexParameteri(textureType, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+
+    // Configures the texture parameters / algorithms to make the image fit the texture mapping
+glTexParameteri(textureType, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR); // Smoother minification
+glTexParameteri(textureType, GL_TEXTURE_MAG_FILTER, GL_LINEAR);             // Smoother magnification
+
+// Configure texture repeat behavior for seamless tiling
+glTexParameteri(textureType, GL_TEXTURE_WRAP_S, GL_REPEAT); // Repeat horizontally
+glTexParameteri(textureType, GL_TEXTURE_WRAP_T, GL_REPEAT); // Repeat vertically
 
     // Upload the texture data to the GPU
     glTexImage2D(textureType, 0, GL_RGBA, imageWidth, imageHeight, 0, format, pixelType, imageData);
@@ -62,6 +71,7 @@ void textureClass::textureUnit(Shader &shader, const char* uniform, GLuint unit)
 }
 
 void textureClass::Bind() {
+    glActiveTexture(GL_TEXTURE0 + unit);
     glBindTexture(this->type, textureID);
 }
 

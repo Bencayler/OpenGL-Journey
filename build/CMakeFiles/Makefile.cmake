@@ -51,6 +51,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/04-3DCube/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/CMakeLists.txt"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/assets/wood_floor.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/assets/wood_floor_specular.png"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/default.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/05-3DCubeTextured/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/06-Camera/CMakeLists.txt"
@@ -65,6 +66,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/07-Lighting/shaders/light.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/CMakeLists.txt"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/assets/wood_floor.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/assets/wood_floor_specular.png"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/default.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/light.frag"
@@ -98,6 +100,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "05-3DCubeTextured/default.frag"
   "05-3DCubeTextured/default.vert"
   "05-3DCubeTextured/wood_floor.png"
+  "05-3DCubeTextured/wood_floor_specular.png"
   "05-3DCubeTextured/CMakeFiles/CMakeDirectoryInformation.cmake"
   "06-Camera/default.frag"
   "06-Camera/default.vert"
@@ -114,6 +117,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "08-SpecularMaps/light.frag"
   "08-SpecularMaps/light.vert"
   "08-SpecularMaps/wood_floor.png"
+  "08-SpecularMaps/wood_floor_specular.png"
   "08-SpecularMaps/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

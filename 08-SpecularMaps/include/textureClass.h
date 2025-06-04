@@ -14,7 +14,7 @@
 
 class textureClass {
     public:
-        textureClass(const char* filepath, GLenum type, GLenum slot, GLenum format, GLenum pixelType);
+        textureClass(const char* filepath, GLenum type, GLuint slot, GLenum format, GLenum pixelType);
         
         // Assigns a texture unit to a shader uniform
         void textureUnit(Shader& shader, const char* uniform, GLuint unit);
@@ -33,6 +33,7 @@ class textureClass {
     private:
         GLuint textureID;
         GLenum type;
+        GLuint unit;
 
 };
 

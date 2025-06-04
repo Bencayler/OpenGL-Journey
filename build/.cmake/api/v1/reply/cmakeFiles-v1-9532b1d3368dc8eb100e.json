@@ -258,6 +258,9 @@
 			"path" : "05-3DCubeTextured/shaders/assets/wood_floor.png"
 		},
 		{
+			"path" : "05-3DCubeTextured/shaders/assets/wood_floor_specular.png"
+		},
+		{
 			"path" : "06-Camera/CMakeLists.txt"
 		},
 		{
@@ -304,6 +307,9 @@
 		},
 		{
 			"path" : "08-SpecularMaps/shaders/assets/wood_floor.png"
+		},
+		{
+			"path" : "08-SpecularMaps/shaders/assets/wood_floor_specular.png"
 		}
 	],
 	"kind" : "cmakeFiles",

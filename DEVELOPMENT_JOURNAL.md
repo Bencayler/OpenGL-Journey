@@ -197,3 +197,31 @@ The hardest part I need to go back and read the learnopengl article on is the fr
 
 ------------------------
 
+June 4th 2025
+
+Next up the Specular Maps. Specular maps are a type of texture map to control the amount and color of specular reflections on a surface. My understanding is that it is a basically a black and white (or more specifically - grayscale) version of the texture and that shows how reflective the light should be. So in our wood texture there is a lot of blacks and darker colors at are inbetween the wood 'planks'. That light needs to be relfected LESS than the lighter part of the wood which would reflect more. As it is now - the specular reflections are just uniform across the surface and looks good, but not quite realistic. The specular map will provide an even more realistic gradient. 
+
+For the sake of the tutorial we will begin by modifying the texture class so it is easier for us to assign multiple textures to the same shader. For the sake of seeing the example it may be worth it to use a different image that has more contrast. The wood crate texture I am using now doesn't have very much dark color across it. We can also move the light a bit closer.
+
+We get the specular map into our main.cpp by importing the texture but only using ONE color channel, in this case, red. Because we are only using one color channel this will effectively grayscale the image. We will create a new texture object and work to port it over after commenting out some of the other texture statements. We will then export it to the shader, and bind it in the main rendering loop. That should be the work to be done in main.cpp
+
+Now in the shader, we import the texture in the default.frag and use that to modify the final frag color. More to follow on those details.
+
+A new revelation - the image that is loaded for the specular mapping actually has to be grayscaled. We can't rely on anything to grayscale for us. I would love an stbi function to grayscale it, but oh well. We use the .r for the single channel on the grayscaled image to get the proper specular map. 
+
+It is fairly easy actually. The biggest changes are only in our specular lighting section of the fragment shader. We declare an extra uniform sampler2D for the grayscaled texture. We use ONLY THE RED CHANNEL from that texture to calculate our finalSpecularStrength INSTEAD of only using standard texture. From there we cacluate the lighting as normal. The same calculations are stored in result. Result is then pushed to FragColor as a vec4. FragColor still takes the NON grayscaled texture (we still want to load the colored texture).
+
+The last issue I am facing is the vertical lines of light the are across the surface of the cube. It signals to me that the specular lighting is working better now, but it is a strange artifact to have and there are no answers readily found with google. 
+
+![alt text](image-1.png)
+
+I couldn't find an issue or a solution in an easy amount of time. I will keep it in there for a while until I find something that causes this. I am ready to put this one to bed. 
+
+Laslty, specular lighting is going to be incredibly important in a water polo video game. The way the light reflects off the surface of the water is going to change from pool to pool (indoors, outdoors, kinds of overhead lights, if there are windows etc etc).
+
+Like a LOT of these tutorials, there is obviously huge amounts of potential for abstraction. I am trying to follow a bit of Jonathan Blows advice and wait sometime before refactoring anything. Often times we want to refactor something for the sake of cleanliness and readability or whatever great programming virtue, but we often refactor TOO soon. Meaning, there is still more to learn about a particular technology or product and a more intelligent refactoring is just around the corner and we end up wasting time refactoring code more times than necessary. Build up the expertise and lessons learned AND then refactor. Maybe that will have the lessons stick less - that is a factor I am worried about, but I think he is correct about waiting to apply our lessons learned before we go forward. 
+
+This does also conflict with his advice of, write a program, rewrite it so its better, rewrite it so it is even better again and again until it is perfect. And maybe, if you're lucky you have a good program that does something interesting with the computer. More to follow. 
+
+
+

@@ -256,17 +256,27 @@ int main() {
 	ebo.Unbind();
 
 	// Create a texture object
-	textureClass texture(
+	textureClass woodTexture(
 		"wood_floor.png",
 		GL_TEXTURE_2D, 
-		GL_TEXTURE0,
+		0,
 		GL_RGBA,
 		GL_UNSIGNED_BYTE
 	);
 
 	// Attach the uniform shader variable to the shader program and the texture
 	// unit
-	texture.textureUnit(shader, "textureSampler", 0);
+	woodTexture.textureUnit(shader, "tex0", 0);
+
+	textureClass specMapTexture(
+		"wood_floor_specular.png",
+		GL_TEXTURE_2D,
+		1,
+		GL_RED, // ONE COLOR CHANNEL
+		GL_UNSIGNED_BYTE
+	);
+
+	specMapTexture.textureUnit(shader, "tex1", 1);
 
 	///////////////////////////////////
 	// Lighting cube initialization  //
@@ -290,7 +300,7 @@ int main() {
 	lightEbo.Unbind();
 
 	glm::vec4 lightColor    = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-	glm::vec3 lightPosition = glm::vec3(4.0f, 2.0f, 0.0f);
+	glm::vec3 lightPosition = glm::vec3(0.0f, 3.0f, 1.0f);
 	glm::mat4 lightModel    = glm::mat4(1.0f);
 	lightModel = glm::translate(lightModel, lightPosition);
 	lightModel = glm::scale(lightModel, glm::vec3(0.2f));
@@ -336,7 +346,12 @@ int main() {
 		//        TEXTURED CUBE RENDERING LOOP           //
 		///////////////////////////////////////////////////
 		shader.Activate();
-		texture.Bind();
+		glActiveTexture(GL_TEXTURE0);
+		woodTexture.Bind();
+		glActiveTexture(GL_TEXTURE1);
+		specMapTexture.Bind();
+
+		
 		Camera.Matrix(shader, "camMatrix");
 
 		// Set light color for textured cube
@@ -415,7 +430,8 @@ int main() {
 
 	// Delete the texture
 	//glDeleteTextures(1, &texture);
-	texture.Delete();
+	woodTexture.Delete();
+	specMapTexture.Delete();
 
 	// Delete our shader program
 	shader.Delete();
