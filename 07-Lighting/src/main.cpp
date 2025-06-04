@@ -60,40 +60,40 @@ int main() {
 
 	// Cube Coordinates  / TexCoords   /      Normals
     // Top face
-    -1.0f,  1.0f, -1.0f,   0.0f, 0.0f,                          // Top-left
-    -1.0f,  1.0f,  1.0f,   0.0f, 1.0f,                          // Bottom-left
-     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,                          // Bottom-right
-     1.0f,  1.0f, -1.0f,   1.0f, 0.0f,                          // Top-right
+    -1.0f,  1.0f, -1.0f,   0.0f, 0.0f,   0.0f, 1.0f, 0.0f,      // Top-left
+    -1.0f,  1.0f,  1.0f,   0.0f, 1.0f,   0.0f, 1.0f, 0.0f,     // Bottom-left
+     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,   0.0f, 1.0f, 0.0f,      // Bottom-right
+     1.0f,  1.0f, -1.0f,   1.0f, 0.0f,   0.0f, 1.0f, 0.0f,      // Top-right
 
     // Left face
-    -1.0f,  1.0f,  1.0f,   0.0f, 0.0f,                          // Top-left
-    -1.0f, -1.0f,  1.0f,   0.0f, 1.0f,                          // Bottom-left
-    -1.0f, -1.0f, -1.0f,   1.0f, 1.0f,                          // Bottom-right
-    -1.0f,  1.0f, -1.0f,   1.0f, 0.0f,                          // Top-right
+    -1.0f,  1.0f,  1.0f,   0.0f, 0.0f,   -1.0f, 0.0f, 0.0f,      // Top-left
+    -1.0f, -1.0f,  1.0f,   0.0f, 1.0f,   -1.0f, 0.0f, 0.0f,     // Bottom-left
+    -1.0f, -1.0f, -1.0f,   1.0f, 1.0f,   -1.0f, 0.0f, 0.0f,     // Bottom-right
+    -1.0f,  1.0f, -1.0f,   1.0f, 0.0f,   -1.0f, 0.0f, 0.0f,     // Top-right
 
     // Right face
-     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,                          // Top-left
-     1.0f, -1.0f,  1.0f,   1.0f, 0.0f,                          // Bottom-left
-     1.0f, -1.0f, -1.0f,   0.0f, 0.0f,                          // Bottom-right
-     1.0f,  1.0f, -1.0f,   0.0f, 1.0f,                          // Top-right
+     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,    1.0f, 0.0f, 0.0f,     // Top-left
+     1.0f, -1.0f,  1.0f,   1.0f, 0.0f,    1.0f, 0.0f, 0.0f,     // Bottom-left
+     1.0f, -1.0f, -1.0f,   0.0f, 0.0f,    1.0f, 0.0f, 0.0f,     // Bottom-right
+     1.0f,  1.0f, -1.0f,   0.0f, 1.0f,    1.0f, 0.0f, 0.0f,     // Top-right
 
     // Front face
-    -1.0f,  1.0f,  1.0f,   0.0f, 1.0f,                          // Top-left
-    -1.0f, -1.0f,  1.0f,   0.0f, 0.0f,                          // Bottom-left
-     1.0f, -1.0f,  1.0f,   1.0f, 0.0f,                          // Bottom-right
-     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,                          // Top-right
+    -1.0f,  1.0f,  1.0f,   0.0f, 1.0f,    0.0f, 0.0f, 1.0f,     // Top-left
+    -1.0f, -1.0f,  1.0f,   0.0f, 0.0f,    0.0f, 0.0f, 1.0f,     // Bottom-left
+     1.0f, -1.0f,  1.0f,   1.0f, 0.0f,    0.0f, 0.0f, 1.0f,     // Bottom-right
+     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,    0.0f, 0.0f, 1.0f,     // Top-right
 
     // Back face
-    -1.0f,  1.0f, -1.0f,   1.0f, 1.0f,                          // Top-left
-    -1.0f, -1.0f, -1.0f,   1.0f, 0.0f,                          // Bottom-left
-     1.0f, -1.0f, -1.0f,   0.0f, 0.0f,                          // Bottom-right
-     1.0f,  1.0f, -1.0f,   0.0f, 1.0f,                          // Top-right
+    -1.0f,  1.0f, -1.0f,   1.0f, 1.0f,   0.0f, 0.0f, -1.0f,     // Top-left
+    -1.0f, -1.0f, -1.0f,   1.0f, 0.0f,   0.0f, 0.0f, -1.0f,     // Bottom-left
+     1.0f, -1.0f, -1.0f,   0.0f, 0.0f,   0.0f, 0.0f, -1.0f,     // Bottom-right
+     1.0f,  1.0f, -1.0f,   0.0f, 1.0f,   0.0f, 0.0f, -1.0f,     // Top-right
 
     // Bottom face
-    -1.0f, -1.0f, -1.0f,   0.0f, 0.0f,                          // Top-left
-    -1.0f, -1.0f,  1.0f,   0.0f, 1.0f,                          // Bottom-left
-     1.0f, -1.0f,  1.0f,   1.0f, 1.0f,                          // Bottom-right
-     1.0f, -1.0f, -1.0f,   1.0f, 0.0f                           // Top-right
+    -1.0f, -1.0f, -1.0f,   0.0f, 0.0f,   0.0f, -1.0f, 0.0f,     // Top-left
+    -1.0f, -1.0f,  1.0f,   0.0f, 1.0f,   0.0f, -1.0f, 0.0f,     // Bottom-left
+     1.0f, -1.0f,  1.0f,   1.0f, 1.0f,   0.0f, -1.0f, 0.0f,     // Bottom-right
+     1.0f, -1.0f, -1.0f,   1.0f, 0.0f,   0.0f, -1.0f, 0.0f      // Top-right
 };
 
 
@@ -248,7 +248,7 @@ int main() {
 	// Link VBO to VAO
 	vao.LinkAttrib(vbo, 0, 3, 8 * sizeof(GLfloat), 0);                   // Position attribute
 	vao.LinkAttrib(vbo, 1, 2, 8 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Texture attribute
-	vao.LinkAttrib(vbo, 1, 2, 8 * sizeof(GLfloat), 2 * sizeof(GLfloat)); // Normal Attributes
+	vao.LinkAttrib(vbo, 2, 3, 8 * sizeof(GLfloat), 5 * sizeof(GLfloat)); // Normal Attributes
 	
 	// Unbind VAO, VBO, and EBO
 	vao.Unbind();
@@ -344,6 +344,20 @@ int main() {
 			glGetUniformLocation(shader.getProgramID(), "lightColor"),
 			lightColor.x, lightColor.y, lightColor.z, lightColor.w
 		);
+
+
+		// Pass light position to the textured cube's shader
+		glUniform3f(
+			glGetUniformLocation(shader.getProgramID(), "lightPos"),
+			lightPosition.x, lightPosition.y, lightPosition.z
+		);
+
+		// Pass camera position to the textures cube's shader (for specular) 
+		glUniform3f (
+			glGetUniformLocation(shader.getProgramID(), "camPos"),
+			Camera.Position.x, Camera.Position.y, Camera.Position.z
+		);
+
 
 		// Draw textured cube
 		vao.Bind();

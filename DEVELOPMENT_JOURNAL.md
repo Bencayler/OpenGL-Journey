@@ -184,3 +184,16 @@ Normally, this kind of normals data will be calculated in 3D modeling software. 
 4.| In the default.vert add a vec3 output for the normal, add a vec3 output fragPos so the 'light' can be interpolated and then take care of the calculations in the fragment shader.
 
 I shouldn't have to modify indices - but we will see. I am slightly different than the tutorial I am following. It seems like I've already taken care of that because I am using a textured cube as opposed to a pyramid.
+
+@ 18:27
+
+Done and working as intended.
+
+The modification of the vertices and the VAO object was quite a bit easier than I thought it would be. I thought the Normal vectors would be different for some reason, but either kind of the normals works for all kinds of lighting is now my understanding. So inputting a perpendicular line was easy. The top face was labeled in the comments (0.0, 1.0, 0.0) is a straight up vector. Easy.
+
+Changing the VAO object was easy as well. Just account for the layout, data, and offsets, and we are good.
+
+The hardest part I need to go back and read the learnopengl article on is the fragment and vertex shader changes I had to make. I somewhat understand the steps, but the math is a complete mystery. Again, I really would love to take a trig, calc, linear algebra class FOR computer graphics. LOTS AND LOTS OF linear algebra above the hood and I'm sure loads of calc and trig below. Just the feeding of the camera position, lighting position is the biggest key here. I don't know what more there is to say besides I'm somewhat glad this is over, but of course, I know its not and I will be returning for the rest of my graphics programming career so I might as well get cozy with the concepts over the week.
+
+------------------------
+
