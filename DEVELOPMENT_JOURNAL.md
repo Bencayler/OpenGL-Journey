@@ -223,5 +223,42 @@ Like a LOT of these tutorials, there is obviously huge amounts of potential for 
 
 This does also conflict with his advice of, write a program, rewrite it so its better, rewrite it so it is even better again and again until it is perfect. And maybe, if you're lucky you have a good program that does something interesting with the computer. More to follow. 
 
+------------------------
 
+June 6th 2025
 
+Moving onto the different kinds of light we can use. In general we have three kinds of light: point, directional, and spot. 
+
+Point lights illuminate the environment in all directions, which is what we were doing with our light the last two lessons. It is basically the sun. It sends light out in all directions just as the sun illuminates the solar system. There is a catch - just like in real life the intensity of the light becomes less intense as it moves away and it strength decreases exponentially (inverse square relationship or 1/x^2). In our point light example we did not incorporate this. 
+
+In computer graphics we have a slightly more complicated equation to simulate this. Instead of just 1 / distance squared we have to use 1 over a quadratic equation with respect to distance. Typically this equation is written 1 / a * d^2 + b * d + 1 where a and b are constants. A is the quadratic term and B is the linear term. A changes how fast the intensity dies out and B changes how far the light reaches. Look at this image from desmos for an illustration. The Y output of the function is our light intenisty and we can change the inputs for A and B. My understanding is that we want these consants normalized. Going beyond certain values in the equation has a lot bizzare undefined behavior in the graph.
+
+![alt text](image-2.png)
+
+This lesson has implement this really quickly. We start by writing a pointLight function in the fragment shader where we copy everything over. This is somewhat notable since its our first function outside of main for our shading language.
+
+First we simply need the distance from the light to the object. This is simply the vector that comes from the subtracting the current position from the light position. We already do this for the diffuse lighting, but it is not stored as a variable. We create a vec3 lightVec and can replace that in the function. We then get the distance by using a length function on the vector. Lastly, we right out the equation with our variables. Float A = 3.0; etc and store that in an intensity float variable and then apply it to the specular and diffuse lighting. 
+
+Directional lighting is next and is actually the easiest to implement. This too works like the sun but on the scales we see on Earth as opposed to the solar system. The suns rays are so far away and the sun so massive that the rays are essentially parallel. Also similar to the sun, the source of light is so distanct from the scene the lights are basically parallel. Because it is so far we remove the dimming. 
+
+We basically just copy the function over from the point light and instead of calculating the light direction based on two points we pass in a constanct vec3 and normalize it. For the sake of this example we have to point the light in the OPPOSITE direction we want it to face. I wonder if we can't just subtract the result of the normalized vector instead? Wouldn't that point it in the opposite direction?
+
+The last type of light is the spot light and illuminates an area in a conic area, light a spotlight or a lamp. We again beging by taking the pointlight function. We then define the two foats that represent the cosines values of two angles. The first angle is the angle between the inner cone and the direction of the light, the second angle is the angle between outer cone and the direction of the light. See the example below.
+
+![alt text](image-3.png)
+
+We use the two cones to create a gradient between the intensily illuminated area and the transition to darkness. 
+
+![alt text](image-4.png)
+
+This tutorial wrote the cosine values directly into the floats as opposed to using angles to calculate it and a cosine function and their respective returned values. Apparently there are performance concerns? That seems strange to me, trig functions are some of the most fundamental operations in computers - how intense can the performance hit be?
+
+Nevertheless, we calculate the angle between the current part being lit and the central direction of the light using a dot product. This will give us yet another cosine value which matches perfectly with our other cosine values. Lastly we need to get the intensity of the gradient and return the clampled value between 0.0 and 1.0. That formula is the following:
+
+intensity = clamp((angle - outerCone) / (innerCone - outerCome), 0.0f, 1.0f)
+
+Lastly we multiply this intensity by the diffuse and specular lighting and should have our final values to return.
+
+This lesson is nice, and quick, but also fundamental in the lighiting sense. It is quite nice it takes place entirely in the fragment shader, which simplifies our debugging and focuses our learning.
+
+Next up is a mesh class which may take considerably longer, but is likely to be an extremely helpful abstraction over our vertices and indices we have for our two cubes.

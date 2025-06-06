@@ -310,6 +310,27 @@
 		},
 		{
 			"path" : "08-SpecularMaps/shaders/assets/wood_floor_specular.png"
+		},
+		{
+			"path" : "09-TypesOfLight/CMakeLists.txt"
+		},
+		{
+			"path" : "09-TypesOfLight/shaders/default.frag"
+		},
+		{
+			"path" : "09-TypesOfLight/shaders/default.vert"
+		},
+		{
+			"path" : "09-TypesOfLight/shaders/light.frag"
+		},
+		{
+			"path" : "09-TypesOfLight/shaders/light.vert"
+		},
+		{
+			"path" : "09-TypesOfLight/shaders/assets/wood_floor.png"
+		},
+		{
+			"path" : "09-TypesOfLight/shaders/assets/wood_floor_specular.png"
 		}
 	],
 	"kind" : "cmakeFiles",

@@ -25,3 +25,6 @@ C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting/
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps/CMakeFiles/SpecularMaps.dir
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps/CMakeFiles/edit_cache.dir
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps/CMakeFiles/rebuild_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight/CMakeFiles/TypesOfLight.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight/CMakeFiles/edit_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight/CMakeFiles/rebuild_cache.dir

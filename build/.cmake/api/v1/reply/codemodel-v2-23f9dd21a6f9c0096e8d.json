@@ -15,7 +15,8 @@
 						5,
 						6,
 						7,
-						8
+						8,
+						9
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -26,7 +27,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						8
+						9
 					]
 				},
 				{
@@ -148,6 +149,21 @@
 					[
 						5
 					]
+				},
+				{
+					"build" : "09-TypesOfLight",
+					"jsonFile" : "directory-09-TypesOfLight-Debug-b8e7b0f85d99ac42ee31.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "09-TypesOfLight",
+					"targetIndexes" : 
+					[
+						8
+					]
 				}
 			],
 			"name" : "Debug",
@@ -164,7 +180,8 @@
 						5,
 						6,
 						7,
-						8
+						8,
+						9
 					],
 					"name" : "OpenGL_Journals_Test",
 					"targetIndexes" : 
@@ -177,7 +194,8 @@
 						5,
 						6,
 						7,
-						8
+						8,
+						9
 					]
 				}
 			],
@@ -237,6 +255,13 @@
 					"id" : "TriforceApp::@d37b0878c46bdf7efc7c",
 					"jsonFile" : "target-TriforceApp-Debug-f6f86f78da03c268936d.json",
 					"name" : "TriforceApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "TypesOfLight::@9b7ea72a7011d9dad715",
+					"jsonFile" : "target-TypesOfLight-Debug-b9160710421e9bee1d41.json",
+					"name" : "TypesOfLight",
 					"projectIndex" : 0
 				},
 				{

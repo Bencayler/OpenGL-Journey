@@ -262,5 +262,47 @@
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/SpecularMaps.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\SpecularMaps.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\08-SpecularMaps\\src\\textureClass.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/src/textureClass.cpp",
   "output": "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/src/textureClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/TypesOfLight.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\TypesOfLight.dir\\src\\Camera.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\09-TypesOfLight\\src\\Camera.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/src/Camera.cpp",
+  "output": "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/src/Camera.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/TypesOfLight.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\TypesOfLight.dir\\src\\EBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\09-TypesOfLight\\src\\EBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/src/EBO.cpp",
+  "output": "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/src/EBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/TypesOfLight.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\TypesOfLight.dir\\src\\VAO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\09-TypesOfLight\\src\\VAO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/src/VAO.cpp",
+  "output": "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/src/VAO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/TypesOfLight.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\TypesOfLight.dir\\src\\VBO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\09-TypesOfLight\\src\\VBO.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/src/VBO.cpp",
+  "output": "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/src/VBO.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/TypesOfLight.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\TypesOfLight.dir\\src\\main.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\09-TypesOfLight\\src\\main.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/src/main.cpp",
+  "output": "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/TypesOfLight.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\TypesOfLight.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\09-TypesOfLight\\src\\shaderClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/src/shaderClass.cpp",
+  "output": "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/src/shaderClass.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/TypesOfLight.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\TypesOfLight.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\09-TypesOfLight\\src\\textureClass.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/src/textureClass.cpp",
+  "output": "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/src/textureClass.cpp.obj"
 }
 ]

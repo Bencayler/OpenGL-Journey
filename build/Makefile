@@ -232,6 +232,19 @@ SpecularMaps/fast:
 	$(MAKE) $(MAKESILENT) -f 08-SpecularMaps\CMakeFiles\SpecularMaps.dir\build.make 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/build
 .PHONY : SpecularMaps/fast
 
+#=============================================================================
+# Target rules for targets named TypesOfLight
+
+# Build rule for target.
+TypesOfLight: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TypesOfLight
+.PHONY : TypesOfLight
+
+# fast build rule for target.
+TypesOfLight/fast:
+	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/build
+.PHONY : TypesOfLight/fast
+
 Libraries/src/glad.obj: Libraries/src/glad.c.obj
 .PHONY : Libraries/src/glad.obj
 
@@ -272,6 +285,7 @@ help:
 	@echo ... SpecularMaps
 	@echo ... TriangleApp
 	@echo ... TriforceApp
+	@echo ... TypesOfLight
 	@echo ... glad
 	@echo ... Libraries/src/glad.obj
 	@echo ... Libraries/src/glad.i

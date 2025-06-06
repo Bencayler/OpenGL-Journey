@@ -47,6 +47,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/06-Camera/cmake_install.cmake")
   include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/07-Lighting/cmake_install.cmake")
   include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularMaps/cmake_install.cmake")
+  include("C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight/cmake_install.cmake")
 
 endif()
 

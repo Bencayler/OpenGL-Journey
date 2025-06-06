@@ -71,6 +71,7 @@ all: 05-3DCubeTextured/all
 all: 06-Camera/all
 all: 07-Lighting/all
 all: 08-SpecularMaps/all
+all: 09-TypesOfLight/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -83,6 +84,7 @@ codegen: 05-3DCubeTextured/codegen
 codegen: 06-Camera/codegen
 codegen: 07-Lighting/codegen
 codegen: 08-SpecularMaps/codegen
+codegen: 09-TypesOfLight/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -94,6 +96,7 @@ preinstall: 05-3DCubeTextured/preinstall
 preinstall: 06-Camera/preinstall
 preinstall: 07-Lighting/preinstall
 preinstall: 08-SpecularMaps/preinstall
+preinstall: 09-TypesOfLight/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -106,6 +109,7 @@ clean: 05-3DCubeTextured/clean
 clean: 06-Camera/clean
 clean: 07-Lighting/clean
 clean: 08-SpecularMaps/clean
+clean: 09-TypesOfLight/clean
 .PHONY : clean
 
 #=============================================================================
@@ -261,13 +265,32 @@ clean: 08-SpecularMaps/clean
 .PHONY : 08-SpecularMaps/clean
 
 #=============================================================================
+# Directory level rules for directory 09-TypesOfLight
+
+# Recursive "all" directory target.
+09-TypesOfLight/all: 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/all
+.PHONY : 09-TypesOfLight/all
+
+# Recursive "codegen" directory target.
+09-TypesOfLight/codegen: 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/codegen
+.PHONY : 09-TypesOfLight/codegen
+
+# Recursive "preinstall" directory target.
+09-TypesOfLight/preinstall:
+.PHONY : 09-TypesOfLight/preinstall
+
+# Recursive "clean" directory target.
+09-TypesOfLight/clean: 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/clean
+.PHONY : 09-TypesOfLight/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/glad.dir
 
 # All Build rule for target.
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=52,53 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=60,61 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -284,7 +307,7 @@ glad: CMakeFiles/glad.dir/rule
 # codegen rule for target.
 CMakeFiles/glad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=52,53 "Finished codegen for target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=60,61 "Finished codegen for target glad"
 .PHONY : CMakeFiles/glad.dir/codegen
 
 # clean rule for target.
@@ -547,6 +570,38 @@ SpecularMaps: 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/rule
 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/clean:
 	$(MAKE) $(MAKESILENT) -f 08-SpecularMaps\CMakeFiles\SpecularMaps.dir\build.make 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/clean
 .PHONY : 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/clean
+
+#=============================================================================
+# Target rules for target 09-TypesOfLight/CMakeFiles/TypesOfLight.dir
+
+# All Build rule for target.
+09-TypesOfLight/CMakeFiles/TypesOfLight.dir/all: CMakeFiles/glad.dir/all
+	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/depend
+	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=52,53,54,55,56,57,58,59 "Built target TypesOfLight"
+.PHONY : 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/all
+
+# Build rule for subdir invocation for target.
+09-TypesOfLight/CMakeFiles/TypesOfLight.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles 0
+.PHONY : 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/rule
+
+# Convenience name for target.
+TypesOfLight: 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/rule
+.PHONY : TypesOfLight
+
+# codegen rule for target.
+09-TypesOfLight/CMakeFiles/TypesOfLight.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=52,53,54,55,56,57,58,59 "Finished codegen for target TypesOfLight"
+.PHONY : 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/codegen
+
+# clean rule for target.
+09-TypesOfLight/CMakeFiles/TypesOfLight.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/clean
+.PHONY : 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

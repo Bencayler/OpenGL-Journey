@@ -71,6 +71,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/light.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/08-SpecularMaps/shaders/light.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/assets/wood_floor.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/assets/wood_floor_specular.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/default.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/default.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/light.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/light.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
   "CMakeFiles/4.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
@@ -119,6 +126,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "08-SpecularMaps/wood_floor.png"
   "08-SpecularMaps/wood_floor_specular.png"
   "08-SpecularMaps/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "09-TypesOfLight/default.frag"
+  "09-TypesOfLight/default.vert"
+  "09-TypesOfLight/light.frag"
+  "09-TypesOfLight/light.vert"
+  "09-TypesOfLight/wood_floor.png"
+  "09-TypesOfLight/wood_floor_specular.png"
+  "09-TypesOfLight/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -132,4 +146,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "06-Camera/CMakeFiles/Camera.dir/DependInfo.cmake"
   "07-Lighting/CMakeFiles/Lighting.dir/DependInfo.cmake"
   "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/DependInfo.cmake"
+  "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/DependInfo.cmake"
   )
