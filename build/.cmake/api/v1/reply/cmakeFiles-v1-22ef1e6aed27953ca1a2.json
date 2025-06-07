@@ -331,6 +331,27 @@
 		},
 		{
 			"path" : "09-TypesOfLight/shaders/assets/wood_floor_specular.png"
+		},
+		{
+			"path" : "10-MeshClass/CMakeLists.txt"
+		},
+		{
+			"path" : "10-MeshClass/shaders/default.frag"
+		},
+		{
+			"path" : "10-MeshClass/shaders/default.vert"
+		},
+		{
+			"path" : "10-MeshClass/shaders/light.frag"
+		},
+		{
+			"path" : "10-MeshClass/shaders/light.vert"
+		},
+		{
+			"path" : "10-MeshClass/shaders/assets/wood_floor.png"
+		},
+		{
+			"path" : "10-MeshClass/shaders/assets/wood_floor_specular.png"
 		}
 	],
 	"kind" : "cmakeFiles",

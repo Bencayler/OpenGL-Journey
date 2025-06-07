@@ -78,6 +78,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/default.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/light.frag"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/09-TypesOfLight/shaders/light.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/CMakeLists.txt"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/shaders/assets/wood_floor.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/shaders/assets/wood_floor_specular.png"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/shaders/default.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/shaders/default.vert"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/shaders/light.frag"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/shaders/light.vert"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/CMakeLists.txt"
   "CMakeFiles/4.0.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
@@ -133,6 +140,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "09-TypesOfLight/wood_floor.png"
   "09-TypesOfLight/wood_floor_specular.png"
   "09-TypesOfLight/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "10-MeshClass/default.frag"
+  "10-MeshClass/default.vert"
+  "10-MeshClass/light.frag"
+  "10-MeshClass/light.vert"
+  "10-MeshClass/wood_floor.png"
+  "10-MeshClass/wood_floor_specular.png"
+  "10-MeshClass/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -147,4 +161,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "07-Lighting/CMakeFiles/Lighting.dir/DependInfo.cmake"
   "08-SpecularMaps/CMakeFiles/SpecularMaps.dir/DependInfo.cmake"
   "09-TypesOfLight/CMakeFiles/TypesOfLight.dir/DependInfo.cmake"
+  "10-MeshClass/CMakeFiles/MeshClass.dir/DependInfo.cmake"
   )

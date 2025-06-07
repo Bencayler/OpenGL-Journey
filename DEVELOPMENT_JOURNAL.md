@@ -262,3 +262,16 @@ Lastly we multiply this intensity by the diffuse and specular lighting and shoul
 This lesson is nice, and quick, but also fundamental in the lighiting sense. It is quite nice it takes place entirely in the fragment shader, which simplifies our debugging and focuses our learning.
 
 Next up is a mesh class which may take considerably longer, but is likely to be an extremely helpful abstraction over our vertices and indices we have for our two cubes.
+
+------------------------
+
+June 7th 2025
+
+Okay! The time has come to abstract all this together. Finally. I've been dealing with shaders, vertices, and indices, one at a time and calling them sequentially as we step through the main function. Not to mention standard arrays, which are great, but are difficult to make abstractions around. Using vectors just gives a lot more confidence that this can abstracted well.
+
+I imagine this is the heart of grahpics programming. Wrapping up all this semi complicated instructions with the GPU and putting it into a single mesh class. I also imagine this is where a lot of decision making comes in. How exactly do we abstract away a mesh defines a lot of what the engine will do. I can imagine that this is a big decision that comes early in development and an intelligent decision guided by experience needs to be made early before things get too big and unwieldy to refactor. 
+
+After reading the tutorial I also understand the criticism that things like Unreal and Unity get. Yes, you can use those off the shelf, but if they implement something in a way that doesn't work for your particular game then it can be a bit rough. Additionally, if you have a source modifiable license of those engines, going in and changing the way it handles something like meshes is basically splitting the atom. 
+
+Of course I know what a mesh is - I've seen the monkey head and donut in Blender, but it might be nice to have a concrete definition. A mesh simply is the set of vertices, indices, and textures for a model. That is basically it. And as I've said before all a video game model is, is a series of vertices and indices stored in GPU memory. So when we take the model from Blender it is stored as vertex coordinate, how they are connected with indices, and the texture that acompanies it, and normals. All the things we have manually encoded our cube with, Blender does for us to be loaded into the game engine. 
+

@@ -28,3 +28,6 @@ C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/08-SpecularM
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight/CMakeFiles/TypesOfLight.dir
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight/CMakeFiles/edit_cache.dir
 C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/09-TypesOfLight/CMakeFiles/rebuild_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass/CMakeFiles/MeshClass.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass/CMakeFiles/edit_cache.dir
+C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass/CMakeFiles/rebuild_cache.dir

@@ -245,6 +245,19 @@ TypesOfLight/fast:
 	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/build
 .PHONY : TypesOfLight/fast
 
+#=============================================================================
+# Target rules for targets named MeshClass
+
+# Build rule for target.
+MeshClass: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MeshClass
+.PHONY : MeshClass
+
+# fast build rule for target.
+MeshClass/fast:
+	$(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/build
+.PHONY : MeshClass/fast
+
 Libraries/src/glad.obj: Libraries/src/glad.c.obj
 .PHONY : Libraries/src/glad.obj
 
@@ -282,6 +295,7 @@ help:
 	@echo ... Camera
 	@echo ... InterpolatedTriangleApp
 	@echo ... Lighting
+	@echo ... MeshClass
 	@echo ... SpecularMaps
 	@echo ... TriangleApp
 	@echo ... TriforceApp

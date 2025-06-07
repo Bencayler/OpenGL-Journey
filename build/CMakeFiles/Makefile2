@@ -72,6 +72,7 @@ all: 06-Camera/all
 all: 07-Lighting/all
 all: 08-SpecularMaps/all
 all: 09-TypesOfLight/all
+all: 10-MeshClass/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -85,6 +86,7 @@ codegen: 06-Camera/codegen
 codegen: 07-Lighting/codegen
 codegen: 08-SpecularMaps/codegen
 codegen: 09-TypesOfLight/codegen
+codegen: 10-MeshClass/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -97,6 +99,7 @@ preinstall: 06-Camera/preinstall
 preinstall: 07-Lighting/preinstall
 preinstall: 08-SpecularMaps/preinstall
 preinstall: 09-TypesOfLight/preinstall
+preinstall: 10-MeshClass/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -110,6 +113,7 @@ clean: 06-Camera/clean
 clean: 07-Lighting/clean
 clean: 08-SpecularMaps/clean
 clean: 09-TypesOfLight/clean
+clean: 10-MeshClass/clean
 .PHONY : clean
 
 #=============================================================================
@@ -284,13 +288,32 @@ clean: 09-TypesOfLight/clean
 .PHONY : 09-TypesOfLight/clean
 
 #=============================================================================
+# Directory level rules for directory 10-MeshClass
+
+# Recursive "all" directory target.
+10-MeshClass/all: 10-MeshClass/CMakeFiles/MeshClass.dir/all
+.PHONY : 10-MeshClass/all
+
+# Recursive "codegen" directory target.
+10-MeshClass/codegen: 10-MeshClass/CMakeFiles/MeshClass.dir/codegen
+.PHONY : 10-MeshClass/codegen
+
+# Recursive "preinstall" directory target.
+10-MeshClass/preinstall:
+.PHONY : 10-MeshClass/preinstall
+
+# Recursive "clean" directory target.
+10-MeshClass/clean: 10-MeshClass/CMakeFiles/MeshClass.dir/clean
+.PHONY : 10-MeshClass/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/glad.dir
 
 # All Build rule for target.
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=60,61 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=68,69 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -307,7 +330,7 @@ glad: CMakeFiles/glad.dir/rule
 # codegen rule for target.
 CMakeFiles/glad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=60,61 "Finished codegen for target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=68,69 "Finished codegen for target glad"
 .PHONY : CMakeFiles/glad.dir/codegen
 
 # clean rule for target.
@@ -322,7 +345,7 @@ CMakeFiles/glad.dir/clean:
 01-Triangle/CMakeFiles/TriangleApp.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f 01-Triangle\CMakeFiles\TriangleApp.dir\build.make 01-Triangle/CMakeFiles/TriangleApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f 01-Triangle\CMakeFiles\TriangleApp.dir\build.make 01-Triangle/CMakeFiles/TriangleApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=44,45 "Built target TriangleApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=52,53 "Built target TriangleApp"
 .PHONY : 01-Triangle/CMakeFiles/TriangleApp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -339,7 +362,7 @@ TriangleApp: 01-Triangle/CMakeFiles/TriangleApp.dir/rule
 # codegen rule for target.
 01-Triangle/CMakeFiles/TriangleApp.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f 01-Triangle\CMakeFiles\TriangleApp.dir\build.make 01-Triangle/CMakeFiles/TriangleApp.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=44,45 "Finished codegen for target TriangleApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=52,53 "Finished codegen for target TriangleApp"
 .PHONY : 01-Triangle/CMakeFiles/TriangleApp.dir/codegen
 
 # clean rule for target.
@@ -354,7 +377,7 @@ TriangleApp: 01-Triangle/CMakeFiles/TriangleApp.dir/rule
 02-Triforce/CMakeFiles/TriforceApp.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f 02-Triforce\CMakeFiles\TriforceApp.dir\build.make 02-Triforce/CMakeFiles/TriforceApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f 02-Triforce\CMakeFiles\TriforceApp.dir\build.make 02-Triforce/CMakeFiles/TriforceApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=46,47,48,49,50,51 "Built target TriforceApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=54,55,56,57,58,59 "Built target TriforceApp"
 .PHONY : 02-Triforce/CMakeFiles/TriforceApp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -371,7 +394,7 @@ TriforceApp: 02-Triforce/CMakeFiles/TriforceApp.dir/rule
 # codegen rule for target.
 02-Triforce/CMakeFiles/TriforceApp.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f 02-Triforce\CMakeFiles\TriforceApp.dir\build.make 02-Triforce/CMakeFiles/TriforceApp.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=46,47,48,49,50,51 "Finished codegen for target TriforceApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=54,55,56,57,58,59 "Finished codegen for target TriforceApp"
 .PHONY : 02-Triforce/CMakeFiles/TriforceApp.dir/codegen
 
 # clean rule for target.
@@ -546,7 +569,7 @@ Lighting: 07-Lighting/CMakeFiles/Lighting.dir/rule
 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f 08-SpecularMaps\CMakeFiles\SpecularMaps.dir\build.make 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/depend
 	$(MAKE) $(MAKESILENT) -f 08-SpecularMaps\CMakeFiles\SpecularMaps.dir\build.make 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=36,37,38,39,40,41,42,43 "Built target SpecularMaps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=44,45,46,47,48,49,50,51 "Built target SpecularMaps"
 .PHONY : 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/all
 
 # Build rule for subdir invocation for target.
@@ -563,7 +586,7 @@ SpecularMaps: 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/rule
 # codegen rule for target.
 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f 08-SpecularMaps\CMakeFiles\SpecularMaps.dir\build.make 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=36,37,38,39,40,41,42,43 "Finished codegen for target SpecularMaps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=44,45,46,47,48,49,50,51 "Finished codegen for target SpecularMaps"
 .PHONY : 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/codegen
 
 # clean rule for target.
@@ -578,7 +601,7 @@ SpecularMaps: 08-SpecularMaps/CMakeFiles/SpecularMaps.dir/rule
 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/all: CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/depend
 	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=52,53,54,55,56,57,58,59 "Built target TypesOfLight"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=60,61,62,63,64,65,66,67 "Built target TypesOfLight"
 .PHONY : 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/all
 
 # Build rule for subdir invocation for target.
@@ -595,13 +618,45 @@ TypesOfLight: 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/rule
 # codegen rule for target.
 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=52,53,54,55,56,57,58,59 "Finished codegen for target TypesOfLight"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=60,61,62,63,64,65,66,67 "Finished codegen for target TypesOfLight"
 .PHONY : 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/codegen
 
 # clean rule for target.
 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/clean:
 	$(MAKE) $(MAKESILENT) -f 09-TypesOfLight\CMakeFiles\TypesOfLight.dir\build.make 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/clean
 .PHONY : 09-TypesOfLight/CMakeFiles/TypesOfLight.dir/clean
+
+#=============================================================================
+# Target rules for target 10-MeshClass/CMakeFiles/MeshClass.dir
+
+# All Build rule for target.
+10-MeshClass/CMakeFiles/MeshClass.dir/all: CMakeFiles/glad.dir/all
+	$(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/depend
+	$(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=36,37,38,39,40,41,42,43 "Built target MeshClass"
+.PHONY : 10-MeshClass/CMakeFiles/MeshClass.dir/all
+
+# Build rule for subdir invocation for target.
+10-MeshClass/CMakeFiles/MeshClass.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 10-MeshClass/CMakeFiles/MeshClass.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles 0
+.PHONY : 10-MeshClass/CMakeFiles/MeshClass.dir/rule
+
+# Convenience name for target.
+MeshClass: 10-MeshClass/CMakeFiles/MeshClass.dir/rule
+.PHONY : MeshClass
+
+# codegen rule for target.
+10-MeshClass/CMakeFiles/MeshClass.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=36,37,38,39,40,41,42,43 "Finished codegen for target MeshClass"
+.PHONY : 10-MeshClass/CMakeFiles/MeshClass.dir/codegen
+
+# clean rule for target.
+10-MeshClass/CMakeFiles/MeshClass.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/clean
+.PHONY : 10-MeshClass/CMakeFiles/MeshClass.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
