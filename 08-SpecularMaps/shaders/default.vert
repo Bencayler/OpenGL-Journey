@@ -13,9 +13,6 @@ out vec3 Normal;
 uniform mat4 modelMatrix;
 uniform mat4 camMatrix;
 
-uniform vec3 lightPos;
-uniform vec3 camPos;
-
 
 void main() {
 	// Calculate fragment position in world space

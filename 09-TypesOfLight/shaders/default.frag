@@ -21,40 +21,89 @@ uniform vec3 lightPos;
 // Camera position
 uniform vec3 camPos;
 
+vec4 pointLight() {
+	// Get the light vector
+	vec3 lightVector = lightPos - FragPos;
 
+	// Calculate the intensity of light via a inverse quadratic
+	float distance = length(lightVector); // Get the magnitude of the vector
+	float a = 0.1;
+	float b = 0.5;
+	float intensity = 1.0f / (a * (distance * distance) + b * distance + 1.0f);
 
-
-void main() {
 	// === Ambient Lighting === 
-	float ambientStrength = 0.1;
-	vec3 ambient          = ambientStrength * vec3(lightColor);
+	float ambientStrength = 0.30f;
 
-	// === Diffuse Lighting ===
-	vec3 norm     = normalize(Normal); // Ensure normal is normalized
-    vec3 lightDir = normalize(lightPos - FragPos); // Direction from fragment to light
-	float diff    = max(dot(norm, lightDir), 0.0); // Dot product gives intensity. Clamp to 0.0 
-    vec3 diffuse  = diff * vec3(lightColor); // Diffuse light color
+	// === Diffuse Lighting === 
+	vec3 normal = normalize(Normal);
+	vec3 lightDirection = normalize(lightVector);
+	float diffuse = max(dot(normal, lightDirection), 0.0f);
 
 	// === Specular Lighting ===
-	// 1. Sample the specular map
-	// We take the red channel (or any one single channel) since it's typically grayscale
-	float mapSpecularStrength = texture(tex1, textureCoords).r; // R is for read
+	float specularStrength = 0.850f;
+	vec3 viewDirection = normalize(camPos - FragPos);
+	vec3 reflectionDirection = reflect(-lightDirection, normal);
+	float specAmount = pow(max(dot(viewDirection, reflectionDirection), 0.0f), 16);
+	float specular = specAmount * specularStrength;
 	
-	// 2. Use this sampled value to scale the specular strength
-	// This makes areas with lower mapSpecularStrength less shiny
-	float finalSpecularStrength = mapSpecularStrength;
+	// Return the vec4
+	return (texture(tex0, textureCoords) * (diffuse * intensity + ambientStrength) + texture(tex1, textureCoords).r * specular * intensity) * lightColor;
 
-	// float specularStrength = 0.5f; // How shiny the object is
-	vec3 viewDir           = normalize(camPos - FragPos);
-	vec3 reflectDir        = reflect(-lightDir, norm);
-	float spec             = pow(max(dot(viewDir, reflectDir), 0.0), 32.0);
+}
+
+// Todo - Implement directional light
+vec4 directionalLight() {
+	// === Ambient Lighting === 
+	float ambientStrength = 0.20f;
+
+	// === Diffuse Lighting === 
+	vec3 normal = normalize(Normal);
+	vec3 lightDirection = normalize(vec3(1.0f, 1.0f, 0.0f));
+	float diffuse = max(dot(normal, lightDirection), 0.0f);
+
+	// === Specular Lighting ===
+	float specularLight = 0.50f;
+	vec3 viewDirection = normalize(camPos - FragPos);
+	vec3 reflectionDirection = reflect(-lightDirection, normal);
+	float specAmount = pow(max(dot(viewDirection, reflectionDirection), 0.0f), 16);
+	float specular = specAmount * specularLight;
+
+	return (texture(tex0, textureCoords) * (diffuse + ambientStrength ) + texture(tex1, textureCoords).r * specular) * lightColor;
+}
+
+vec4 spotLight() {
 	
-	// We use the specular strength from the grayscaled image INSTEAD of the standard specular light
-	// that comes from simply calculating the angle to the normal and the camera.
-	vec3 specular          = finalSpecularStrength * spec * vec3(lightColor);
+	// Establish the outer and inner cones
+	float outerCone = 0.90f;
+	float innerCone = 0.95f;
 
-	// Combine the results with addition
-	vec3 result = ambient + diffuse + specular;
+	// === Ambient Lighting === 
+	float ambientStrength = 0.30f;
 
-	FragColor = texture(tex0, textureCoords) * vec4(result, 1.0);
+	// === Diffuse Lighting === 
+	vec3 normal = normalize(Normal);
+	vec3 lightDirection = normalize(lightPos - FragPos);
+	float diffuse = max(dot(normal, lightDirection), 0.0f);
+
+	// === Specular Lighting ===
+	float specularLight = 0.50f;
+	vec3 viewDirection = normalize(camPos - FragPos);
+	vec3 reflectDirection = reflect(-lightDirection, normal);
+	float specAmount = pow(max(dot(viewDirection, reflectDirection), 0.0f), 16);
+	float specular = specAmount * specularLight;
+
+	// Calculate the intensity of the frag pstions based on its angle to the center of the light cone
+	float angle = dot(vec3(0.0f, -1.0f, 0.0f), -lightDirection);
+	float intensity = clamp((angle - outerCone) / (innerCone - outerCone), 0.0f, 1.0f);
+
+	// Return the vec4
+	return (texture(tex0, textureCoords) * (diffuse * intensity + ambientStrength) + texture(tex1, textureCoords).r * specular * intensity) * lightColor;
+
+	
+}
+
+void main() {
+	// FragColor = spotLight();
+	FragColor = directionalLight();
+	// FragColor = pointLight();
 }
