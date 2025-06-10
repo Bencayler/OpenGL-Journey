@@ -275,3 +275,62 @@ After reading the tutorial I also understand the criticism that things like Unre
 
 Of course I know what a mesh is - I've seen the monkey head and donut in Blender, but it might be nice to have a concrete definition. A mesh simply is the set of vertices, indices, and textures for a model. That is basically it. And as I've said before all a video game model is, is a series of vertices and indices stored in GPU memory. So when we take the model from Blender it is stored as vertex coordinate, how they are connected with indices, and the texture that acompanies it, and normals. All the things we have manually encoded our cube with, Blender does for us to be loaded into the game engine. 
 
+To begin with the actual programming I'm going to be refactoring the class names to be more uniform. textureClass needs to be renamed to texture etc. Actually quite a bit easier to do than I thought. Simply reading the compilation errors and clearing them was enough. 
+
+Okay, I'm going to have some questions or maybe concerns with this tutorial so far. In our Mesh class we are defining one of the vectors of our Mesh data as a Vertex data class. We are then putting a struct for Vertex in the VBO.h file. We will see how this goes, but it seems like a bizzare place to place it and weird that it is a struct. We will see. Again, my read right now is that this is an important decision but we will see how it plays out. Also dealing with structs in C++ is so much nicer than in C. Just declare that sucker and shes ready to go. 
+
+The vertex struct basically just stores all the data that is in our vertices: Position, Normals, Color, and texture coordinates.
+
+I'm finding my beef now and I had to go to an LLM to get a decent answer. This tutortial wants us to include color data into the Vertex struct. This seems sily to me. After the rainbow cube I haven't done anything with color data, why include it as a part of the mesh? Isn't everything in the game going to be textured? According to the LLM this is an area of tradeoff, if we are going to just texture everything, why would we need to store information for color? I'm going to refactor to include this, but it seems silly so far and a pain in the neck to include. - Not to mention our vertex data need to store in a particular order (the order the vertex struct defines its parts in). We will see.
+
+I am at a stopping point and want to make a note for my future self at where I am at. I am done modifying the vertices to have the correct data and in the correct order. I have modified the VAO LinkAttrib methods in the Mesh class. I have NOT compiled in a while. To do so I need to modify the main function to account for the new parameters of the new VBO and EBO objects. (They now take in a reference to a vector as opposed to an array and the size). That apparently comes later in the tutorial and I'm apprehensive I'll waste my time making the refactorizations now. 
+
+I still have some questions I'll need to get answered in the future: Is this the standard order vertex data is stored? How can we change it in the future? More to follow.
+
+------------------------
+
+June 9th 2025
+
+Okay, so I didn't journal for the 8th despite working on this for over 6 hours. The lack of compilation and checking the output caught up with me. I eventually got the cube to draw using the new Mesh class abstraction but could never find the problem with the texture loading. I tried what I thought was everything. My frustration mounted and mounted and mounted and there was I could find. And eventually it just because such a hot mess of debugging that I had to start over. This is me doing that and changing my approach. I'm going to start over, now checking my incremental updates to ensure the cube still draws as God intended. 
+
+My general order of operations are again
+1: Rename the Texture and Shader classes == Done
+2: Refactor the Vertices and the vertex shader to account for color data (that we aren't even using) 
+     - Done and the cube is still drawing as intened == Done 
+     - Now we want to reorder everything so it will match the Vertex struct == Done
+3: Change the link Attrib VAO and make sure that works with the new data. == Done
+     - This is done for the Textured Cube - lets do this for the light cube next == Done
+3A: Refactor the EBO class to take in a vector of indices
+3A: Refactor the texture class to work in a vector == Done
+4: Refactor it to use Vertex structs - make sure it is working == Done
+5: Introduce the Mesh class  
+6: Introduce the Mesh class in steps to ensure the cube is drawing as intended
+7: Hopefully we are finished
+
+
+THIS SEEMS TO BE IT. When using the textures in a vector the textures are not loading properly. But when manually and hard coded called they work. 
+
+After some tooling I see the problem now and I need to write this down to remember it. It works as intended when calling the functions from a normal array of Textures. But when initialized to a Vector it suddenly breaks. We need a copy constructor - not because of the const char* or any OpenGL data type - but bcecuse when a texture is copied, the default copy constructor just copies the GLuint texture ID, meaning two objects now think the "own" the same OpenGL texture. The rub comes with how .emplace_back() and resiable arrays work. When we "increase the size of the array" we are actually defining an entirely new array and MOVING / COPYING everything over to that new array that fits our data. That is the problem here and what is doubly frustrating is that of course I know this. Why didn't I bother to think it was an issue with the vector? I know how arrays and resizable arrays work and I am just so fucking bad at debugging I never bothered to look at the problem from every possible angle. I just trusted C++ to take care of it for me and that is not how this works. I digress. If we don't define a custom copy / move constuctor when we 'emplace_back()' we are only copying the textureID member and not the actual texture and two texture objects have the same ID and both will call glDeleteTextures() in their destructor. So we need the rule of the Big 5 to fix this problem, just like I learned about at school and I was so annoyed I had to learn it, because isn't it so obvious you have to do this. But look at me. Victim of my own hubris. 
+
+Quick overview of the Big 5 - since I'm mostly only familiar with the Big 3. If we implement one, we have to implement all. What those are:
+1. Destructor
+2. Copy Constructor
+3. Copy assignment overload
+4. Move constructor - to transfer ownership WITHOUT copying
+5. Move assignment operator - to transfer ownership on assignment
+
+Quick update - and that was it, and even more problems with the vector. It doesn't like initializing it with the shaders. The initialization apparently creates an unnamed temporary Texture object, which then get copied or moved into the vector and that is sensitive. This is different than creating the objects permanently and emplacing them in the back. This is okay with me, the emplacing_back method is honestly easier for me to read.
+
+What does the syntax mean for the Move constructor and the move assignment operators?: Texture(Texture&& other) noexcept; What does noexcept mean, and what is the reference to a reference?
+
+The double reference in the move contructor && identifies this as a move contructor and is an rvalue reference. Rvalue references are a kind of reference introduced in C++ 11 that can bind to temporary objects (things that are about to be destryoed). The move contructor "steals" resources (like an OpenGL texture ID, or strings) from this termporary object OTHER instead of copying them.
+
+NOEXCEPT is a keyword that specifies this function is guranteed not to throw exceptions. It's a promise to the compiler andanyone using this function. The standard library loves it apparently. When resizing a vector it will only use the move constructor if it is a NOEXCEPT function, otherwise it will fall back for safety. Similar to ordered maps not liking objects that don't have comparison overloads.
+
+------------------------
+
+June 10th 2025
+
+Carrying on from yesterday with the revelation of how Vectors are handled. Three or four days debugging later it feels amazing to finally have an understanding of what was going wrong and enhanced skills are debugging. More troubles today, but it was nice to finally have a shot at reading what exactly the code was doing. Move semantics still weren't working for some reason and part of the reason I don't care for vectors, but I understand why they are necessary in this case. If something needs more than one texture file to layer over a model we need to support more than just the normal diffuse and the specular textures. (IE supporting more than one texture pass). The solution was to use a shared pointer so the texture vector can properly transfer ownership from function to function. That may be my standard going forward. I'd probably be smart to more fully understand what smart pointers do under the hood and rewrite much of this code base in it, but that may be a task better saved for the end when I can spend multiple days refactoring and improving the tutorial in its entirety. Either way things are looking good. The draw method appears to work as intended and I am moving the light vertices now and deleting all the unnecesary commented out code. Big day today and the culmination of a lot of work since Saturday. I am on my way to be a better programmer and graphics programmer. Like a lot of things in life - the most painful path has the most growth. I of course love math, and feel better learning more math, but damn if it isn't a painful process. I've always said it is easier to go to the gym 5 times a week than it is 1 time a month and that example is obvious here. More to follow when the tutorial is complete.
+
+After finally debuggin another 4 hours I found the last issue of the initialization. One final statement must have gotten deleted and it was causing the error. I really need to install a debugger into VSCode to debug these statements instead of just trying to read the program. I'm incredibly done. I am committing this and pushing it. Onto the next lesson.

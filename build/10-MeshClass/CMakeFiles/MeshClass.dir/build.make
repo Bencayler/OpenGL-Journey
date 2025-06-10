@@ -101,11 +101,56 @@ include 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MeshClass.dir/src/EBO.cpp.s"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\EBO.cpp -o CMakeFiles\MeshClass.dir\src\EBO.cpp.s
 
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/includes_CXX.rsp
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Mesh.cpp
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj -MF CMakeFiles\MeshClass.dir\src\Mesh.cpp.obj.d -o CMakeFiles\MeshClass.dir\src\Mesh.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Mesh.cpp
+
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MeshClass.dir/src/Mesh.cpp.i"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Mesh.cpp > CMakeFiles\MeshClass.dir\src\Mesh.cpp.i
+
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MeshClass.dir/src/Mesh.cpp.s"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Mesh.cpp -o CMakeFiles\MeshClass.dir\src\Mesh.cpp.s
+
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/includes_CXX.rsp
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Shader.cpp
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj -MF CMakeFiles\MeshClass.dir\src\Shader.cpp.obj.d -o CMakeFiles\MeshClass.dir\src\Shader.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Shader.cpp
+
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MeshClass.dir/src/Shader.cpp.i"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Shader.cpp > CMakeFiles\MeshClass.dir\src\Shader.cpp.i
+
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MeshClass.dir/src/Shader.cpp.s"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Shader.cpp -o CMakeFiles\MeshClass.dir\src\Shader.cpp.s
+
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/includes_CXX.rsp
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Texture.cpp
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj -MF CMakeFiles\MeshClass.dir\src\Texture.cpp.obj.d -o CMakeFiles\MeshClass.dir\src\Texture.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Texture.cpp
+
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MeshClass.dir/src/Texture.cpp.i"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Texture.cpp > CMakeFiles\MeshClass.dir\src\Texture.cpp.i
+
+10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MeshClass.dir/src/Texture.cpp.s"
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\Texture.cpp -o CMakeFiles\MeshClass.dir\src\Texture.cpp.s
+
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/includes_CXX.rsp
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/VAO.cpp
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj -MF CMakeFiles\MeshClass.dir\src\VAO.cpp.obj.d -o CMakeFiles\MeshClass.dir\src\VAO.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\VAO.cpp
 
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.i: cmake_force
@@ -120,7 +165,7 @@ include 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/includes_CXX.rsp
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/VBO.cpp
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj -MF CMakeFiles\MeshClass.dir\src\VBO.cpp.obj.d -o CMakeFiles\MeshClass.dir\src\VBO.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\VBO.cpp
 
 10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.i: cmake_force
@@ -135,7 +180,7 @@ include 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/includes_CXX.rsp
 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/main.cpp
 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj -MF CMakeFiles\MeshClass.dir\src\main.cpp.obj.d -o CMakeFiles\MeshClass.dir\src\main.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\main.cpp
 
 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.i: cmake_force
@@ -146,63 +191,35 @@ include 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MeshClass.dir/src/main.cpp.s"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\main.cpp -o CMakeFiles\MeshClass.dir\src\main.cpp.s
 
-10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
-10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/includes_CXX.rsp
-10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/shaderClass.cpp
-10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj -MF CMakeFiles\MeshClass.dir\src\shaderClass.cpp.obj.d -o CMakeFiles\MeshClass.dir\src\shaderClass.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\shaderClass.cpp
-
-10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MeshClass.dir/src/shaderClass.cpp.i"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\shaderClass.cpp > CMakeFiles\MeshClass.dir\src\shaderClass.cpp.i
-
-10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MeshClass.dir/src/shaderClass.cpp.s"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\shaderClass.cpp -o CMakeFiles\MeshClass.dir\src\shaderClass.cpp.s
-
-10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/flags.make
-10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/includes_CXX.rsp
-10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/textureClass.cpp
-10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj: 10-MeshClass/CMakeFiles/MeshClass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object 10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj -MF CMakeFiles\MeshClass.dir\src\textureClass.cpp.obj.d -o CMakeFiles\MeshClass.dir\src\textureClass.cpp.obj -c C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\textureClass.cpp
-
-10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MeshClass.dir/src/textureClass.cpp.i"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\textureClass.cpp > CMakeFiles\MeshClass.dir\src\textureClass.cpp.i
-
-10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MeshClass.dir/src/textureClass.cpp.s"
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\10-MeshClass\src\textureClass.cpp -o CMakeFiles\MeshClass.dir\src\textureClass.cpp.s
-
 # Object files for target MeshClass
 MeshClass_OBJECTS = \
 "CMakeFiles/MeshClass.dir/src/Camera.cpp.obj" \
 "CMakeFiles/MeshClass.dir/src/EBO.cpp.obj" \
+"CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj" \
+"CMakeFiles/MeshClass.dir/src/Shader.cpp.obj" \
+"CMakeFiles/MeshClass.dir/src/Texture.cpp.obj" \
 "CMakeFiles/MeshClass.dir/src/VAO.cpp.obj" \
 "CMakeFiles/MeshClass.dir/src/VBO.cpp.obj" \
-"CMakeFiles/MeshClass.dir/src/main.cpp.obj" \
-"CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj" \
-"CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj"
+"CMakeFiles/MeshClass.dir/src/main.cpp.obj"
 
 # External object files for target MeshClass
 MeshClass_EXTERNAL_OBJECTS =
 
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/Camera.cpp.obj
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/EBO.cpp.obj
+10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj
+10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj
+10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj
-10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj
-10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/build.make
 10-MeshClass/MeshClass.exe: libglad.a
 10-MeshClass/MeshClass.exe: C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/Libraries/lib/libglfw3.a
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/linkLibs.rsp
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/objects1.rsp
 10-MeshClass/MeshClass.exe: 10-MeshClass/CMakeFiles/MeshClass.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable MeshClass.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable MeshClass.exe"
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build\10-MeshClass && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MeshClass.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

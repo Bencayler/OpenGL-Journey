@@ -1,14 +1,15 @@
 // Standard library includes
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 // GLM includes
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
 // Custom shader classes
-#include "shaderClass.h"
-#include "textureClass.h"
+#include "Texture.h"
+#include "Texture.h"
 
 // Custom camera classe(s)
 #include "Camera.h"
@@ -17,6 +18,8 @@
 #include "EBO.h"
 #include "VBO.h"
 #include "VAO.h"
+
+#include "Mesh.h"
 
 // Include GLAD and GLFW
 #include <glad/glad.h>
@@ -34,92 +37,46 @@ int main() {
 ///////////////////////////////////////////////////////////////////////////////
 //                  TEXUTRED CUBE VERTICES AND INDICES                       // 
 ///////////////////////////////////////////////////////////////////////////////
-	GLfloat vertices[] = {
-
-	/*
-	Like we see below with the indices, the vetices don't get more complicated
-	in the sense of dimension, but the nature of texture mapping makes
-	this considerably more difficuly. Essentially every face is unique
-	and not ACTUALLY connected, but the coordinates match and they will 
-	all rotate together. All this is to say, the number of vertices goes
-	up considerably. We have 3 * 4 * 6 = 72 vertices now, just because 
-	every face has to have a unique coordinate and we can no longer share
-	and connect them via the indices. The U, V are normalized coordinates
-	to stretch the texture over the face. This too needs to match its 
-	corresponding vertex or the whole texture will be smeared and warped
-	at best. This adds considerable complexity, not in terms of execution
-	but in terms of debugging. The values must be perfect, and finding the 
-	imperfect value took 2 hours. 
-	(0, 1) ------- (1, 1)
-	|				 |
-	|				 |
-	|				 |
-	| 				 |
-	(0, 0) ------- (1, 0)
-	*/
-
-	// Cube Coordinates  / TexCoords   /      Normals
+	//                 Cube Coordinates  /                Normals       /               Colors       /        Texture UV   /
+	std::vector<Vertex> vertices = {
     // Top face
-    -1.0f,  1.0f, -1.0f,   0.0f, 0.0f,   0.0f, 1.0f, 0.0f,      // Top-left
-    -1.0f,  1.0f,  1.0f,   0.0f, 1.0f,   0.0f, 1.0f, 0.0f,     // Bottom-left
-     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,   0.0f, 1.0f, 0.0f,      // Bottom-right
-     1.0f,  1.0f, -1.0f,   1.0f, 0.0f,   0.0f, 1.0f, 0.0f,      // Top-right
+    Vertex{glm::vec3(-1.0f,  1.0f, -1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 0.0f)},  // Top-left
+	Vertex{glm::vec3(-1.0f,  1.0f,  1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f)}, // Bottom-left
+	Vertex{glm::vec3( 1.0f,  1.0f,  1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f)}, // Bottom-right
+    Vertex{glm::vec3( 1.0f,  1.0f, -1.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f)}, // Top-right
 
     // Left face
-    -1.0f,  1.0f,  1.0f,   0.0f, 0.0f,   -1.0f, 0.0f, 0.0f,      // Top-left
-    -1.0f, -1.0f,  1.0f,   0.0f, 1.0f,   -1.0f, 0.0f, 0.0f,     // Bottom-left
-    -1.0f, -1.0f, -1.0f,   1.0f, 1.0f,   -1.0f, 0.0f, 0.0f,     // Bottom-right
-    -1.0f,  1.0f, -1.0f,   1.0f, 0.0f,   -1.0f, 0.0f, 0.0f,     // Top-right
+    Vertex{glm::vec3(-1.0f,  1.0f,  1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 0.0f)}, // Top-left
+    Vertex{glm::vec3(-1.0f, -1.0f,  1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f)}, // Bottom-left
+    Vertex{glm::vec3(-1.0f, -1.0f, -1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f)}, // Bottom-right
+    Vertex{glm::vec3(-1.0f,  1.0f, -1.0f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f)}, // Top-right
 
     // Right face
-     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,    1.0f, 0.0f, 0.0f,     // Top-left
-     1.0f, -1.0f,  1.0f,   1.0f, 0.0f,    1.0f, 0.0f, 0.0f,     // Bottom-left
-     1.0f, -1.0f, -1.0f,   0.0f, 0.0f,    1.0f, 0.0f, 0.0f,     // Bottom-right
-     1.0f,  1.0f, -1.0f,   0.0f, 1.0f,    1.0f, 0.0f, 0.0f,     // Top-right
+    Vertex{glm::vec3(1.0f,  1.0f,  1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f)}, // Top-left
+    Vertex{glm::vec3(1.0f, -1.0f,  1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f)}, // Bottom-left
+    Vertex{glm::vec3(1.0f, -1.0f, -1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 0.0f)}, // Bottom-right
+    Vertex{glm::vec3(1.0f,  1.0f, -1.0f), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f)}, // Top-right
 
     // Front face
-    -1.0f,  1.0f,  1.0f,   0.0f, 1.0f,    0.0f, 0.0f, 1.0f,     // Top-left
-    -1.0f, -1.0f,  1.0f,   0.0f, 0.0f,    0.0f, 0.0f, 1.0f,     // Bottom-left
-     1.0f, -1.0f,  1.0f,   1.0f, 0.0f,    0.0f, 0.0f, 1.0f,     // Bottom-right
-     1.0f,  1.0f,  1.0f,   1.0f, 1.0f,    0.0f, 0.0f, 1.0f,     // Top-right
+    Vertex{glm::vec3(-1.0f,  1.0f,  1.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f)}, // Top-left
+    Vertex{glm::vec3(-1.0f, -1.0f,  1.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 0.0f)}, // Bottom-left
+    Vertex{glm::vec3( 1.0f, -1.0f,  1.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f)}, // Top-Right
+    Vertex{glm::vec3( 1.0f,  1.0f,  1.0f), glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f)}, // Bottom-right
 
     // Back face
-    -1.0f,  1.0f, -1.0f,   1.0f, 1.0f,   0.0f, 0.0f, -1.0f,     // Top-left
-    -1.0f, -1.0f, -1.0f,   1.0f, 0.0f,   0.0f, 0.0f, -1.0f,     // Bottom-left
-     1.0f, -1.0f, -1.0f,   0.0f, 0.0f,   0.0f, 0.0f, -1.0f,     // Bottom-right
-     1.0f,  1.0f, -1.0f,   0.0f, 1.0f,   0.0f, 0.0f, -1.0f,     // Top-right
+    Vertex{glm::vec3(-1.0f,  1.0f, -1.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f)}, // Top-left
+    Vertex{glm::vec3(-1.0f, -1.0f, -1.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f)}, // Bottom-left
+    Vertex{glm::vec3( 1.0f, -1.0f, -1.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 0.0f)}, // Bottom-right
+    Vertex{glm::vec3( 1.0f,  1.0f, -1.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f)}, // Top-right
 
     // Bottom face
-    -1.0f, -1.0f, -1.0f,   0.0f, 0.0f,   0.0f, -1.0f, 0.0f,     // Top-left
-    -1.0f, -1.0f,  1.0f,   0.0f, 1.0f,   0.0f, -1.0f, 0.0f,     // Bottom-left
-     1.0f, -1.0f,  1.0f,   1.0f, 1.0f,   0.0f, -1.0f, 0.0f,     // Bottom-right
-     1.0f, -1.0f, -1.0f,   1.0f, 0.0f,   0.0f, -1.0f, 0.0f      // Top-right
+    Vertex{glm::vec3(-1.0f, -1.0f, -1.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 0.0f)}, // Top-left
+    Vertex{glm::vec3(-1.0f, -1.0f,  1.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f)}, // Bottom-left
+    Vertex{glm::vec3( 1.0f, -1.0f,  1.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f)}, // Bottom-right
+    Vertex{glm::vec3( 1.0f, -1.0f, -1.0f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f)}  // Top-right
 };
 
-
-		
-	/*	
-	Define our square indices:
-
-	This is a bit outdated for the texture program just because we deal with
-	indices differently. We can no longer share incides like we can with the
-	rainbow cube. Because we are placing a texture onto the local coordinates
- 	of the cube face, the indices need to be unique. In the number of indices
-	nothing changes. We still need to tell the GPU how to connect the inidces,
-	but inpractice it is much more difficult because the unique values has 
-	increased. We need 24 values (4 for each side) as opposed to the 6 
-	(one for each point that could be shared) we werere able to share for 
-	all 36 indices before.
-	
-     3 ______ 2	
-	 /     /|
-	/     / |
-  	0 -- 1__|
-  5	| \  |  / 7
-	|  \ | /
-	4 -- 6
-	*/
-	GLuint indices[] = {
+	std::vector<GLuint> indices = {
     // Top face
     0, 1, 2, 
 	0, 2, 3,
@@ -148,21 +105,20 @@ int main() {
 ///////////////////////////////////////////////////////////////////////////////
 //                    LIGHT CUBE VERTICES AND INDICES                        // 
 ///////////////////////////////////////////////////////////////////////////////
-// We can just copy these from the interpolated cube and skip the color data
-	GLfloat lightVertices[] = {
+	std::vector<Vertex> lightVertices = {
 	// X,      Y,      Z
-    -1.0f,   1.0f,  -1.0f,
-    -1.0f,   1.0f,   1.0f,
-     1.0f,   1.0f,   1.0f,
-     1.0f,   1.0f,  -1.0f,
-    -1.0f,  -1.0f,  -1.0f,
-    -1.0f,  -1.0f,   1.0f,
-     1.0f,  -1.0f,   1.0f,
-     1.0f,  -1.0f,  -1.0f
+    Vertex{glm::vec3(-1.0f,   1.0f,  -1.0f)},
+    Vertex{glm::vec3(-1.0f,   1.0f,   1.0f)},
+    Vertex{glm::vec3(1.0f,   1.0f,   1.0f)},
+    Vertex{glm::vec3(1.0f,   1.0f,  -1.0f)},
+    Vertex{glm::vec3(-1.0f,  -1.0f,  -1.0f)},
+    Vertex{glm::vec3(-1.0f,  -1.0f,   1.0f)},
+    Vertex{glm::vec3(1.0f,  -1.0f,   1.0f)},
+    Vertex{glm::vec3(1.0f,  -1.0f,  -1.0f)}
 
 	};
-
-	GLuint lightIndices[] = {
+	std::cout << "Vertex is " << sizeof(Vertex) << " bytes\n";
+	std::vector<GLuint> lightIndices = {
 		// Top face
 		0, 1, 2, // Triangle 1
 		0, 2, 3, // Triangle 2
@@ -229,75 +185,18 @@ int main() {
 	glFrontFace(GL_CCW);     // Set front face to counter-clockwise
 	// glCullFace(GL_BACK);     // Cull back faces
 	
-	///////////////////////////////////
-	// Textured cube initialization  //
-	///////////////////////////////////
-	// Create and compile our shaders
+
 	Shader shader("default.vert", "default.frag");
-
-	// Create VAO, VBO, and EBO objects
-	VAO vao;
-	VBO vbo(vertices, sizeof(vertices));
-	EBO ebo(indices, sizeof(indices));
-
-	// Bind the VAO, VBO, and EBO objects to buffers
-	vao.Bind();
-	vbo.Bind();	
-	ebo.Bind();
-	
-	// Link VBO to VAO
-	vao.LinkAttrib(vbo, 0, 3, 8 * sizeof(GLfloat), 0);                   // Position attribute
-	vao.LinkAttrib(vbo, 1, 2, 8 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // Texture attribute
-	vao.LinkAttrib(vbo, 2, 3, 8 * sizeof(GLfloat), 5 * sizeof(GLfloat)); // Normal Attributes
-	
-	// Unbind VAO, VBO, and EBO
-	vao.Unbind();
-	vbo.Unbind();
-	ebo.Unbind();
-
-	// Create a texture object
-	textureClass woodTexture(
-		"wood_floor.png",
-		GL_TEXTURE_2D, 
-		0,
-		GL_RGBA,
-		GL_UNSIGNED_BYTE
-	);
-
-	// Attach the uniform shader variable to the shader program and the texture
-	// unit
-	woodTexture.textureUnit(shader, "tex0", 0);
-
-	textureClass specMapTexture(
-		"wood_floor_specular.png",
-		GL_TEXTURE_2D,
-		1,
-		GL_RED, // ONE COLOR CHANNEL
-		GL_UNSIGNED_BYTE
-	);
-
-	specMapTexture.textureUnit(shader, "tex1", 1);
-
-	///////////////////////////////////
-	// Lighting cube initialization  //
-	///////////////////////////////////
 	Shader lightingShader("light.vert", "light.frag");
 
-	VAO lightVao;
-	VBO lightVbo(lightVertices, sizeof(lightVertices));
-	EBO lightEbo(lightIndices, sizeof(lightIndices));
 
-	lightVao.Bind();
-	lightVbo.Bind();
-	lightEbo.Bind();
 
-	// Attach the vertices to the VAO 
-	lightVao.LinkAttrib(lightVbo, 0, 3, 3 * sizeof(GLfloat), 0);
-
-	// Unbind the VAO, VBO, EBO objects 
-	lightVao.Unbind();
-	lightVbo.Unbind();
-	lightEbo.Unbind();
+	std::vector <std::shared_ptr<Texture>> textures;
+	textures.push_back(std::make_shared<Texture>("wood_floor.png", "diffuse", 0, GL_RGBA, GL_UNSIGNED_BYTE));
+	textures.push_back(std::make_shared<Texture>("wood_floor_specular.png", "specular", 1, GL_RED, GL_UNSIGNED_BYTE));
+	std::vector <std::shared_ptr<Texture>> emptyTextures;
+	Mesh cube(vertices, indices, textures);
+	Mesh light(lightVertices, lightIndices, emptyTextures);
 
 	glm::vec4 lightColor    = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	glm::vec3 lightPosition = glm::vec3(0.0f, 3.0f, 1.0f);
@@ -310,26 +209,18 @@ int main() {
 
 	// Now we need to connect our matrices to the lighting shader program
 	lightingShader.Activate();
-	glUniform4f(
-		glGetUniformLocation(lightingShader.getProgramID(), "lightColor"),
-		lightColor.x, lightColor.y, lightColor.z, lightColor.w
-	);
+	glUniform4f(glGetUniformLocation(lightingShader.getProgramID(), "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
 	glUniformMatrix4fv(glGetUniformLocation(lightingShader.getProgramID(), "modelMatrix"), 1, GL_FALSE, glm::value_ptr(lightModel));
 
 	
 	shader.Activate();
 	glUniformMatrix4fv(glGetUniformLocation(shader.getProgramID(), "modelMatrix"), 1, GL_FALSE, glm::value_ptr(cubeModel));
-	glUniform4f(
-    	glGetUniformLocation(shader.getProgramID(), "lightColor"),
-    	lightColor.x, lightColor.y, lightColor.z, lightColor.w
-	);
-
-
+	glUniform4f(glGetUniformLocation(shader.getProgramID(), "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+	glUniform3f(glGetUniformLocation(shader.getProgramID(), "lightPos"), lightPosition.x, lightPosition.y, lightPosition.z); 
 
 
 	// Create the camera object
 	Camera Camera(WIDTH, HEIGHT, glm::vec3(0.0f, 0.0f, 8.0f));
-
 
 	// Main rendering loop
 	while (!glfwWindowShouldClose(window)) {
@@ -342,80 +233,10 @@ int main() {
 		Camera.Inputs(window);
 		Camera.updateMatrix(45.0f, 0.1f, 100.0f);
 
-		///////////////////////////////////////////////////
-		//        TEXTURED CUBE RENDERING LOOP           //
-		///////////////////////////////////////////////////
-		shader.Activate();
-		glActiveTexture(GL_TEXTURE0);
-		woodTexture.Bind();
-		glActiveTexture(GL_TEXTURE1);
-		specMapTexture.Bind();
-
+		cube.Draw(shader, Camera);
+		light.Draw(lightingShader, Camera);
 		
 		Camera.Matrix(shader, "camMatrix");
-
-		// Set light color for textured cube
-		glUniform4f(
-			glGetUniformLocation(shader.getProgramID(), "lightColor"),
-			lightColor.x, lightColor.y, lightColor.z, lightColor.w
-		);
-
-
-		// Pass light position to the textured cube's shader
-		glUniform3f(
-			glGetUniformLocation(shader.getProgramID(), "lightPos"),
-			lightPosition.x, lightPosition.y, lightPosition.z
-		);
-
-		// Pass camera position to the textures cube's shader (for specular) 
-		glUniform3f (
-			glGetUniformLocation(shader.getProgramID(), "camPos"),
-			Camera.Position.x, Camera.Position.y, Camera.Position.z
-		);
-
-
-		// Draw textured cube
-		vao.Bind();
-		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(GLuint), GL_UNSIGNED_INT, 0);
-
-
-		///////////////////////////////////////////////////
-		//        LIGHTING CUBE RENDERING LOOP           //
-		///////////////////////////////////////////////////
-		lightingShader.Activate();
-		Camera.Matrix(lightingShader, "camMatrix");
-
-		// Update model matrix uniform
-		glUniformMatrix4fv(
-			glGetUniformLocation(lightingShader.getProgramID(), "modelMatrix"), 
-			1, GL_FALSE, 
-			glm::value_ptr(lightModel)
-		);
-
-		// Set light color
-		glUniform4f(
-			glGetUniformLocation(lightingShader.getProgramID(), "lightColor"),
-			lightColor.x, lightColor.y, lightColor.z, lightColor.w
-		);
-
-		// Bind light VAO and draw
-		lightVao.Bind();
-		glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(GLuint), GL_UNSIGNED_INT, 0);
-
-
-		// glUniformMatrix4fv(glGetUniformLocation(lightingShader.getProgramID(), "modelMatrix"), 
-        //            1, GL_FALSE, glm::value_ptr(lightModel));
-
-
-
-		// // Set the texture sampler uniform to use texture unit 0
-		// glUniform1i(glGetUniformLocation(shader.getProgramID(), "textureSampler"), 0);
-
-
-
-		// // Bind the VAO and draw the cube
-		// glBindVertexArray(vao.vaoID);
-		// glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(GLuint), GL_UNSIGNED_INT, 0);
 
 		// Swap buffer and poll events
 		glfwSwapBuffers(window);
@@ -423,18 +244,9 @@ int main() {
 
 	}
 
-	// Delete our objects
-	vao.Delete();
-	vbo.Delete();
-	ebo.Delete();
-
-	// Delete the texture
-	//glDeleteTextures(1, &texture);
-	woodTexture.Delete();
-	specMapTexture.Delete();
-
 	// Delete our shader program
 	shader.Delete();
+	lightingShader.Delete();
 
 	// Destroy the window
 	glfwDestroyWindow(window);

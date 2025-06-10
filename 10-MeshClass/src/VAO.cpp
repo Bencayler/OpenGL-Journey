@@ -29,7 +29,7 @@ void VAO::LinkVBO(VBO vbo, GLuint layout) {
 void VAO::LinkAttrib(VBO& vbo, GLuint layout, GLuint size, GLuint stride, GLuint offset) {
     this->Bind();
     vbo.Bind();
-    glEnableVertexAttribArray(layout);
+
     glVertexAttribPointer(
         layout,
         size,
@@ -38,6 +38,7 @@ void VAO::LinkAttrib(VBO& vbo, GLuint layout, GLuint size, GLuint stride, GLuint
         stride,
         (void*)(offset)
     );
+    glEnableVertexAttribArray(layout);
     
     vbo.Unbind();
     this->Unbind(); 

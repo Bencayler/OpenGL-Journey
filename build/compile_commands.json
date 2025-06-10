@@ -319,6 +319,24 @@
 },
 {
   "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/MeshClass.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\MeshClass.dir\\src\\Mesh.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\10-MeshClass\\src\\Mesh.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Mesh.cpp",
+  "output": "10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/MeshClass.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\MeshClass.dir\\src\\Shader.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\10-MeshClass\\src\\Shader.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Shader.cpp",
+  "output": "10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass",
+  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/MeshClass.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\MeshClass.dir\\src\\Texture.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\10-MeshClass\\src\\Texture.cpp",
+  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Texture.cpp",
+  "output": "10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj"
+},
+{
+  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass",
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/MeshClass.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\MeshClass.dir\\src\\VAO.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\10-MeshClass\\src\\VAO.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/VAO.cpp",
   "output": "10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj"
@@ -334,17 +352,5 @@
   "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/MeshClass.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\MeshClass.dir\\src\\main.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\10-MeshClass\\src\\main.cpp",
   "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/main.cpp",
   "output": "10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj"
-},
-{
-  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass",
-  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/MeshClass.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\MeshClass.dir\\src\\shaderClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\10-MeshClass\\src\\shaderClass.cpp",
-  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/shaderClass.cpp",
-  "output": "10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj"
-},
-{
-  "directory": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/build/10-MeshClass",
-  "command": "C:\\MinGW\\bin\\g++.exe -DGLFW_INCLUDE_NONE @CMakeFiles/MeshClass.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\MeshClass.dir\\src\\textureClass.cpp.obj -c C:\\Users\\THEJANKMACHINE\\Documents\\VSCode\\OpenGL_Journals_Test\\10-MeshClass\\src\\textureClass.cpp",
-  "file": "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/textureClass.cpp",
-  "output": "10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj"
 }
 ]

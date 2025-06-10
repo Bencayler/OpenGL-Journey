@@ -177,6 +177,78 @@ src/EBO.cpp.s:
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/EBO.cpp.s
 .PHONY : src/EBO.cpp.s
 
+src/Mesh.obj: src/Mesh.cpp.obj
+.PHONY : src/Mesh.obj
+
+# target to build an object file
+src/Mesh.cpp.obj:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj
+.PHONY : src/Mesh.cpp.obj
+
+src/Mesh.i: src/Mesh.cpp.i
+.PHONY : src/Mesh.i
+
+# target to preprocess a source file
+src/Mesh.cpp.i:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.i
+.PHONY : src/Mesh.cpp.i
+
+src/Mesh.s: src/Mesh.cpp.s
+.PHONY : src/Mesh.s
+
+# target to generate assembly for a file
+src/Mesh.cpp.s:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.s
+.PHONY : src/Mesh.cpp.s
+
+src/Shader.obj: src/Shader.cpp.obj
+.PHONY : src/Shader.obj
+
+# target to build an object file
+src/Shader.cpp.obj:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj
+.PHONY : src/Shader.cpp.obj
+
+src/Shader.i: src/Shader.cpp.i
+.PHONY : src/Shader.i
+
+# target to preprocess a source file
+src/Shader.cpp.i:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.i
+.PHONY : src/Shader.cpp.i
+
+src/Shader.s: src/Shader.cpp.s
+.PHONY : src/Shader.s
+
+# target to generate assembly for a file
+src/Shader.cpp.s:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.s
+.PHONY : src/Shader.cpp.s
+
+src/Texture.obj: src/Texture.cpp.obj
+.PHONY : src/Texture.obj
+
+# target to build an object file
+src/Texture.cpp.obj:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj
+.PHONY : src/Texture.cpp.obj
+
+src/Texture.i: src/Texture.cpp.i
+.PHONY : src/Texture.i
+
+# target to preprocess a source file
+src/Texture.cpp.i:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.i
+.PHONY : src/Texture.cpp.i
+
+src/Texture.s: src/Texture.cpp.s
+.PHONY : src/Texture.s
+
+# target to generate assembly for a file
+src/Texture.cpp.s:
+	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.s
+.PHONY : src/Texture.cpp.s
+
 src/VAO.obj: src/VAO.cpp.obj
 .PHONY : src/VAO.obj
 
@@ -249,54 +321,6 @@ src/main.cpp.s:
 	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/shaderClass.obj: src/shaderClass.cpp.obj
-.PHONY : src/shaderClass.obj
-
-# target to build an object file
-src/shaderClass.cpp.obj:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj
-.PHONY : src/shaderClass.cpp.obj
-
-src/shaderClass.i: src/shaderClass.cpp.i
-.PHONY : src/shaderClass.i
-
-# target to preprocess a source file
-src/shaderClass.cpp.i:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.i
-.PHONY : src/shaderClass.cpp.i
-
-src/shaderClass.s: src/shaderClass.cpp.s
-.PHONY : src/shaderClass.s
-
-# target to generate assembly for a file
-src/shaderClass.cpp.s:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.s
-.PHONY : src/shaderClass.cpp.s
-
-src/textureClass.obj: src/textureClass.cpp.obj
-.PHONY : src/textureClass.obj
-
-# target to build an object file
-src/textureClass.cpp.obj:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj
-.PHONY : src/textureClass.cpp.obj
-
-src/textureClass.i: src/textureClass.cpp.i
-.PHONY : src/textureClass.i
-
-# target to preprocess a source file
-src/textureClass.cpp.i:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.i
-.PHONY : src/textureClass.cpp.i
-
-src/textureClass.s: src/textureClass.cpp.s
-.PHONY : src/textureClass.s
-
-# target to generate assembly for a file
-src/textureClass.cpp.s:
-	cd /d C:\Users\THEJANKMACHINE\Documents\VSCode\OpenGL_Journals_Test\build && $(MAKE) $(MAKESILENT) -f 10-MeshClass\CMakeFiles\MeshClass.dir\build.make 10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.s
-.PHONY : src/textureClass.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -312,6 +336,15 @@ help:
 	@echo ... src/EBO.obj
 	@echo ... src/EBO.i
 	@echo ... src/EBO.s
+	@echo ... src/Mesh.obj
+	@echo ... src/Mesh.i
+	@echo ... src/Mesh.s
+	@echo ... src/Shader.obj
+	@echo ... src/Shader.i
+	@echo ... src/Shader.s
+	@echo ... src/Texture.obj
+	@echo ... src/Texture.i
+	@echo ... src/Texture.s
 	@echo ... src/VAO.obj
 	@echo ... src/VAO.i
 	@echo ... src/VAO.s
@@ -321,12 +354,6 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/shaderClass.obj
-	@echo ... src/shaderClass.i
-	@echo ... src/shaderClass.s
-	@echo ... src/textureClass.obj
-	@echo ... src/textureClass.i
-	@echo ... src/textureClass.s
 .PHONY : help
 
 

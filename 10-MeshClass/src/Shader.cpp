@@ -1,4 +1,4 @@
-#include "shaderClass.h"
+#include "Shader.h"
 
 // TODO :: Write the constructor with a other init methods declared in the .h file
 Shader::Shader(const char* vertexFile, const char* fragmentFile) {

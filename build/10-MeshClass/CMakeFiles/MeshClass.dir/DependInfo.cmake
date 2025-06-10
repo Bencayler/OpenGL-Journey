@@ -10,11 +10,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Camera.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/Camera.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/Camera.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/EBO.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/EBO.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/EBO.cpp.obj.d"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Mesh.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/Mesh.cpp.obj.d"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Shader.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/Shader.cpp.obj.d"
+  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/Texture.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/Texture.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/VAO.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/VAO.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/VBO.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/VBO.cpp.obj.d"
   "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/main.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/main.cpp.obj.d"
-  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/shaderClass.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/shaderClass.cpp.obj.d"
-  "C:/Users/THEJANKMACHINE/Documents/VSCode/OpenGL_Journals_Test/10-MeshClass/src/textureClass.cpp" "10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj" "gcc" "10-MeshClass/CMakeFiles/MeshClass.dir/src/textureClass.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -11,7 +11,7 @@
 #include <glm/gtx/vector_angle.hpp>
 
 // Custom class include
-#include "shaderClass.h"
+#include "Shader.h"
 
 class Camera {
     private:
